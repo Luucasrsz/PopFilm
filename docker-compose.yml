@@ -1,0 +1,44 @@
+version: "3"
+services:
+  mariadb:
+    image: mariadb
+    restart: always
+    volumes:
+      - ./mariadb_data:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+      MARIADB_USER: agente
+      MARIADB_USER_PASSWORD: 0traClave
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    environment:
+      - PMA_HOST=mariadb
+    ports:
+      - 9093:80
+    depends_on:
+      - mariadb
+  apache:
+    build: ./apache
+    container_name: apache
+    volumes:
+      - ./miweb:/var/www/html
+    ports:
+      - "9094:80"
+    restart: unless-stopped
+    depends_on:
+      - python
+      - mariadb
+  python:
+    build: ./python
+    container_name: python
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: example
+      DB_DATABASE: PEPS
+      DB_HOST: mariadb
+      DB_PORT: 3306
+      PORT: 8080
+      HOST: "0.0.0.0"
+    depends_on:
+      - mariadb
