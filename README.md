@@ -4,7 +4,7 @@
 
 - Mario Plaza
 - Lucas Rodriguez
-- Eva
+- Eva Ruiz
 
 ## Descripción
 
