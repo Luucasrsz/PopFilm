@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controles administrador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="header-logo">Popfilm</a>
+      <nav class="header-nav">
+        <a href="#home">Inicio</a>
+        <a href="#series">Series</a>
+        <a href="#movies">Películas</a>
+      </nav>
+      <div class="account-actions">
+        <a href="register/register.html"
+          ><img src="../assets/account_icon.svg" alt="Account Circle"
+        /></a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="add-movie-button">
+        <button class="button" onclick="insertMovie()">Agregar Película</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Género</th>
+              <th>Año</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="movie-list">
+            <tr>
+              <td>La Casa de Papel</td>
+              <td>Acción</td>
+              <td>2020</td>
+              <td>
+                <button class="icon-button" onclick="editMovie(this)">
+                  <span class="icon">✏️</span>
+                </button>
+                <button class="icon-button" onclick="deleteMovie(this)">
+                  <span class="icon">🗑️</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Stranger Things</td>
+              <td>Suspense</td>
+              <td>2019</td>
+              <td>
+                <button class="icon-button" onclick="editMovie(this)">
+                  <span class="icon">✏️</span>
+                </button>
+                <button class="icon-button" onclick="deleteMovie(this)">
+                  <span class="icon">🗑️</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

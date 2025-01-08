@@ -14,7 +14,7 @@ Este proyecto se desarrolló con **HTML**, **CSS**, **JavaScript** en el front-e
 
 - Registro de usuarios.
 - Ingreso y gestión de películas (CRUD).
-- Persistencia de datos utilizando MariaDB.
+- Gestión de la informacion de manera segura utilizando MariaDB
 
 ## Pasos de Instalación
 
