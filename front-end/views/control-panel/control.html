@@ -8,22 +8,24 @@
   </head>
   <body>
     <header class="header">
-      <a href="../index.html" class="header-logo">Popfilm</a>
+      <a href="../../index.html" class="header-logo">Popfilm</a>
       <nav class="header-nav">
         <a href="#home">Inicio</a>
         <a href="#series">Series</a>
         <a href="#movies">Películas</a>
       </nav>
       <div class="account-actions">
-        <a href="register/register.html"
-          ><img src="../assets/account_icon.svg" alt="Account Circle"
-        /></a>
+        <a href="register/register.html">
+          <img src="../../assets/account_icon.svg" alt="Account Circle" />
+        </a>
       </div>
     </header>
 
     <div class="container">
       <div class="add-movie-button">
-        <button class="button" onclick="insertMovie()">Agregar Película</button>
+        <button class="button" onclick="abrirFormulario()">
+          Agregar Película
+        </button>
       </div>
       <div class="table-container">
         <table>
@@ -41,20 +43,7 @@
               <td>Acción</td>
               <td>2020</td>
               <td>
-                <button class="icon-button" onclick="editMovie(this)">
-                  <span class="icon">✏️</span>
-                </button>
-                <button class="icon-button" onclick="deleteMovie(this)">
-                  <span class="icon">🗑️</span>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Stranger Things</td>
-              <td>Suspense</td>
-              <td>2019</td>
-              <td>
-                <button class="icon-button" onclick="editMovie(this)">
+                <button class="icon-button" onclick="abrirFormulario()">
                   <span class="icon">✏️</span>
                 </button>
                 <button class="icon-button" onclick="deleteMovie(this)">
@@ -64,6 +53,26 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal-form" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="cerrarFormulario()">×</span>
+        <h2>Agregar Película</h2>
+        <form id="movie-form" onsubmit="agregarPelicula(event)">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required />
+
+          <label for="genero">Género:</label>
+          <input type="text" id="genero" name="genero" required />
+
+          <label for="anio">Año:</label>
+          <input type="number" id="anio" name="anio" required />
+
+          <button type="submit" class="button">Guardar</button>
+        </form>
       </div>
     </div>
 
