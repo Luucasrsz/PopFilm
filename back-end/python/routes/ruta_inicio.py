@@ -1,79 +1,110 @@
-from __future__ import print_function
-from __main__ import app
-from flask import request,session
+from flask import request, session
 from bd import obtener_conexion
 import json
-import sys
+from bcrypt import hashpw, gensalt, checkpw  # Para manejar contraseñas de forma segura
 
-@app.route("/login",methods=['POST'])
+@app.route("/login", methods=['POST'])
 def login():
     content_type = request.headers.get('Content-Type')
-    if (content_type == 'application/json'):
+    if content_type == 'application/json':
         usuario_json = request.json
-        username = usuario_json['username']
-        password = usuario_json['password']
+        email = usuario_json.get('email')
+        password = usuario_json.get('password')
+
         try:
             conexion = obtener_conexion()
             with conexion.cursor() as cursor:
-                 #cursor.execute("SELECT perfil FROM usuarios WHERE usuario = %s and clave= %s",(username,password))
-                 cursor.execute("SELECT perfil FROM usuarios WHERE usuario = '" + username +"' and clave= '" + password + "'")
-                 usuario = cursor.fetchone()
+                # Consulta segura con parámetros
+                cursor.execute("SELECT contrasena, perfil FROM usuarios WHERE email = %s", (email,))
+                usuario = cursor.fetchone()
+
+                if usuario is None or not checkpw(password.encode('utf-8'), usuario[0].encode('utf-8')):
+                    ret = {"status": "ERROR", "mensaje": "Usuario o contraseña incorrectos"}
+                else:
+                    # Actualiza la columna logeado
+                    cursor.execute("UPDATE usuarios SET logeado = TRUE WHERE email = %s", (email,))
+                    conexion.commit()
+
+                    ret = {"status": "OK"}
+                    session["usuario"] = email
+                    session["perfil"] = usuario[1]
+            code = 200
+        except Exception as e:
+            print(f"Excepción al validar al usuario: {str(e)}")
+            ret = {"status": "ERROR", "mensaje": "Error interno del servidor"}
+            code = 500
+        finally:
             conexion.close()
-            if usuario is None:
-                ret = {"status": "ERROR","mensaje":"Usuario/clave erroneo" }
-            else:
-                ret = {"status": "OK" }
-                session["usuario"]=username
-                session["perfil"]=usuario[0]
-            code=200
-        except:
-            print("Excepcion al validar al usuario")   
-            ret={"status":"ERROR"}
-            code=500
     else:
-        ret={"status":"Bad request"}
-        code=401
+        ret = {"status": "Bad request", "mensaje": "Formato de contenido no válido"}
+        code = 400
     return json.dumps(ret), code
 
-@app.route("/registro",methods=['POST'])
+
+@app.route("/registro", methods=['POST'])
 def registro():
     content_type = request.headers.get('Content-Type')
-    if (content_type == 'application/json'):
+    if content_type == 'application/json':
         usuario_json = request.json
-        username = usuario_json['username']
-        password = usuario_json['password']
-        perfil = usuario_json['profile']
+        email = usuario_json.get('email')
+        password = usuario_json.get('password')
+        nombre = usuario_json.get('nombre')
+        perfil = usuario_json.get('profile')
+
         try:
             conexion = obtener_conexion()
             with conexion.cursor() as cursor:
-                 #cursor.execute("SELECT perfil FROM usuarios WHERE usuario = %s and clave= %s",(username,password))
-                 cursor.execute("SELECT perfil FROM usuarios WHERE usuario = '" + username +"' and clave= '" + password + "'")
-                 usuario = cursor.fetchone()
-                 if usuario is None:
-                     print("INSERT INTO usuarios(usuario,clave,perfil) VALUES('"+ username +"','"+  password+"','"+ perfil+"')") 
-                     cursor.execute("INSERT INTO usuarios(usuario,clave,perfil) VALUES('"+ username +"','"+  password+"','"+ perfil+"')")
-                     if cursor.rowcount == 1:
-                         conexion.commit()
-                         ret={"status": "OK" }
-                         code=200
-                     else:
-                         ret={"status": "ERROR" }
-                         code=500
-                 else:
-                   ret = {"status": "ERROR","mensaje":"Usuario/clave erroneo" }
-                   code=200
+                # Verifica si el usuario ya existe
+                cursor.execute("SELECT email FROM usuarios WHERE email = %s", (email,))
+                usuario = cursor.fetchone()
+
+                if usuario is None:
+                    # Cifrar la contraseña
+                    hashed_password = hashpw(password.encode('utf-8'), gensalt()).decode('utf-8')
+
+                    cursor.execute(
+                        "INSERT INTO usuarios (email, contrasena, nombre, perfil, logeado) VALUES (%s, %s, %s, %s, FALSE)",
+                        (email, hashed_password, nombre, perfil)
+                    )
+                    if cursor.rowcount == 1:
+                        conexion.commit()
+                        ret = {"status": "OK", "mensaje": "Usuario registrado correctamente"}
+                        code = 201
+                    else:
+                        ret = {"status": "ERROR", "mensaje": "No se pudo registrar el usuario"}
+                        code = 500
+                else:
+                    ret = {"status": "ERROR", "mensaje": "El usuario ya existe"}
+                    code = 400
+        except Exception as e:
+            print(f"Excepción al registrar al usuario: {str(e)}")
+            ret = {"status": "ERROR", "mensaje": "Error interno del servidor"}
+            code = 500
+        finally:
             conexion.close()
-        except:
-            print("Excepcion al registrar al usuario")   
-            ret={"status":"ERROR"}
-            code=500
     else:
-        ret={"status":"Bad request"}
-        code=401
+        ret = {"status": "Bad request", "mensaje": "Formato de contenido no válido"}
+        code = 400
     return json.dumps(ret), code
 
 
-@app.route("/logout",methods=['GET'])
+@app.route("/logout", methods=['GET'])
 def logout():
-    session.clear()
-    return json.dumps({"status":"OK"}),200
+    try:
+        if "usuario" in session:
+            conexion = obtener_conexion()
+            with conexion.cursor() as cursor:
+                # Deslogea al usuario en la base de datos
+                cursor.execute("UPDATE usuarios SET logeado = FALSE WHERE email = %s", (session["usuario"],))
+                conexion.commit()
+            conexion.close()
+
+        session.clear()
+        ret = {"status": "OK", "mensaje": "Sesión cerrada correctamente"}
+        code = 200
+    except Exception as e:
+        print(f"Excepción al cerrar sesión: {str(e)}")
+        ret = {"status": "ERROR", "mensaje": "Error al cerrar sesión"}
+        code = 500
+
+    return json.dumps(ret), code
