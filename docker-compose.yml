@@ -8,12 +8,13 @@ services:
       MARIADB_ROOT_PASSWORD: example
       MARIADB_USER: agente
       MARIADB_USER_PASSWORD: 0traClave
-      MARIADB_DATABASE: POPFILM
+      MARIADB_DATABASE: PEPS
     volumes:
-      - ./mariadb_data:/var/lib/mysql
-      - ./Juegos.sql:/docker-entrypoint-initdb.d/Peliculas.sql
-
+      - ./back-end/mariadb_data:/var/lib/mysql
+      - ./back-end/Peliculas.sql:/docker-entrypoint-initdb.d/Peliculas.sql
     user: mysql
+    ports:
+      - 3306:3306
   phpmyadmin:
     image: phpmyadmin
     container_name: phpmyadmin
@@ -30,7 +31,7 @@ services:
     environment:
       DB_USERNAME: root
       DB_PASSWORD: example
-      DB_DATABASE: POPFILM
+      DB_DATABASE: PEPS
       DB_HOST: mariadb
       DB_PORT: 3306
       PORT: 8080
