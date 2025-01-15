@@ -2,12 +2,12 @@ from __future__ import print_function
 from bd import obtener_conexion
 import sys
 
-def insertar_juego(nombre, descripcion, precio,foto):
+def insertar_pelicula(nombre, sinopsis, categoria,portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("INSERT INTO juegos(nombre, descripcion, precio,foto) VALUES (%s, %s, %s,%s)",
-                       (nombre, descripcion, precio,foto))
+            cursor.execute("INSERT INTO peliculas(nombre, sinopsis, categoria,portada) VALUES (%s, %s, %s,%s)",
+                       (nombre, sinopsis, categoria,portada))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:
@@ -16,30 +16,30 @@ def insertar_juego(nombre, descripcion, precio,foto):
         conexion.commit()
         conexion.close()
     except:
-        print("Excepcion al insertar un juego", file=sys.stdout)
+        print("Excepcion al insertar una pelicula", file=sys.stdout)
         ret = {"status": "Failure" }
         code=500
     return ret,code
 
-def convertir_juego_a_json(juego):
+def convertir_pelicula_a_json(pelicula):
     d = {}
-    d['id'] = juego[0]
-    d['nombre'] = juego[1]
-    d['descripcion'] = juego[2]
-    d['precio'] = juego[3]
-    d['foto'] = juego[4]
+    d['id'] = pelicula[0]
+    d['nombre'] = pelicula[1]
+    d['sinopsis'] = pelicula[2]
+    d['categoria'] = pelicula[3]
+    d['portada'] = pelicula[4]
     return d
 
-def obtener_juegos():
+def obtener_peliculas():
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("SELECT id, nombre, descripcion, precio,foto FROM juegos")
-            juegos = cursor.fetchall()
-            juegosjson=[]
-            if juegos:
-                for juego in juegos:
-                    juegosjson.append(convertir_juego_a_json(juego))
+            cursor.execute("SELECT id, nombre, sinopsis, categoria,portada FROM peliculas")
+            peliculas = cursor.fetchall()
+            peliculasjson=[]
+            if peliculas:
+                for pelicula in peliculas:
+                    peliculasjson.append(convertir_pelicula_a_json(pelicula))
         conexion.close()
         code=200
     except:
@@ -48,29 +48,29 @@ def obtener_juegos():
         code=500
     return juegosjson,code
 
-def obtener_juego_por_id(id):
+def obtener_pelicula_por_id(id):
     juegojson = {}
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
             #cursor.execute("SELECT id, nombre, descripcion, precio,foto FROM juegos WHERE id = %s", (id,))
-            cursor.execute("SELECT id, nombre, descripcion, precio,foto FROM juegos WHERE id =" + id)
-            juego = cursor.fetchone()
-            if juego is not None:
-                juegojson = convertir_juego_a_json(juego)
+            cursor.execute("SELECT id, nombre, sinopsis, categoria,portada FROM peliculas WHERE id =" + id)
+            pelicula = cursor.fetchone()
+            if pelicula is not None:
+                peliculasJson = convertir_pelicula_a_json(pelicula)
         conexion.close()
         code=200
     except:
-        print("Excepcion al recuperar un juego", file=sys.stdout)
+        print("Excepcion al recuperar una pelicula", file=sys.stdout)
         code=500
     return juegojson,code
 
 
-def eliminar_juego(id):
+def eliminar_pelicula(id):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("DELETE FROM juegos WHERE id = %s", (id,))
+            cursor.execute("DELETE FROM peliculas WHERE id = %s", (id,))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:
@@ -79,17 +79,17 @@ def eliminar_juego(id):
         conexion.close()
         code=200
     except:
-        print("Excepcion al eliminar un juego", file=sys.stdout)
+        print("Excepcion al eliminar una pelicula", file=sys.stdout)
         ret = {"status": "Failure" }
         code=500
     return ret,code
 
-def actualizar_juego(id, nombre, descripcion, precio, foto):
+def actualizar_pelicula(id, nombre, sinopsis, categoria, portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("UPDATE juegos SET nombre = %s, descripcion = %s, precio = %s, foto=%s WHERE id = %s",
-                       (nombre, descripcion, precio, foto,id))
+            cursor.execute("UPDATE juegos SET nombre = %s, sinopsis = %s, categoria = %s, portada=%s WHERE id = %s",
+                       (nombre, sinopsis, categoria, portada,id))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:
@@ -98,7 +98,7 @@ def actualizar_juego(id, nombre, descripcion, precio, foto):
         conexion.close()
         code=200
     except:
-        print("Excepcion al eliminar un juego", file=sys.stdout)
+        print("Excepcion al ectualizar una pelicula", file=sys.stdout)
         ret = {"status": "Failure" }
         code=500
     return ret,code

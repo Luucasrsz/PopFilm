@@ -9,21 +9,26 @@
   <body>
     <div class="form-container">
       <a href="../index.html"><h1>POPFILM</h1></a>
-      <form action="#" method="POST">
+      <form id="loginForm" action="#" method="POST">
         <input
           type="email"
-          name="email"
+          id="username"
           placeholder="Correo electrónico"
           required
         />
         <input
           type="password"
-          name="password"
+          id="password"
           placeholder="Contraseña"
           required
         />
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" onclick="iniciarSesion();">Iniciar sesión</button>
       </form>
+      <div class="error" style="display: none; color: red">
+        Usuario o contraseña incorrectos.
+      </div>
     </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
