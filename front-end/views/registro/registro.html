@@ -8,27 +8,31 @@
   </head>
   <body>
     <div class="form-container">
-      <h1>Unete a nosotros!</h1>
-      <form action="#" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre" required />
+      <h1>¡Únete a nosotros!</h1>
+      <form id="registerForm" action="#" method="POST">
+        <input type="text" id="nombre" placeholder="Nombre" required />
         <input
           type="email"
-          name="email"
+          id="email"
           placeholder="Correo electrónico"
           required
         />
         <input
           type="password"
-          name="password"
+          id="password"
           placeholder="Contraseña"
           required
         />
-        <button type="submit">Regístrate</button>
+        <button type="submit" onclick="registrarUsuario();">Regístrate</button>
       </form>
+      <div class="error" style="display: none; color: red">
+        Hubo un error en el registro. Por favor, intenta nuevamente.
+      </div>
       <div class="help-text">
         ¿Ya tienes una cuenta?
         <a href="../login/login.html">Inicia sesión aquí</a>
       </div>
     </div>
+    <script src="scripts.js"></script>
   </body>
 </html>

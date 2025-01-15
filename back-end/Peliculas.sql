@@ -1,14 +1,16 @@
 CREATE DATABASE IF NOT EXISTS POPFILM;
-CREATE TABLE peliculas(
+
+CREATE TABLE peliculas (
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
     sinopsis VARCHAR(255) NOT NULL,
-    categoria DECIMAL(9,2) NOT NULL,
-	portada VARCHAR(255)
+    categoria VARCHAR(255) NOT NULL, 
+    portada VARCHAR(255)
 );
-CREATE TABLE usuarios(
-	usuario VARCHAR(100) NOT NULL PRIMARY KEY,
-    clave VARCHAR(255) NOT NULL,
-    perfil VARCHAR(100) NOT NULL,
-    fechaUltimoAcceso DATE
+
+CREATE TABLE usuarios (
+    email VARCHAR(100) NOT NULL PRIMARY KEY,
+    contrasena VARCHAR(255) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    logeado BOOLEAN DEFAULT false
 );

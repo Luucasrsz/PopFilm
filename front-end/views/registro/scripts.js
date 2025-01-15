@@ -1,9 +1,10 @@
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-function iniciarSesion() {
+function registrarUsuario() {
   document.getElementsByClassName("error")[0].style.display = "none";
   var raw = JSON.stringify({
+    nombre: document.getElementById("nombre").value,
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   });
@@ -14,12 +15,12 @@ function iniciarSesion() {
     body: raw,
   };
 
-  fetch("/login", requestOptions)
+  fetch("/registro", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status == "OK") {
         alert("Usuario registrado correctamente");
-        location.href = "../control-panel/control.html";
+        location.href = "index.html";
       } else {
         document.getElementsByClassName("error")[0].style.display = "block";
       }
