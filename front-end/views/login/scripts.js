@@ -19,7 +19,7 @@ function iniciarSesion() {
     .then((result) => {
       if (result.status == "OK") {
         alert("Usuario registrado correctamente");
-        location.href = "../control-panel/control.html";
+        location.href = "../../index.html";
       } else {
         document.getElementsByClassName("error")[0].style.display = "block";
       }
