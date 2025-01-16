@@ -1,5 +1,6 @@
 from flask import request, session
 from bd import obtener_conexion
+from __main__ import app
 import json
 from bcrypt import hashpw, gensalt, checkpw  # Para manejar contraseñas de forma segura
 
@@ -9,7 +10,7 @@ def login():
     if content_type == 'application/json':
         usuario_json = request.json
         email = usuario_json.get('email')
-        password = usuario_json.get('password')
+        contrasena = usuario_json.get('contrasena')
 
         try:
             conexion = obtener_conexion()
@@ -47,7 +48,7 @@ def registro():
     if content_type == 'application/json':
         usuario_json = request.json
         email = usuario_json.get('email')
-        password = usuario_json.get('password')
+        contrasena = usuario_json.get('contrasena')
         nombre = usuario_json.get('nombre')
         perfil = usuario_json.get('profile')
 
@@ -60,7 +61,7 @@ def registro():
 
                 if usuario is None:
                     # Cifrar la contraseña
-                    hashed_password = hashpw(password.encode('utf-8'), gensalt()).decode('utf-8')
+                    hashed_password = hashpw(contrasena.encode('utf-8'), gensalt()).decode('utf-8')
 
                     cursor.execute(
                         "INSERT INTO usuarios (email, contrasena, nombre, perfil, logeado) VALUES (%s, %s, %s, %s, FALSE)",
