@@ -1,5 +1,6 @@
 from flask import request, session
 from bd import obtener_conexion
+from __main__ import app
 import json
 from bcrypt import hashpw, gensalt, checkpw  # Para manejar contraseñas de forma segura
 
