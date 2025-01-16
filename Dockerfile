@@ -13,4 +13,5 @@ RUN pip install -r requirements.txt
 COPY ./web .  
 
 EXPOSE 8080
-CMD ["python", "app.py", "runserver"]
+CMD ["python", "back-end/python/app.py", "runserver"]
+

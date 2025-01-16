@@ -37,6 +37,10 @@ services:
       PORT: 8080
       HOST: 0.0.0.0
     ports:
-      - 9094:8080
+      - 9094:8000
     depends_on:
         - mariadb
+  apache:
+    build: ./web/front-end/apache
+    ports:
+      - 7777:80
