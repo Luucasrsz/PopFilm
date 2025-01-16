@@ -5,6 +5,11 @@ from variables import cargarvariables
 
 app = Flask(__name__)
 
+@app.route("/")
+def root():
+    return app.send_static_file('index.html')
+
+
 app.config.from_pyfile('settings.py')
 cargarvariables()
 

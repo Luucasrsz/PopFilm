@@ -44,3 +44,5 @@ services:
     build: ./web/front-end/apache
     ports:
       - 7777:80
+    depends_on:
+      - python

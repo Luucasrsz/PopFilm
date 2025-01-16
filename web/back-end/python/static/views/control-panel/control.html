@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controles administrador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../home/home.html" class="header-logo">Popfilm</a>
+      <nav class="header-nav">
+        <a href="../home/home.html">Inicio</a>
+        <a href="control.html">Modificar</a>
+      </nav>
+      <div class="account-actions">
+        <a href="register/register.html">
+          <img src="../../assets/account_icon.svg" alt="Account Circle" />
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="add-movie-button">
+        <button class="button" onclick="abrirFormulario()">
+          Agregar Película
+        </button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Género</th>
+              <th>Año</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="movie-list">
+            <tr>
+              <td>La Casa de Papel</td>
+              <td>Acción</td>
+              <td>2020</td>
+              <td>
+                <button class="icon-button" onclick="abrirFormulario()">
+                  <span class="icon">✏️</span>
+                </button>
+                <button class="icon-button" onclick="deleteMovie(this)">
+                  <span class="icon">🗑️</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal-form" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="cerrarFormulario()">×</span>
+        <h2>Agregar Película</h2>
+        <form id="movie-form" onsubmit="agregarPelicula(event)">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required />
+
+          <label for="genero">Género:</label>
+          <input type="text" id="genero" name="genero" required />
+
+          <label for="anio">Año:</label>
+          <input type="number" id="anio" name="anio" required />
+
+          <button type="submit" class="button">Guardar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login de usuarios</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <a href="../index.html"><h1>POPFILM</h1></a>
+      <form id="loginForm" action="#" method="POST">
+        <input
+          type="email"
+          id="email"
+          placeholder="Correo electrónico"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Contraseña"
+          required
+        />
+        <button type="submit" onclick="iniciarSesion();">Iniciar sesión</button>
+      </form>
+      <div class="error" style="display: none; color: red">
+        Usuario o contraseña incorrectos.
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
