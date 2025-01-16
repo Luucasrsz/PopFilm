@@ -10,8 +10,8 @@ services:
       MARIADB_USER_PASSWORD: 0traClave
       MARIADB_DATABASE: PEPS
     volumes:
-      - ./back-end/mariadb_data:/var/lib/mysql
-      - ./back-end/Peliculas.sql:/docker-entrypoint-initdb.d/Peliculas.sql
+      - ./mariadb_data:/var/lib/mysql
+      - ./Peliculas.sql:/docker-entrypoint-initdb.d/Peliculas.sql
     user: mysql
     ports:
       - 3306:3306
