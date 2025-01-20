@@ -29,12 +29,12 @@ def guardar_pelicula():
         code=401
     return json.dumps(ret), code
 
-@app.route("api/peliculas/<id>", methods=["DELETE"])
+@app.route("/api/peliculas/<id>", methods=["DELETE"])
 def eliminar_pelicula(id):
     ret,code=peliculas_controller.eliminar_pelicula(id)
     return json.dumps(ret), code
 
-@app.route("api/peliculas", methods=["PUT"])
+@app.route("/api/peliculas", methods=["PUT"])
 def actualizar_pelicula():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
