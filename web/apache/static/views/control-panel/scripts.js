@@ -20,7 +20,7 @@ function insertMovie() {
     body: datos,
   };
 
-  fetch("/peliculas", requestOptions)
+  fetch("/api/peliculas", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status === "OK") {

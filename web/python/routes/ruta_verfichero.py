@@ -6,7 +6,7 @@ import sys
 import json
 import subprocess
 
-@app.route ('/ver/<archivo>', methods=['GET']) 
+@app.route ('/api/ver/<archivo>', methods=['GET']) 
 def ver(archivo):
     try:    
         basepath = os.path.dirname(__file__) # ruta del archivo actual

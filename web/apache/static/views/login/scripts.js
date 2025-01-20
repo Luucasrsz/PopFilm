@@ -14,7 +14,7 @@ function iniciarSesion() {
     body: raw,
   };
 
-  fetch("/login", requestOptions)
+  fetch("/api/login", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status == "OK") {
