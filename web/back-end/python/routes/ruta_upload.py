@@ -5,7 +5,7 @@ import os
 import json
 import sys
 
-@app.route ('/upload', methods=['POST']) 
+@app.route ('/api/upload', methods=['POST']) 
 def upload():
     try:
         f= request.files['fichero']

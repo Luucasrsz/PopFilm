@@ -17,7 +17,7 @@ function registrarUsuario() {
     body: raw,
   };
 
-  fetch("/registro", requestOptions)
+  fetch("/api/registro", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status === "OK") {

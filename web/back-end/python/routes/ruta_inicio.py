@@ -4,7 +4,7 @@ from __main__ import app
 import json
 from bcrypt import hashpw, gensalt, checkpw  # Para manejar contraseñas de forma segura
 
-@app.route("/login", methods=['POST'])
+@app.route("/api/login", methods=['POST'])
 def login():
     content_type = request.headers.get('Content-Type')
     if content_type == 'application/json':
@@ -42,7 +42,7 @@ def login():
     return json.dumps(ret), code
 
 
-@app.route("/registro", methods=['POST'])
+@app.route("/api/registro", methods=['POST'])
 def registro():
     content_type = request.headers.get('Content-Type')
     if content_type == 'application/json':
@@ -89,7 +89,7 @@ def registro():
     return json.dumps(ret), code
 
 
-@app.route("/logout", methods=['GET'])
+@app.route("/api/logout", methods=['GET'])
 def logout():
     try:
         if "usuario" in session:
