@@ -36,13 +36,15 @@ services:
       DB_PORT: 3306
       PORT: 8080
       HOST: 0.0.0.0
-    PYTHONBUFFERED: 1
+      PYTHONBUFFERED: 1
     ports:
       - 9094:8000
     depends_on:
       - mariadb
   apache:
-    build: ./web/front-end/apache
+    build: ./web/apache
+    volumes: 
+      - ./web/python/static:/var/www/html
     ports:
       - 7777:80
     depends_on:

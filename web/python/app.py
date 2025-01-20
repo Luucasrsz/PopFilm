@@ -1,17 +1,17 @@
 import os
-from flask import Flask
-from variables import cargarvariables
-
+from flask import Flask, send_from_directory
 
 app = Flask(__name__)
 
 @app.route("/")
-def root():
-    return app.send_static_file('index.html')
+def serve_index():
+    return send_from_directory('/var/www/html', 'index.html')
 
+@app.route("/api/")
+def root():
+    return "API Root"
 
 app.config.from_pyfile('settings.py')
-cargarvariables()
 
 from routes import ruta_inicio
 from routes import ruta_peliculas
