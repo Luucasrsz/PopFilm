@@ -16,10 +16,10 @@ def login():
             conexion = obtener_conexion()
             with conexion.cursor() as cursor:
                 # Consulta segura con parámetros
-                cursor.execute("SELECT contrasena, perfil FROM usuarios WHERE email = %s", (email,))
+                cursor.execute("SELECT contrasena FROM usuarios WHERE email = %s", (email,))
                 usuario = cursor.fetchone()
 
-                if usuario is None or not checkpw(password.encode('utf-8'), usuario[0].encode('utf-8')):
+                if usuario is None or not checkpw(contrasena.encode('utf-8'), usuario[0].encode('utf-8')):
                     ret = {"status": "ERROR", "mensaje": "Usuario o contraseña incorrectos"}
                 else:
                     # Actualiza la columna logeado
@@ -28,7 +28,7 @@ def login():
 
                     ret = {"status": "OK"}
                     session["usuario"] = email
-                    session["perfil"] = usuario[1]
+                    
             code = 200
         except Exception as e:
             print(f"Excepción al validar al usuario: {str(e)}")
@@ -50,7 +50,7 @@ def registro():
         email = usuario_json.get('email')
         contrasena = usuario_json.get('contrasena')
         nombre = usuario_json.get('nombre')
-        perfil = usuario_json.get('profile')
+        logeado = usuario_json.get('logeado')
 
         try:
             conexion = obtener_conexion()
@@ -64,8 +64,8 @@ def registro():
                     hashed_password = hashpw(contrasena.encode('utf-8'), gensalt()).decode('utf-8')
 
                     cursor.execute(
-                        "INSERT INTO usuarios (email, contrasena, nombre, perfil, logeado) VALUES (%s, %s, %s, %s, FALSE)",
-                        (email, hashed_password, nombre, perfil)
+                        "INSERT INTO usuarios (email, contrasena, nombre, logeado) VALUES (%s, %s, %s, %s)",
+                        (email, hashed_password, nombre, logeado)
                     )
                     if cursor.rowcount == 1:
                         conexion.commit()

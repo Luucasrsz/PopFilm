@@ -5,7 +5,7 @@ function iniciarSesion() {
   document.getElementsByClassName("error")[0].style.display = "none";
   var raw = JSON.stringify({
     email: document.getElementById("email").value,
-    password: document.getElementById("password").value,
+    contrasena: document.getElementById("password").value,
   });
 
   var requestOptions = {
