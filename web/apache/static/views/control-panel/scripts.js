@@ -1,32 +1,37 @@
-function insertMovie() {
+// URL base de la API
+const apiUrl = "/api/peliculas"; // Ajustar según la URL de tu API
+
+// Función para insertar una película
+function insertMovie(event) {
+  event.preventDefault(); // Evitar que el formulario recargue la página
+
+  // Obtener los valores del formulario
   const nombre = document.getElementById("titulo").value;
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("genero").value;
-  const anio = document.getElementById("anio").value;
+  const portada = document.getElementById("portada").files[0]; // Obtenemos el archivo de la portada
 
-  // Preparar los datos a enviar
-  const datos = JSON.stringify({
-    nombre: nombre,
-    sinopsis: sinopsis,
-    categoria: categoria,
-    anio: anio,
-  });
+  // Crear un FormData para enviar los datos incluyendo el archivo
+  const formData = new FormData();
+  formData.append("nombre", nombre);
+  formData.append("sinopsis", sinopsis);
+  formData.append("categoria", categoria);
+  formData.append("portada", portada);
 
+  // Configurar la solicitud para enviar los datos
   const requestOptions = {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: datos,
+    body: formData,
   };
 
-  fetch("/api/peliculas", requestOptions)
+  // Enviar los datos al servidor
+  fetch(apiUrl, requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status === "OK") {
         alert("Película guardada con éxito");
         cerrarFormulario();
-        agregarFila(nombre, categoria, anio);
+        agregarFila(nombre, categoria, sinopsis, URL.createObjectURL(portada)); // Mostrar la película en la tabla
       } else {
         alert("La película no se ha guardado");
       }
@@ -37,40 +42,51 @@ function insertMovie() {
     });
 }
 
-// Agregar fila a la tabla dinámicamente
-function agregarFila(nombre, categoria, anio) {
-  const tableBody = document.getElementById("movie-list");
-  const newRow = `
-      <tr>
-        <td>${nombre}</td>
-        <td>${categoria}</td>
-        <td>${anio}</td>
-        <td>
-          <button class="icon-button" onclick="abrirFormulario()">
-            <span class="icon">✏️</span>
-          </button>
-          <button class="icon-button" onclick="deleteMovie(this)">
-            <span class="icon">🗑️</span>
-          </button>
-        </td>
-      </tr>
-    `;
+// Función para agregar una fila a la tabla
+function agregarFila(nombre, categoria, sinopsis, portadaUrl) {
+  const movieList = document.getElementById("movie-list");
+  const row = document.createElement("tr");
 
-  tableBody.insertAdjacentHTML("beforeend", newRow);
+  row.innerHTML = `
+    <td>${nombre}</td>
+    <td>${categoria}</td>
+    <td>${sinopsis}</td>
+    <td><img src="${portadaUrl}" alt="Portada" width="50" /></td>
+    <td>
+      <button onclick="deleteMovie(this)">Eliminar</button>
+    </td>
+  `;
+
+  movieList.appendChild(row);
 }
 
-// Eliminar fila de la tabla
+// Función para eliminar una película de la tabla
 function deleteMovie(button) {
-  const row = button.closest("tr");
-  row.remove();
+  const row = button.closest("tr"); // Encuentra la fila más cercana al botón
+  const movieId = row.dataset.id; // Asumir que cada fila tiene un 'data-id' con el ID de la película
+
+  // Eliminar película desde la API
+  fetch(`/api/peliculas/${movieId}`, { method: "DELETE" })
+    .then((response) => response.json())
+    .then((result) => {
+      if (result.status === "OK") {
+        row.remove(); // Eliminar la fila de la tabla
+      } else {
+        alert("La película no se ha eliminado");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Se ha producido un error al eliminar la película");
+    });
 }
 
-// Abrir el formulario modal
+// Función para abrir el formulario modal
 function abrirFormulario() {
   document.getElementById("modal-form").style.display = "flex";
 }
 
-// Cerrar el formulario modal
+// Función para cerrar el formulario modal
 function cerrarFormulario() {
   document.getElementById("modal-form").style.display = "none";
 }
