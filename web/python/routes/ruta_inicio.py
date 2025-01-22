@@ -53,7 +53,9 @@ def registro():
         logeado = usuario_json.get('logeado')
 
         try:
+            print("1")
             conexion = obtener_conexion()
+            print("2")
             with conexion.cursor() as cursor:
                 # Verifica si el usuario ya existe
                 cursor.execute("SELECT email FROM usuarios WHERE email = %s", (email,))

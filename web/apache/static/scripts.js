@@ -39,3 +39,4 @@ function cerrarModal() {
   modal.style.display = "none";
   location.href = "views/login/login.html";
 }
+
