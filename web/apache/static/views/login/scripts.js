@@ -18,8 +18,8 @@ function iniciarSesion() {
     .then((response) => response.json())
     .then((result) => {
       if (result.status == "OK") {
-        alert("Usuario registrado correctamente");
-        location.href = "../../index.html";
+        alert("Usuario logeado correctamente");
+        location.href = "../home/home.html";
       } else {
         document.getElementsByClassName("error")[0].style.display = "block";
       }

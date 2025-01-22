@@ -13,7 +13,9 @@ def login():
         contrasena = usuario_json.get('contrasena')
 
         try:
+            print("1")
             conexion = obtener_conexion()
+            print("2")
             with conexion.cursor() as cursor:
                 # Consulta segura con parámetros
                 cursor.execute("SELECT contrasena FROM usuarios WHERE email = %s", (email,))
@@ -71,7 +73,7 @@ def registro():
                     )
                     if cursor.rowcount == 1:
                         conexion.commit()
-                        ret = {"status": "OK", "mensaje": "Usuario registrado correctamente"}
+                        ret = {"status": "OK", "mensaje": "Usuario registrado"}
                         code = 201
                     else:
                         ret = {"status": "ERROR", "mensaje": "No se pudo registrar el usuario"}

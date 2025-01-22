@@ -6,9 +6,40 @@
     <title>Login de usuarios</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <script>
+    var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+function iniciarSesion() {
+  document.getElementsByClassName("error")[0].style.display = "none";
+  var raw = JSON.stringify({
+    email: document.getElementById("email").value,
+    contrasena: document.getElementById("password").value,
+  });
+
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+  };
+
+  fetch("/api/login", requestOptions)
+    .then((response) => response.json())
+    .then((result) => {
+      if (result.status == "OK") {
+        alert("Usuario logeado correctamente");
+        location.href = "../home/home.html";
+      } else {
+        document.getElementsByClassName("error")[0].style.display = "block";
+      }
+    })
+    .catch((error) => console.log("error", error));
+}
+
+  </script>
   <body>
     <div class="form-container">
-      <a href="../index.html"><h1>POPFILM</h1></a>
+      <a href="../index.html"><h1>PAPAFRITA</h1></a>
       <form id="loginForm" action="#" method="POST">
         <input
           type="email"
@@ -28,7 +59,5 @@
         Usuario o contraseña incorrectos.
       </div>
     </div>
-
-    <script src="scripts.js"></script>
   </body>
 </html>
