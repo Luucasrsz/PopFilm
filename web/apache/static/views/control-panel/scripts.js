@@ -2,6 +2,7 @@
 const apiUrl = "/api/peliculas"; // Ajustar según la URL de tu API
 
 // Función para insertar una película
+// Función para insertar una película
 function insertMovie(event) {
   event.preventDefault(); // Evitar que el formulario recargue la página
 
@@ -9,23 +10,20 @@ function insertMovie(event) {
   const nombre = document.getElementById("titulo").value;
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("genero").value;
-  const portada = document.getElementById("portada").files[0]; // Obtenemos el archivo de la portada
+  const portada = document.getElementById("portada").files[0]; // Obtener el archivo de la portada
 
   // Crear un FormData para enviar los datos incluyendo el archivo
   const formData = new FormData();
-  formData.append("nombre", nombre);
-  formData.append("sinopsis", sinopsis);
-  formData.append("categoria", categoria);
-  formData.append("portada", portada);
+  formData.append("nombre", nombre); // Nombre de la película
+  formData.append("sinopsis", sinopsis); // Sinopsis de la película
+  formData.append("categoria", categoria); // Categoría de la película
+  formData.append("fichero", portada); // Archivo de la portada
 
-  // Configurar la solicitud para enviar los datos
-  const requestOptions = {
+  // Enviar el archivo a la ruta /api/upload para guardarlo
+  fetch("/api/upload", {
     method: "POST",
     body: formData,
-  };
-
-  // Enviar los datos al servidor
-  fetch(apiUrl, requestOptions)
+  })
     .then((response) => response.json())
     .then((result) => {
       if (result.status === "OK") {
@@ -33,31 +31,44 @@ function insertMovie(event) {
         cerrarFormulario();
         agregarFila(nombre, categoria, sinopsis, URL.createObjectURL(portada)); // Mostrar la película en la tabla
       } else {
-        alert("La película no se ha guardado");
+        alert("Hubo un error al guardar la película");
       }
     })
     .catch((error) => {
       console.error("Error:", error);
-      alert("Se ha producido un error");
+      alert("Se ha producido un error al subir la portada");
     });
 }
 
 // Función para agregar una fila a la tabla
-function agregarFila(nombre, categoria, sinopsis, portadaUrl) {
-  const movieList = document.getElementById("movie-list");
+function agregarFila(nombre, categoria, sinopsis, portadaURL) {
+  const tableBody = document.getElementById("movie-list");
+
+  // Crear una nueva fila en la tabla
   const row = document.createElement("tr");
 
-  row.innerHTML = `
-    <td>${nombre}</td>
-    <td>${categoria}</td>
-    <td>${sinopsis}</td>
-    <td><img src="${portadaUrl}" alt="Portada" width="50" /></td>
-    <td>
-      <button onclick="deleteMovie(this)">Eliminar</button>
-    </td>
-  `;
+  // Crear las celdas para el nombre, categoría, sinopsis, portada
+  const tdNombre = document.createElement("td");
+  tdNombre.textContent = nombre;
+  const tdCategoria = document.createElement("td");
+  tdCategoria.textContent = categoria;
+  const tdSinopsis = document.createElement("td");
+  tdSinopsis.textContent = sinopsis;
+  const tdPortada = document.createElement("td");
+  const img = document.createElement("img");
+  img.src = portadaURL; // Usar la URL de la imagen subida
+  img.alt = "Portada";
+  img.width = 100; // Puedes ajustar el tamaño de la imagen si lo deseas
+  tdPortada.appendChild(img);
 
-  movieList.appendChild(row);
+  // Agregar las celdas a la fila
+  row.appendChild(tdNombre);
+  row.appendChild(tdCategoria);
+  row.appendChild(tdSinopsis);
+  row.appendChild(tdPortada);
+
+  // Agregar la fila a la tabla
+  tableBody.appendChild(row);
 }
 
 // Función para eliminar una película de la tabla
