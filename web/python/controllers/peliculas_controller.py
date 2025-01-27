@@ -2,12 +2,12 @@ from __future__ import print_function
 from bd import obtener_conexion
 import sys
 
-def insertar_pelicula(nombre, sinopsis, categoria,portada):
+def insertar_pelicula(nombre, sinopsis, categoria, portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("INSERT INTO peliculas(nombre, sinopsis, categoria,portada) VALUES (%s, %s, %s,%s)",
-                       (nombre, sinopsis, categoria,portada))
+            cursor.execute("INSERT INTO peliculas(nombre, sinopsis, categoria, portada) VALUES (%s, %s, %s, %s)",
+                       (nombre, sinopsis, categoria, portada))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:

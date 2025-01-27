@@ -18,7 +18,7 @@
       // Obtener los valores del formulario
       const nombre = document.getElementById("titulo").value;
       const sinopsis = document.getElementById("sinopsis").value;
-      const categoria = document.getElementById("genero").value;
+      const categoria = document.getElementById("categoria").value;
       const portada = document.getElementById("portada").files[0]; // Obtener el archivo de la portada
 
       // Crear un FormData para enviar los datos incluyendo el archivo
@@ -26,10 +26,10 @@
       formData.append("nombre", nombre); // Nombre de la película
       formData.append("sinopsis", sinopsis); // Sinopsis de la película
       formData.append("categoria", categoria); // Categoría de la película
-      formData.append("fichero", portada); // Archivo de la portada
+      formData.append("portada", portada); // Archivo de la portada
 
       // Enviar el archivo a la ruta /api/upload para guardarlo
-      fetch("/api/upload", {
+      fetch("/api/peliculas", {
         method: "POST",
         body: formData,
       })
@@ -53,6 +53,8 @@
           alert("Se ha producido un error al subir la portada");
         });
     }
+
+    
 
     // Función para agregar una fila a la tabla
     function agregarFila(nombre, categoria, sinopsis, portadaURL) {
@@ -161,8 +163,8 @@
           <label for="titulo">Título:</label>
           <input type="text" id="titulo" name="titulo" required />
 
-          <label for="genero">Categoria:</label>
-          <input type="text" id="genero" name="genero" required />
+          <label for="categoria">Categoria:</label>
+          <input type="text" id="categoria" name="categoria" required />
 
           <label for="sinopsis">Sinopsis:</label>
           <input type="text" id="sinopsis" name="sinopsis" required />
