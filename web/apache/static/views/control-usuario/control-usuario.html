@@ -4,75 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de Usuario</title>
-    <style>
-        /* Estilos básicos */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-
-        .input-field {
-            margin-bottom: 10px;
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            width: 100%;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        .error {
-            color: red;
-            display: none;
-            margin-bottom: 10px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
     <div class="container">
-        <h2>Control de Usuario</h2>
+        <h2>Panel del usuario</h2>
         
         <!-- Mensaje de error -->
         <div class="error" id="error-message">Hubo un problema con la actualización. Inténtalo de nuevo.</div>
 
         <!-- Formulario para cambiar nombre y contraseña -->
         <form id="user-form">
-            <input type="text" id="new-name" class="input-field" placeholder="Nuevo nombre">
-            <input type="password" id="new-password" class="input-field" placeholder="Nueva contraseña">
+            <input type="text" id="new-name" class="input-field" placeholder="Cambiar nombre">
+            <input type="password" id="new-password" class="input-field" placeholder="Cambiar contraseña">
             
             <button type="button" class="button" id="update-button">Actualizar</button>
         </form>
 
         <!-- Botón para cerrar sesión -->
-        <button type="button" class="button" id="logout-button">Cerrar sesión</button>
+        <button type="button" class="button logout-button" id="logout-button">Cerrar sesión</button>
     </div>
 
     <script>
@@ -122,12 +72,12 @@
         // Función para cerrar sesión
         logoutButton.addEventListener('click', function() {
             // Aquí puedes agregar la lógica para cerrar sesión, por ejemplo:
-            fetch('/api/logout', { method: 'POST' })
+            fetch('/api/logout', { method: 'GET' })
                 .then(response => response.json())
                 .then(result => {
                     if (result.status === 'OK') {
                         alert('Sesión cerrada');
-                        window.location.href = 'login.html'; // Redirige a la página de login
+                        window.location.href = '../login/login.html'; // Redirige a la página de login
                     } else {
                         alert('Error al cerrar sesión');
                     }
