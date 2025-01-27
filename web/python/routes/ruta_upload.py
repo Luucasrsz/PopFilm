@@ -1,34 +1,58 @@
-from flask import request
+from flask import Flask, request, jsonify
+from bd import obtener_conexion
+import os
+import uuid
 
-@app.route('/api/upload', methods=['POST'])
-def upload():
-    try:
-        # Verificar el Content-Type
-        content_type = request.content_type
-        if not content_type.startswith('multipart/form-data'):
-            return json.dumps({"status": "ERROR", "message": "Content-Type debe ser 'multipart/form-data'"}), 400
-        
-        if 'portada' not in request.files:
-            return json.dumps({"status": "ERROR", "message": "No se adjuntó un archivo"}), 400
-        
-        f = request.files['portada']  # Obtener el archivo
-        user_input = request.form.get("nombre")  # Obtener el nombre de la película
-        
-        # Sanitizar el nombre de la película
-        safe_name = user_input.replace(" ", "_").replace("/", "_").replace("\\", "_")
-        
-        basepath = os.path.dirname(__file__)
-        upload_folder = os.path.join(basepath, 'uploads')  # Carpeta de archivos subidos
-        
-        if not os.path.exists(upload_folder):
-            os.makedirs(upload_folder)
-        
-        # Usar el nombre de la película para el archivo
-        file_path = os.path.join(upload_folder, f"{safe_name}_{f.filename}")
+app = Flask(__name__)
 
-        f.save(file_path)
+UPLOAD_FOLDER = 'uploads'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
-        return json.dumps({"status": "OK", "file_path": file_path}), 200
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-    except Exception as e:
-        return json.dumps({"status": "ERROR", "message": str(e)}), 500
+# Verificar que el archivo tiene una extensión permitida
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+# Ruta para subir la portada de la película
+@app.route('/api/upload_image', methods=['POST'])
+def upload_portada():
+    if 'file' not in request.files:
+        return jsonify({"status": "ERROR", "message": "No file part"}), 400
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return jsonify({"status": "ERROR", "message": "No selected file"}), 400
+
+    if 'pelicula_id' not in request.form:
+        return jsonify({"status": "ERROR", "message": "No pelicula_id provided"}), 400
+
+    pelicula_id = request.form['pelicula_id']
+    
+    if file and allowed_file(file.filename):
+        # Crear un nombre único para el archivo
+        filename = str(uuid.uuid4()) + '.' + file.filename.rsplit('.', 1)[1].lower()
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+
+        # Guardar el archivo en el servidor
+        file.save(file_path)
+
+        # Insertar en la tabla 'portadas' y vincularla con la película
+        conn = obtener_conexion()
+        cursor = conn.cursor()
+        cursor.execute('''
+            INSERT INTO portadas (pelicula_id, ruta_portada)
+            VALUES (%s, %s)
+        ''', (pelicula_id, filename))
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+        return jsonify({"status": "OK", "message": "Portada subida exitosamente", "file_path": file_path}), 200
+
+    else:
+        return jsonify({"status": "ERROR", "message": "File type not allowed"}), 400
+
+if __name__ == "__main__":
+    app.run(debug=True)

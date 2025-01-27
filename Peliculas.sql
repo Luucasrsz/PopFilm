@@ -6,9 +6,11 @@ CREATE TABLE peliculas (
     sinopsis VARCHAR(255) NOT NULL,
     categoria VARCHAR(255) NOT NULL, 
     precio DECIMAL(9,2) NOT NULL,
-    portada VARCHAR(255)
+    portada TEXT
     
 );
+INSERT INTO peliculas(nombre, sinopsis, categoria, portada, precio)
+VALUES ('Ejemplo', 'Sinopsis de prueba', 'Comedia', 'PEPE', 19.99);
 
 CREATE TABLE usuarios (
     email VARCHAR(255) NOT NULL PRIMARY KEY,
