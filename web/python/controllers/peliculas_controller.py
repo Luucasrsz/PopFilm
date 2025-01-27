@@ -44,26 +44,25 @@ def obtener_peliculas():
         code=200
     except:
         print("Excepcion al obtener los juegos", file=sys.stdout)
-        juegosjson=[]
+        peliculasjson=[]
         code=500
-    return juegosjson,code
+    return peliculasjson,code
 
 def obtener_pelicula_por_id(id):
-    juegojson = {}
+    peliculasjson = {}
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            #cursor.execute("SELECT id, nombre, descripcion, precio,foto FROM juegos WHERE id = %s", (id,))
-            cursor.execute("SELECT id, nombre, sinopsis, categoria,portada FROM peliculas WHERE id =" + id)
+            cursor.execute("SELECT id, nombre, categoria, sinopsis,portada FROM peliculas WHERE id = %s", (id,))
             pelicula = cursor.fetchone()
             if pelicula is not None:
-                peliculasJson = convertir_pelicula_a_json(pelicula)
+                peliculasjson = convertir_pelicula_a_json(pelicula)
         conexion.close()
         code=200
     except:
         print("Excepcion al recuperar una pelicula", file=sys.stdout)
         code=500
-    return juegojson,code
+    return peliculasjson,code
 
 
 def eliminar_pelicula(id):
@@ -88,7 +87,7 @@ def actualizar_pelicula(id, nombre, sinopsis, categoria, portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("UPDATE juegos SET nombre = %s, sinopsis = %s, categoria = %s, portada=%s WHERE id = %s",
+            cursor.execute("UPDATE peliculas SET nombre = %s, sinopsis = %s, categoria = %s, portada=%s WHERE id = %s",
                        (nombre, sinopsis, categoria, portada,id))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
