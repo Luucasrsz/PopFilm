@@ -95,21 +95,5 @@ def registro():
 
 @app.route("/api/logout", methods=['GET'])
 def logout():
-    try:
-        if "usuario" in session:
-            conexion = obtener_conexion()
-            with conexion.cursor() as cursor:
-                # Deslogea al usuario en la base de datos
-                cursor.execute("UPDATE usuarios SET logeado = FALSE WHERE email = %s", (session["usuario"],))
-                conexion.commit()
-            conexion.close()
-
-        session.clear()
-        ret = {"status": "OK", "mensaje": "Sesión cerrada correctamente"}
-        code = 200
-    except Exception as e:
-        print(f"Excepción al cerrar sesión: {str(e)}")
-        ret = {"status": "ERROR", "mensaje": "Error al cerrar sesión"}
-        code = 500
-
-    return json.dumps(ret), code
+    session.clear()
+    return json.dumps({"status":"OK"}),200

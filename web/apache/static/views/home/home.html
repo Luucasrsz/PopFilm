@@ -5,7 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Popfilm</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #141414;
+        color: white;
+      }
+
+      .header {
+        background-color: #141414;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #e58d09;
+        text-decoration: none;
+        padding: 5px 10px;
+      }
+
+      .header-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .header-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .header-nav a:hover {
+        color: #e58d09;
+      }
+
+      .header-search {
+        background-color: #333;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        color: white;
+        outline: none;
+      }
+
+      .movie-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .movie-card {
+        width: 200px;
+        background-color: #222;
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s;
+      }
+
+      .movie-card:hover {
+        transform: scale(1.05);
+      }
+
+      /* Simulando la imagen con un div */
+      .movie-card .movie-image {
+        width: 100%;
+        height: 300px;
+        background-color: #555;
+        background-image: url('https://via.placeholder.com/200x300'); /* Imagen de ejemplo */
+        background-size: cover;
+        background-position: center;
+      }
+
+      .movie-card .movie-info {
+        padding: 10px;
+      }
+
+      .movie-card .movie-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+    </style>
   </head>
+  <script>
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    function cargarPeliculas() {
+      fetch("/api/peliculas")
+        .then(response => response.json())
+        .then(peliculas => {
+          const movieContainer = document.getElementById("movie-container");
+          movieContainer.innerHTML = '';
+          
+          // Verificar si la respuesta tiene datos
+          if (peliculas && peliculas.length > 0) {
+            peliculas.forEach(pelicula => {
+              const movieCard = document.createElement("div");
+              movieCard.classList.add("movie-card");
+
+              // Añadir la "imagen" de la película (div simulado)
+              const movieImage = document.createElement("div");
+              movieImage.classList.add("movie-image");
+              // Usamos la portada como background, si es válida
+              const portada = pelicula.portada ? pelicula.portada : 'https://via.placeholder.com/200x300';
+              movieImage.style.backgroundImage = `url(${portada})`;
+              movieCard.appendChild(movieImage);
+
+              // Información de la película
+              const movieInfo = document.createElement("div");
+              movieInfo.classList.add("movie-info");
+
+              const movieTitle = document.createElement("div");
+              movieTitle.classList.add("movie-title");
+              movieTitle.textContent = pelicula.nombre || "Título desconocido"; // Usar "nombre" como título
+              movieInfo.appendChild(movieTitle);
+
+              // Añadir la info al card
+              movieCard.appendChild(movieInfo);
+
+              // Añadir el card al contenedor
+              movieContainer.appendChild(movieCard);
+            });
+          } else {
+            // Mensaje si no se encuentran películas
+            const noMoviesMessage = document.createElement("div");
+            noMoviesMessage.textContent = "No se encontraron películas.";
+            movieContainer.appendChild(noMoviesMessage);
+          }
+        })
+        .catch(error => {
+          console.error('Error al cargar las películas:', error);
+        });
+    }
+
+    window.onload = cargarPeliculas;  // Cargar las películas al cargar la página
+  </script>
   <body>
     <header class="header">
       <a href="index.html" class="header-logo">Popfilm</a>
@@ -15,10 +160,14 @@
       </nav>
       <input type="text" class="header-search" placeholder="Buscar..." />
       <div class="account-actions">
-        <a href="../control-usuario/control-usuario.html"
-          ><img src="../../assets/account_icon.svg" alt="Account Circle"
-        /></a>
+        <a href="../control-usuario/control-usuario.html">
+          <img src="../../assets/account_icon.svg" alt="Account Circle" />
+        </a>
       </div>
     </header>
+
+    <div id="movie-container" class="movie-container">
+      <!-- Aquí se mostrarán las películas -->
+    </div>
   </body>
 </html>
