@@ -6,8 +6,8 @@ def insertar_pelicula(nombre, sinopsis, categoria, precio, portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("INSERT INTO peliculas(nombre, sinopsis, categoria, portada, precio) VALUES (%s, %s, %s, %s, %s)",
-                       (nombre, sinopsis, categoria, portada, precio))
+            cursor.execute("INSERT INTO peliculas(nombre, sinopsis, categoria, precio, portada) VALUES (%s, %s, %s, %s, %s)",
+                       (nombre, sinopsis, categoria, precio, portada))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:
@@ -27,8 +27,9 @@ def convertir_pelicula_a_json(pelicula):
     d['nombre'] = pelicula[1]
     d['sinopsis'] = pelicula[2]
     d['categoria'] = pelicula[3]
-    d['portada'] = pelicula[4]
-    d['precio'] = pelicula[5]
+    d['precio'] = pelicula[4]
+    d['portada'] = pelicula[5]
+    
     return d
 
 def obtener_peliculas():
@@ -84,12 +85,12 @@ def eliminar_pelicula(id):
         code=500
     return ret,code
 
-def actualizar_pelicula(id, nombre, sinopsis, categoria, portada, precio):
+def actualizar_pelicula(id, nombre, sinopsis, categoria, precio, portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("UPDATE peliculas SET nombre = %s, sinopsis = %s, categoria = %s, portada=%s, precio=%s WHERE id = %s",
-                       (nombre, sinopsis, categoria, portada, precio,id))
+            cursor.execute("UPDATE peliculas SET nombre = %s, sinopsis = %s, categoria = %s, precio=%s, portada=%s WHERE id = %s",
+                       (nombre, sinopsis, categoria, precio, portada,id))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:

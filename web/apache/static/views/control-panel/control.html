@@ -27,8 +27,8 @@
         "nombre": nombre,
         "sinopsis": sinopsis,
         "categoria": categoria,
-        "portada": portada,
-        "precio": precio
+        "precio": precio,
+        "portada": portada
       });
 
       fetch("/api/peliculas", {
@@ -75,7 +75,7 @@ function editarPelicula(id) {
       document.getElementById("titulo").value = pelicula.nombre;
       document.getElementById("sinopsis").value = pelicula.sinopsis;
       document.getElementById("categoria").value = pelicula.categoria;
-      document.getElementById("precio").value = pelicula.precio
+      document.getElementById("precio").value = pelicula.precio;
 
       // Cambiar el botón de "Guardar" a "Actualizar"
       document.getElementById("submit-btn").textContent = "Actualizar";
@@ -98,7 +98,7 @@ function editarPelicula(id) {
   const nombre = document.getElementById("titulo").value;
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("categoria").value;
-  const precio = document.getElementById("precio").value;
+  const precio = parseFloat(document.getElementById("precio").value) || 0.0;//si metes texto el precio se pone a 0
   const portada = "PEPE"; // Puedes añadir lógica para manejar la portada si es necesario
 
   const datos = JSON.stringify({
@@ -106,8 +106,8 @@ function editarPelicula(id) {
     "nombre": nombre,
     "sinopsis": sinopsis,
     "categoria": categoria,
-    "portada": portada,
-    "precio": precio
+    "precio": precio,
+    "portada": portada
   });
 
   // Realizar la solicitud PUT
@@ -141,7 +141,7 @@ function editarPelicula(id) {
 }
 
     // Función para agregar una fila a la tabla de películas
-    function agregarFila(nombre, categoria, sinopsis, portadaURL,precio, id) {
+    function agregarFila(nombre, categoria, sinopsis, precio, portadaURL, id) {
       const tableBody = document.getElementById("movie-list");
 
       // Crear una nueva fila en la tabla
@@ -154,7 +154,7 @@ function editarPelicula(id) {
       tdCategoria.textContent = categoria;
       const tdSinopsis = document.createElement("td");
       tdSinopsis.textContent = sinopsis;
-      const tdPortada = document.createElement("td");
+      //const tdPortada = document.createElement("td");
       const tdPrecio = document.createElement("td");
       tdPrecio.textContent = precio;
       //const img = document.createElement("img");
@@ -189,7 +189,7 @@ function editarPelicula(id) {
       row.appendChild(tdNombre);
       row.appendChild(tdCategoria);
       row.appendChild(tdSinopsis);
-      row.appendChild(tdPortada);
+      row.appendChild(tdPrecio); 
       row.appendChild(tdAcciones);
 
       // Agregar la fila a la tabla
@@ -270,7 +270,6 @@ function editarPelicula(id) {
               <th>Categoria</th>
               <th>Sinopsis</th>
               <th>Precio</th>
-              <th>Portada</th>
               <th>Acciones</th>
             </tr>
           </thead>

@@ -23,7 +23,7 @@ def guardar_pelicula():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         pelicula_json = request.json
-        ret,code=peliculas_controller.insertar_pelicula(pelicula_json["nombre"], pelicula_json["sinopsis"], (pelicula_json["categoria"]), pelicula_json["portada"], pelicula_json["precio"])
+        ret,code=peliculas_controller.insertar_pelicula(pelicula_json["nombre"], pelicula_json["sinopsis"], (pelicula_json["categoria"]), pelicula_json["precio"], pelicula_json["portada"])
     else:
         ret={"status":"Bad request"}
         code=401
@@ -39,7 +39,7 @@ def actualizar_pelicula():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         pelicula_json = request.json
-        ret,code=peliculas_controller.actualizar_pelicula(pelicula_json["id"],pelicula_json["nombre"], pelicula_json["sinopsis"], (pelicula_json["categoria"]),pelicula_json["portada"], pelicula_json["precio"])
+        ret,code=peliculas_controller.actualizar_pelicula(pelicula_json["id"],pelicula_json["nombre"], pelicula_json["sinopsis"], (pelicula_json["categoria"]), pelicula_json["precio"], pelicula_json["portada"])
     else:
         ret={"status":"Bad request"}
         code=401
