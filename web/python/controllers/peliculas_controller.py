@@ -2,12 +2,12 @@ from __future__ import print_function
 from bd import obtener_conexion
 import sys
 
-def insertar_pelicula(nombre, sinopsis, categoria, portada):
+def insertar_pelicula(nombre, sinopsis, categoria, precio, portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("INSERT INTO peliculas(nombre, sinopsis, categoria, portada) VALUES (%s, %s, %s, %s)",
-                       (nombre, sinopsis, categoria, portada))
+            cursor.execute("INSERT INTO peliculas(nombre, sinopsis, categoria, portada, precio) VALUES (%s, %s, %s, %s, %s)",
+                       (nombre, sinopsis, categoria, portada, precio))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:
@@ -28,13 +28,14 @@ def convertir_pelicula_a_json(pelicula):
     d['sinopsis'] = pelicula[2]
     d['categoria'] = pelicula[3]
     d['portada'] = pelicula[4]
+    d['precio'] = pelicula[5]
     return d
 
 def obtener_peliculas():
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("SELECT id, nombre, sinopsis, categoria,portada FROM peliculas")
+            cursor.execute("SELECT id, nombre, sinopsis, categoria,portada, precio FROM peliculas")
             peliculas = cursor.fetchall()
             peliculasjson=[]
             if peliculas:
@@ -53,7 +54,7 @@ def obtener_pelicula_por_id(id):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("SELECT id, nombre, categoria, sinopsis,portada FROM peliculas WHERE id = %s", (id,))
+            cursor.execute("SELECT id, nombre, categoria, sinopsis,portada, precio FROM peliculas WHERE id = %s", (id,))
             pelicula = cursor.fetchone()
             if pelicula is not None:
                 peliculasjson = convertir_pelicula_a_json(pelicula)
@@ -83,12 +84,12 @@ def eliminar_pelicula(id):
         code=500
     return ret,code
 
-def actualizar_pelicula(id, nombre, sinopsis, categoria, portada):
+def actualizar_pelicula(id, nombre, sinopsis, categoria, portada, precio):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:
-            cursor.execute("UPDATE peliculas SET nombre = %s, sinopsis = %s, categoria = %s, portada=%s WHERE id = %s",
-                       (nombre, sinopsis, categoria, portada,id))
+            cursor.execute("UPDATE peliculas SET nombre = %s, sinopsis = %s, categoria = %s, portada=%s, precio=%s WHERE id = %s",
+                       (nombre, sinopsis, categoria, portada, precio,id))
             if cursor.rowcount == 1:
                 ret={"status": "OK" }
             else:

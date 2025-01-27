@@ -5,7 +5,9 @@ CREATE TABLE peliculas (
     nombre VARCHAR(255) NOT NULL,
     sinopsis VARCHAR(255) NOT NULL,
     categoria VARCHAR(255) NOT NULL, 
+    precio DECIMAL(9,2) NOT NULL,
     portada VARCHAR(255)
+    
 );
 
 CREATE TABLE usuarios (

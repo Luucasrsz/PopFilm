@@ -21,12 +21,14 @@
       const nombre = document.getElementById("titulo").value;
       const sinopsis = document.getElementById("sinopsis").value;
       const categoria = document.getElementById("categoria").value;
+      const precio = document.getElementById("precio").value;
       const portada = "PEPE"; // Puedes agregar lógica para manejar la portada si es necesario
       const datos = JSON.stringify({
         "nombre": nombre,
         "sinopsis": sinopsis,
         "categoria": categoria,
-        "portada": portada
+        "portada": portada,
+        "precio": precio
       });
 
       fetch("/api/peliculas", {
@@ -43,6 +45,7 @@
               nombre,
               categoria,
               sinopsis,
+              precio,
               portada
             ); // Mostrar la película en la tabla
           } else {
@@ -72,6 +75,7 @@ function editarPelicula(id) {
       document.getElementById("titulo").value = pelicula.nombre;
       document.getElementById("sinopsis").value = pelicula.sinopsis;
       document.getElementById("categoria").value = pelicula.categoria;
+      document.getElementById("precio").value = pelicula.precio
 
       // Cambiar el botón de "Guardar" a "Actualizar"
       document.getElementById("submit-btn").textContent = "Actualizar";
@@ -94,6 +98,7 @@ function editarPelicula(id) {
   const nombre = document.getElementById("titulo").value;
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("categoria").value;
+  const precio = document.getElementById("precio").value;
   const portada = "PEPE"; // Puedes añadir lógica para manejar la portada si es necesario
 
   const datos = JSON.stringify({
@@ -101,7 +106,8 @@ function editarPelicula(id) {
     "nombre": nombre,
     "sinopsis": sinopsis,
     "categoria": categoria,
-    "portada": portada
+    "portada": portada,
+    "precio": precio
   });
 
   // Realizar la solicitud PUT
@@ -135,7 +141,7 @@ function editarPelicula(id) {
 }
 
     // Función para agregar una fila a la tabla de películas
-    function agregarFila(nombre, categoria, sinopsis, portadaURL, id) {
+    function agregarFila(nombre, categoria, sinopsis, portadaURL,precio, id) {
       const tableBody = document.getElementById("movie-list");
 
       // Crear una nueva fila en la tabla
@@ -149,6 +155,8 @@ function editarPelicula(id) {
       const tdSinopsis = document.createElement("td");
       tdSinopsis.textContent = sinopsis;
       const tdPortada = document.createElement("td");
+      const tdPrecio = document.createElement("td");
+      tdPrecio.textContent = precio;
       //const img = document.createElement("img");
       //img.src = portadaURL;
       //img.alt = "Portada";
@@ -196,7 +204,7 @@ function editarPelicula(id) {
           const tableBody = document.getElementById("movie-list");
           tableBody.innerHTML = '';
           peliculas.forEach(pelicula => {
-            agregarFila(pelicula.nombre, pelicula.categoria, pelicula.sinopsis, pelicula.portada, pelicula.id);
+            agregarFila(pelicula.nombre, pelicula.categoria, pelicula.sinopsis, pelicula.portada, pelicula.precio, pelicula.id);
           });
         })
         .catch(error => console.error('Error al cargar las películas:', error));
@@ -261,6 +269,7 @@ function editarPelicula(id) {
               <th>Título</th>
               <th>Categoria</th>
               <th>Sinopsis</th>
+              <th>Precio</th>
               <th>Portada</th>
               <th>Acciones</th>
             </tr>
@@ -285,6 +294,10 @@ function editarPelicula(id) {
 
           <label for="sinopsis">Sinopsis:</label>
           <input type="text" id="sinopsis" name="sinopsis" required />
+
+          <label for="precio">Precio:</label>
+          <input type="text" id="precio" name="precio" required />
+
 
           <button type="submit" id="submit-btn" class="button">Guardar</button>
         </form>
