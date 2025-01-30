@@ -90,7 +90,6 @@ def eliminar_pelicula(id):
     return ret,code
 
 def actualizar_pelicula(id, nombre, sinopsis, categoria, precio, portada):
-def actualizar_pelicula(id, nombre, sinopsis, categoria, precio, portada):
     try:
         conexion = obtener_conexion()
         with conexion.cursor() as cursor:

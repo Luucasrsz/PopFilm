@@ -49,6 +49,8 @@ def guardar_pelicula():
                 # Guardar el archivo con su nombre original
                 portada_filename = os.path.join(upload_folder, portada.filename)
                 portada.save(portada_filename)
+
+                print(f"Imagen guardada en: {portada_filename}")  # Depuración
             
             # Llamar al controlador para insertar la película en la base de datos
             ret, code = peliculas_controller.insertar_pelicula(nombre, sinopsis, categoria, precio, portada_filename)

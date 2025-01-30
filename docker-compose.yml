@@ -37,6 +37,8 @@ services:
       PORT: 8080
       HOST: 0.0.0.0
       PYTHONBUFFERED: 1
+    volumes:
+      - ./uploads:/uploads 
     ports:
       - 9094:8000
     depends_on:
@@ -45,6 +47,7 @@ services:
     build: ./web/apache
     volumes: 
       - ./web/python/static:/var/www/html
+      - ./uploads:/var/www/html/uploads
     ports:
       - 7777:80
     depends_on:

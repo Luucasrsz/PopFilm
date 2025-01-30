@@ -118,7 +118,7 @@
               const movieImage = document.createElement("div");
               movieImage.classList.add("movie-image");
               // Usamos la portada como background, si es válida
-              const portada = pelicula.portada ? pelicula.portada : 'https://via.placeholder.com/200x300';
+              const portada = pelicula.portada ? `/views/home/uploads/${pelicula.portada}` : 'https://via.placeholder.com/200x300';
               movieImage.style.backgroundImage = `url(${portada})`;
               movieCard.appendChild(movieImage);
 

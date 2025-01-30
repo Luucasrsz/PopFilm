@@ -93,29 +93,22 @@ function editarPelicula(id) {
 }
 
 // Función para guardar los cambios de una película
-// Función para guardar los cambios de una película
 function guardarCambios(event) {
-  event.preventDefault(); // Evitar que se recargue la página
+  event.preventDefault();
 
   const nombre = document.getElementById("titulo").value;
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("categoria").value;
   const precio = parseFloat(document.getElementById("precio").value);
-  const portada = document.getElementById("portada").files[0];  // Obtener el archivo de la portada
+  const portada = document.getElementById("portada").files[0]; 
 
   const formData = new FormData();
-  formData.append("id", peliculaId);  // ID de la película que se está editando
+  formData.append("id", peliculaId); 
   formData.append("nombre", nombre);
   formData.append("sinopsis", sinopsis);
   formData.append("categoria", categoria);
   formData.append("precio", precio);
-  
-  // Si se selecciona una nueva portada, se agrega
-  if (portada) {
-    formData.append("portada", portada);
-  }
 
-  // Enviar los datos al servidor
   fetch(`/api/peliculas`, {
     method: 'PUT',
     body: formData
@@ -131,7 +124,7 @@ function guardarCambios(event) {
       if (result.status === "OK") {
         alert("Película actualizada con éxito");
         cerrarFormulario();
-        cargarPeliculas(); // Recargar las películas para ver los cambios
+        cargarPeliculas();
       } else {
         alert(`Hubo un error al actualizar la película: ${result.message || "Error desconocido"}`);
       }
@@ -144,61 +137,61 @@ function guardarCambios(event) {
 
 
 
+// Función para calcular el IVA
+function calcularIVA(precio) {
+  return precio * 0.21;
+}
 
 // Función para agregar una fila a la tabla de películas
 function agregarFila(nombre, categoria, sinopsis, precio, portada, id) {
   const tableBody = document.getElementById("movie-list");
 
-  // Crear una nueva fila en la tabla
   const row = document.createElement("tr");
 
-  // Crear las celdas para el nombre, categoría, sinopsis
   const tdNombre = document.createElement("td");
   tdNombre.textContent = nombre;
   const tdCategoria = document.createElement("td");
   tdCategoria.textContent = categoria;
   const tdSinopsis = document.createElement("td");
   tdSinopsis.textContent = sinopsis;
-
-  // Crear la celda para el precio
   const tdPrecio = document.createElement("td");
-  tdPrecio.textContent = precio;  // Asegúrate de que el precio vaya aquí
-
-  // Crear la celda para la portada
+  tdPrecio.textContent = precio;
   const tdPortada = document.createElement("td");
-  tdPortada.textContent = portada;  // Mostrar el nombre de la portada
-
-  // Crear las celdas para las acciones (editar y eliminar)
+  tdPortada.textContent = portada;
   const tdAcciones = document.createElement("td");
 
   // Botón de editar
   const btnEditar = document.createElement("button");
   btnEditar.textContent = "Editar";
   btnEditar.onclick = function() {
-    console.log("ID para editar:", id);  // Verificar si el id se pasa correctamente
-    editarPelicula(id);  // Llamar a editarPelicula con el id
+      editarPelicula(id);
   };
 
   // Botón de eliminar
   const btnEliminar = document.createElement("button");
   btnEliminar.textContent = "Eliminar";
   btnEliminar.addEventListener("click", function() {
-    eliminarPelicula(id);
+      eliminarPelicula(id);
   });
 
-  // Añadir los botones a la celda de acciones
+  // Botón de calcular IVA
+  const btnCalcularIVA = document.createElement("button");
+  btnCalcularIVA.textContent = "Calcular IVA";
+  btnCalcularIVA.onclick = function() {
+      alert(`El IVA de ${nombre} es: $${calcularIVA(precio).toFixed(2)}`);
+  };
+
   tdAcciones.appendChild(btnEditar);
   tdAcciones.appendChild(btnEliminar);
+  tdAcciones.appendChild(btnCalcularIVA);
 
-  // Agregar las celdas a la fila en el orden correcto
-  row.appendChild(tdNombre);     // Título
-  row.appendChild(tdCategoria);  // Categoría
-  row.appendChild(tdSinopsis);   // Sinopsis
-  row.appendChild(tdPrecio);     // Precio
-  row.appendChild(tdPortada);    // Portada
-  row.appendChild(tdAcciones);   // Acciones
+  row.appendChild(tdNombre);
+  row.appendChild(tdCategoria);
+  row.appendChild(tdSinopsis);
+  row.appendChild(tdPrecio);
+  row.appendChild(tdPortada);
+  row.appendChild(tdAcciones);
 
-  // Agregar la fila a la tabla
   tableBody.appendChild(row);
 }
 
