@@ -8,6 +8,7 @@ from bcrypt import hashpw, gensalt, checkpw
 from bd import obtener_conexion
 import os
 import json
+from funciones_auxiliares import sanitize_input
 
 app = Flask(__name__)
 
@@ -26,12 +27,9 @@ def login():
     content_type = request.headers.get('Content-Type')
     if content_type == 'application/json':
         usuario_json = request.json
-        email = usuario_json.get('email')
-        contrasena = usuario_json.get('contrasena')
-
-         # Sanitizar los inputs
-        email = sanitize_input(email)
-        contrasena = sanitize_input(contrasena)
+        if "email" in usuario_json and "contrasena" in usuario_json:
+            email = sanitize_input(usuario_json['email'])
+            contrasena = sanitize_input(usuario_json['contrasena'])
 
         try:
             conexion = obtener_conexion()
@@ -69,6 +67,10 @@ def registro():
     email = usuario_json.get('email')
     contrasena = usuario_json.get('contrasena')
     nombre = usuario_json.get('nombre')
+
+    email = sanitize_input(email)
+    contrasena = sanitize_input(contrasena)
+    nombre = sanitize_input(nombre)
 
     try:
         conexion = obtener_conexion()
