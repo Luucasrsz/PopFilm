@@ -4,6 +4,7 @@ import decimal
 import json
 from __main__ import app
 from controllers import peliculas_controller
+from funciones_auxiliares import sanitize_input
 
 class Encoder(json.JSONEncoder):
     def default(self, obj):
@@ -19,6 +20,8 @@ def peliculas():
 
 @app.route("/api/pelicula/<id>", methods=["GET"])
 def pelicula_por_id(id):
+    # Sanitizar el ID antes de utilizarlo
+    id = sanitize_input(id)
     pelicula, code = peliculas_controller.obtener_pelicula_por_id(id)
     return json.dumps(pelicula, cls=Encoder), code  # Usar json.dumps con el encoder
 
@@ -65,6 +68,8 @@ def guardar_pelicula():
 
 @app.route("/api/peliculas/<id>", methods=["DELETE"])
 def eliminar_pelicula(id):
+    # Sanitizar el ID antes de utilizarlo
+    id = sanitize_input(id)
     ret, code = peliculas_controller.eliminar_pelicula(id)
     return ret, code  # No se necesita jsonify aquí.
 

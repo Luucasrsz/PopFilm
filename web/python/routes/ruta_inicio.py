@@ -29,6 +29,10 @@ def login():
         email = usuario_json.get('email')
         contrasena = usuario_json.get('contrasena')
 
+         # Sanitizar los inputs
+        email = sanitize_input(email)
+        contrasena = sanitize_input(contrasena)
+
         try:
             conexion = obtener_conexion()
             with conexion.cursor() as cursor:
