@@ -2,7 +2,7 @@ version: "3"
 services:
   mariadb:
     image: mariadb
-    container_name: mariadb
+    container_name: mariadba3
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: example
@@ -13,21 +13,20 @@ services:
       - ./mariadb_data:/var/lib/mysql
       - ./Peliculas.sql:/docker-entrypoint-initdb.d/Peliculas.sql
     user: mysql
-    ports:
-      - 3306:3306
+    
   phpmyadmin:
     image: phpmyadmin
-    container_name: phpmyadmin
+    container_name: phpmyadmina3
     restart: always
     environment:
       - PMA_HOST=mariadb
     ports:
-      - 9093:80
+      - 7003:80
     depends_on:
       - mariadb
   python:
     build: .
-    container_name: python
+    container_name: pythona3
     environment:
       DB_USERNAME: root
       DB_PASSWORD: example
@@ -36,19 +35,20 @@ services:
       DB_PORT: 3306
       PORT: 8080
       HOST: 0.0.0.0
+      SECRET_KEY: 'you-will-never-guess'
+      DEBUG: False
       PYTHONBUFFERED: 1
     volumes:
       - ./uploads:/uploads 
-    ports:
-      - 9094:8000
     depends_on:
       - mariadb
   apache:
     build: ./web/apache
+    container_name: apachea3
     volumes: 
       - ./web/python/static:/var/www/html
       - ./uploads:/var/www/html/uploads
     ports:
-      - 7777:80
+      - 6003:80
     depends_on:
       - python
