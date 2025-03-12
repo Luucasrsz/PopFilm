@@ -36,7 +36,7 @@ services:
       PORT: 8080
       HOST: 0.0.0.0
       SECRET_KEY: 'you-will-never-guess'
-      DEBUG: False
+      DEBUG: "false"
       PYTHONBUFFERED: 1
     volumes:
       - ./uploads:/uploads 
