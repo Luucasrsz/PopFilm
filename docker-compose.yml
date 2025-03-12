@@ -10,7 +10,7 @@ services:
       MARIADB_USER_PASSWORD: 0traClave
       MARIADB_DATABASE: POPFILM
     volumes:
-      - ./mariadb_data:/var/lib/mysql
+      - mariadb_dataa3:/var/lib/mysql
       - ./Peliculas.sql:/docker-entrypoint-initdb.d/Peliculas.sql
     user: mysql
     
@@ -52,3 +52,7 @@ services:
       - 6003:80
     depends_on:
       - python
+volumes:
+  mariadb_dataa3:
+
+

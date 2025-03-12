@@ -3,6 +3,7 @@ from bd import obtener_conexion
 from __main__ import app
 import json
 from bcrypt import hashpw, gensalt, checkpw  # Para manejar contraseñas de forma segura
+from funciones_auxiliares import sanitize_input
 
 @app.route("/api/login", methods=['POST'])
 def login():
@@ -11,6 +12,10 @@ def login():
         usuario_json = request.json
         email = usuario_json.get('email')
         contrasena = usuario_json.get('contrasena')
+
+         # Sanitizar los inputs
+        email = sanitize_input(email)
+        contrasena = sanitize_input(contrasena)
 
         try:
             print("1")
@@ -53,6 +58,12 @@ def registro():
         contrasena = usuario_json.get('contrasena')
         nombre = usuario_json.get('nombre')
         logeado = usuario_json.get('logeado')
+
+        # Sanitizar los inputs
+        email = sanitize_input(email)
+        contrasena = sanitize_input(contrasena)
+        nombre = sanitize_input(nombre)
+        logeado = sanitize_input(logeado)
 
         try:
             print("1")

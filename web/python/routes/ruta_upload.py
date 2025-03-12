@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from bd import obtener_conexion
 import os
 import uuid
+from funciones_auxiliares import sanitize_input
 
 app = Flask(__name__)
 
@@ -29,6 +30,9 @@ def upload_portada():
         return jsonify({"status": "ERROR", "message": "No pelicula_id provided"}), 400
 
     pelicula_id = request.form['pelicula_id']
+
+     # Sanitizar el pelicula_id para prevenir entradas maliciosas
+    pelicula_id = sanitize_input(pelicula_id)
     
     if file and allowed_file(file.filename):
         # Crear un nombre único para el archivo
