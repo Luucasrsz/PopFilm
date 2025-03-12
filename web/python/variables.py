@@ -7,3 +7,6 @@ def cargarvariables():
     os.environ['DB_PORT']='3306'
     os.environ['PORT']='8080'
     os.environ['HOST']='0.0.0.0'
+    
+# 🔹 Clave secreta para JWT (Cámbiala en producción y usa variables de entorno)
+    os.environ['JWT_SECRET_KEY'] = 'lucaselpelucas'  

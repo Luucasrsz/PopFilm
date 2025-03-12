@@ -1,8 +1,25 @@
-from flask import request, session
+from flask import Flask, request, jsonify, make_response
+from flask_jwt_extended import (
+    JWTManager, create_access_token, jwt_required, get_jwt_identity
+)
+from flask_cors import CORS
+import pymysql
+from bcrypt import hashpw, gensalt, checkpw
 from bd import obtener_conexion
-from __main__ import app
+import os
 import json
-from bcrypt import hashpw, gensalt, checkpw  # Para manejar contraseñas de forma segura
+
+app = Flask(__name__)
+
+# Configuración del JWT
+app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET_KEY')
+app.config["JWT_TOKEN_LOCATION"] = ["cookies"] 
+app.config["JWT_COOKIE_SECURE"] = False 
+app.config["JWT_COOKIE_HTTPONLY"] = True  
+app.config["JWT_COOKIE_SAMESITE"] = "Strict"
+
+jwt = JWTManager(app)
+CORS(app, supports_credentials=True)
 
 @app.route("/api/login", methods=['POST'])
 def login():
@@ -13,87 +30,82 @@ def login():
         contrasena = usuario_json.get('contrasena')
 
         try:
-            print("1")
             conexion = obtener_conexion()
-            print("2")
             with conexion.cursor() as cursor:
-                # Consulta segura con parámetros
                 cursor.execute("SELECT contrasena FROM usuarios WHERE email = %s", (email,))
                 usuario = cursor.fetchone()
 
                 if usuario is None or not checkpw(contrasena.encode('utf-8'), usuario[0].encode('utf-8')):
-                    ret = {"status": "ERROR", "mensaje": "Usuario o contraseña incorrectos"}
-                else:
-                    # Actualiza la columna logeado
-                    cursor.execute("UPDATE usuarios SET logeado = TRUE WHERE email = %s", (email,))
-                    conexion.commit()
+                    return jsonify({"status": "ERROR", "mensaje": "Usuario o contraseña incorrectos"}), 400
 
-                    ret = {"status": "OK"}
-                    session["usuario"] = email
-                    
-            code = 200
+                # Generar el JWT
+                token = create_access_token(identity=email)
+
+                # Guardar en cookie segura
+                resp = make_response(jsonify({"status": "OK"}))
+                resp.set_cookie("access_token_cookie", token, httponly=True, samesite="Strict")
+                return resp
         except Exception as e:
             print(f"Excepción al validar al usuario: {str(e)}")
-            ret = {"status": "ERROR", "mensaje": "Error interno del servidor"}
-            code = 500
+            return jsonify({"status": "ERROR", "mensaje": "Error interno del servidor"}), 500
         finally:
             conexion.close()
-    else:
-        ret = {"status": "Bad request", "mensaje": "Formato de contenido no válido"}
-        code = 400
-    return json.dumps(ret), code
+
+    return jsonify({"status": "ERROR", "mensaje": "Formato de contenido no válido"}), 400
+
 
 
 @app.route("/api/registro", methods=['POST'])
 def registro():
     content_type = request.headers.get('Content-Type')
-    if content_type == 'application/json':
-        usuario_json = request.json
-        email = usuario_json.get('email')
-        contrasena = usuario_json.get('contrasena')
-        nombre = usuario_json.get('nombre')
-        logeado = usuario_json.get('logeado')
+    if content_type != 'application/json':
+        return jsonify({"status": "ERROR", "mensaje": "Formato de contenido no válido"}), 400
 
-        try:
-            print("1")
-            conexion = obtener_conexion()
-            print("2")
-            with conexion.cursor() as cursor:
-                # Verifica si el usuario ya existe
-                cursor.execute("SELECT email FROM usuarios WHERE email = %s", (email,))
-                usuario = cursor.fetchone()
+    usuario_json = request.json
+    email = usuario_json.get('email')
+    contrasena = usuario_json.get('contrasena')
+    nombre = usuario_json.get('nombre')
 
-                if usuario is None:
-                    # Cifrar la contraseña
-                    hashed_password = hashpw(contrasena.encode('utf-8'), gensalt()).decode('utf-8')
+    try:
+        conexion = obtener_conexion()
+        with conexion.cursor() as cursor:
+            cursor.execute("SELECT email FROM usuarios WHERE email = %s", (email,))
+            usuario = cursor.fetchone()
 
-                    cursor.execute(
-                        "INSERT INTO usuarios (email, contrasena, nombre, logeado) VALUES (%s, %s, %s, %s)",
-                        (email, hashed_password, nombre, logeado)
-                    )
-                    if cursor.rowcount == 1:
-                        conexion.commit()
-                        ret = {"status": "OK", "mensaje": "Usuario registrado"}
-                        code = 201
-                    else:
-                        ret = {"status": "ERROR", "mensaje": "No se pudo registrar el usuario"}
-                        code = 500
-                else:
-                    ret = {"status": "ERROR", "mensaje": "El usuario ya existe"}
-                    code = 400
-        except Exception as e:
-            print(f"Excepción al registrar al usuario: {str(e)}")
-            ret = {"status": "ERROR", "mensaje": "Error interno del servidor"}
-            code = 500
-        finally:
-            conexion.close()
-    else:
-        ret = {"status": "Bad request", "mensaje": "Formato de contenido no válido"}
-        code = 400
-    return json.dumps(ret), code
+            if usuario:
+                return jsonify({"status": "ERROR", "mensaje": "El usuario ya existe"}), 400
+
+            hashed_password = hashpw(contrasena.encode('utf-8'), gensalt()).decode('utf-8')
+            cursor.execute(
+                "INSERT INTO usuarios (email, contrasena, nombre) VALUES (%s, %s, %s)",
+                (email, hashed_password, nombre)
+            )
+            if cursor.rowcount == 1:
+                conexion.commit()
+                return jsonify({"status": "OK", "mensaje": "Usuario registrado"}), 201
+
+            return jsonify({"status": "ERROR", "mensaje": "No se pudo registrar el usuario"}), 500
+
+    except Exception as e:
+        print(f"Excepción al registrar al usuario: {str(e)}")
+        return jsonify({"status": "ERROR", "mensaje": "Error interno del servidor"}), 500
+
+    finally:
+        conexion.close()
 
 
-@app.route("/api/logout", methods=['GET'])
+@app.route("/api/protegido", methods=["GET"])
+@jwt_required()
+def protegido():
+    usuario = get_jwt_identity()
+    return jsonify({"message": "Acceso permitido", "user": usuario})
+
+# 🔹 LOGOUT - Elimina la cookie JWT
+@app.route("/api/logout", methods=['POST'])
 def logout():
-    session.clear()
-    return json.dumps({"status":"OK"}),200
+    resp = make_response(jsonify({"status": "OK", "mensaje": "Sesión cerrada"}))
+    resp.set_cookie("access_token_cookie", "", expires=0)  # Borra la cookie
+    return resp
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=8080)
