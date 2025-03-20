@@ -7,35 +7,35 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <script>
-    var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+   var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
 
-function iniciarSesion() {
-  document.getElementsByClassName("error")[0].style.display = "none";
-  var raw = JSON.stringify({
-    email: document.getElementById("email").value,
-    contrasena: document.getElementById("password").value,
-  });
+        function conectar(){
+            document.getElementsByClassName("error")[0].style.display="none";
+            var raw = JSON.stringify({
+                "usuario": document.getElementById("usuario").value,
+                "contrasena": document.getElementById("contrasena").value
+            });
 
-  var requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    body: raw,
-  };
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw
+            };
 
-  fetch("/api/login", requestOptions)
-    .then((response) => response.json())
-    .then((result) => {
-      if (result.status == "OK") {
-        alert("Usuario logeado correctamente");
-        location.href = "../home/home.html";
-      } else {
-        document.getElementsByClassName("error")[0].style.display = "block";
-      }
-    })
-    .catch((error) => console.log("error", error));
-}
-
+            fetch("/api/login", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status=="OK"){
+                        sessionStorage.setItem("csrf_token",result.csrf_token)
+                        sessionStorage.setItem("perfil",result.perfil)
+                        location.href="../home/home.html";
+                    } else {
+                        document.getElementsByClassName("error")[0].style.display="block";
+                    }
+                })
+                .catch(error => console.log('error', error)); 
+        }
   </script>
   <body>
     <div class="form-container">
@@ -49,11 +49,11 @@ function iniciarSesion() {
         />
         <input
           type="password"
-          id="password"
+          id="contrasena"
           placeholder="Contraseña"
           required
         />
-        <button type="submit" onclick="iniciarSesion();">Iniciar sesión</button>
+        <button type="submit" onclick="conectar();">Iniciar sesión</button>
       </form>
       <div class="error" style="display: none; color: red">
         Usuario o contraseña incorrectos.

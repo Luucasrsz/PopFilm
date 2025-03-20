@@ -1,33 +1,36 @@
 var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Content-Type", "application/json");
 
-function registrarUsuario() {
-  document.getElementsByClassName("error")[0].style.display = "none";
+        function registrarUsuario(){
+            document.getElementsByClassName("error")[0].style.display="none";
+            var raw = JSON.stringify({
+                "usuario": document.getElementById("usuario").value,
+                "contrasena": document.getElementById("contrasena").value,
+                "email": document.getElementById("email").value,
+                "perfil": "normal"
+            });
+            console.log(raw)
 
-  var raw = JSON.stringify({
-    nombre: document.getElementById("nombre").value,
-    email: document.getElementById("email").value,
-    contrasena: document.getElementById("password").value,
-    logeado: false,
-  });
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw
+            };
 
-  var requestOptions = {
-    method: "POST",
-    headers: myHeaders, // Aquí usamos myHeaders que ya está definido
-    body: raw,
-  };
+            console.log(requestOptions)
 
-  fetch("/api/registro", requestOptions)
-    .then((response) => response.json())
-    .then((result) => {
-      if (result.status === "OK") {
-        mostrarModal();
-      } else {
-        document.getElementsByClassName("error")[0].style.display = "block";
-      }
-    })
-    .catch((error) => console.log("error", error));
-}
+            fetch("/api/registro", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status=="OK"){
+                        alert("Usuario registrado correctamente");
+                        location.href="index.html";
+                    } else {
+                        document.getElementsByClassName("error")[0].style.display="block";
+                    }
+                })
+                .catch(error => console.log('error', error)); 
+        }
 
 function mostrarModal() {
   const modal = document.getElementById("successModal");

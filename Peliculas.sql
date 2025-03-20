@@ -12,10 +12,16 @@ CREATE TABLE peliculas (
 INSERT INTO peliculas(nombre, sinopsis, categoria, portada, precio)
 VALUES ('Ejemplo', 'Sinopsis de prueba', 'Comedia', 'PEPE', 19.99);
 
-CREATE TABLE usuarios (
-    email VARCHAR(255) NOT NULL PRIMARY KEY,
+CREATE TABLE usuarios(
+	usuario VARCHAR(100) NOT NULL PRIMARY KEY,
     contrasena VARCHAR(255) NOT NULL,
-    nombre VARCHAR(100) NOT NULL,
+    perfil VARCHAR(100) NOT NULL,
+    estado VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    fechaUltimoAcceso DATE,
+    fechaBloqueo DATE,
+    numeroAccesosErroneo INTEGER,
+    debeCambiarClave BOOLEAN
 );
 
 
