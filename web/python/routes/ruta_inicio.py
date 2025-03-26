@@ -11,11 +11,11 @@ def login():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         login_json = request.json
-        if "usuario" in login_json and "contrasena" in login_json:
-            usuario = sanitize_input(login_json['usuario'])
+        if "email" in login_json and "contrasena" in login_json:
+            email = sanitize_input(login_json['email'])
             contrasena = sanitize_input(login_json['contrasena'])
-            if isinstance(usuario, str) and isinstance(contrasena, str) and len(usuario) < 50 and len(contrasena) < 50:
-                respuesta,code= usuarios_controller.login(usuario,contrasena)
+            if isinstance(email, str) and isinstance(contrasena, str) and len(email) < 50 and len(contrasena) < 50:
+                respuesta,code= usuarios_controller.login(email,contrasena)
             else:
                 respuesta={"status":"Bad parameters"}
                 code=401

@@ -7,3 +7,4 @@ Jinja2==3.0.3
 python-dotenv
 Werkzeug==2.3.0
 bcrypt==4.1.2
+Flask-CORS

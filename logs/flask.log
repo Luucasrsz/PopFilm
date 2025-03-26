@@ -1,0 +1,279 @@
+[2025-03-26 08:17:09,182] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.4:8080
+[2025-03-26 08:17:09,182] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 08:18:20,246] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.0.3:8080
+[2025-03-26 08:18:20,246] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 08:18:40,215] INFO in usuarios_controller: Error {e}
+[2025-03-26 08:18:40,216] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.28.0.5
+[2025-03-26 08:18:40,217] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 08:18:40] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-03-26 08:19:50,804] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.4:8080
+[2025-03-26 08:19:50,804] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 08:20:13,233] INFO in usuarios_controller: Error {e}
+[2025-03-26 08:20:13,234] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 08:20:13,235] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 08:20:13] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-03-26 08:20:18,667] INFO in usuarios_controller: Error {e}
+[2025-03-26 08:20:18,667] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 08:20:18,668] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 08:20:18] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-03-26 08:28:31,403] INFO in usuarios_controller: Error {e}
+[2025-03-26 08:28:31,404] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 08:28:31,404] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 08:28:31] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-03-26 08:30:01,819] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.240.4:8080
+[2025-03-26 08:30:01,819] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 08:30:14,078] INFO in usuarios_controller: Error {e}
+[2025-03-26 08:30:14,079] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.240.5
+[2025-03-26 08:30:14,080] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 08:30:14] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-03-26 08:31:29,052] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.3:8080
+[2025-03-26 08:31:29,052] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 08:36:50,673] INFO in usuarios_controller: Error {e}
+[2025-03-26 08:36:50,674] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 08:36:50,675] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 08:36:50] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-03-26 08:39:19,711] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.3:8080
+[2025-03-26 08:39:19,711] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 08:40:17,044] INFO in usuarios_controller: Antes de insertar
+[2025-03-26 08:40:17,046] INFO in usuarios_controller: Error {e}
+[2025-03-26 08:40:17,046] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 08:40:17,049] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 08:40:17] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-03-26 08:45:09,234] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.3:8080
+[2025-03-26 08:45:09,235] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 08:45:12,391] INFO in usuarios_controller: Nuevo usuario creado
+[2025-03-26 08:45:12,392] INFO in app: path: /api/registro | method: POST | status: 200 OK | size: 16 >>> 172.26.0.5
+[2025-03-26 08:45:12,393] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 08:45:12] "POST /api/registro HTTP/1.1" 200 -
+[2025-03-26 08:46:36,562] INFO in usuarios_controller: Nuevo usuario creado
+[2025-03-26 08:46:36,563] INFO in app: path: /api/registro | method: POST | status: 200 OK | size: 16 >>> 172.26.0.5
+[2025-03-26 08:46:36,564] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 08:46:36] "POST /api/registro HTTP/1.1" 200 -
+[2025-03-26 08:47:12,136] INFO in app: path: /api/registro | method: POST | status: 200 OK | size: 51 >>> 172.26.0.5
+[2025-03-26 08:47:12,137] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 08:47:12] "POST /api/registro HTTP/1.1" 200 -
+[2025-03-26 08:56:20,728] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.0.3:8080
+[2025-03-26 08:56:20,728] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:05:32,370] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.4:8080
+[2025-03-26 09:05:32,370] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:05:53,417] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 09:05:53,418] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 09:05:53] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:11:20,337] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.4:8080
+[2025-03-26 09:11:20,338] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:11:36,979] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 09:11:36,980] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 09:11:36] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:11:37,782] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 09:11:37,783] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 09:11:37] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:11:42,918] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 09:11:42,918] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 09:11:42] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:12:57,470] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.4:8080
+[2025-03-26 09:12:57,471] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:13:10,263] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-03-26 09:13:10,264] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 09:13:10] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:16:41,235] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.240.4:8080
+[2025-03-26 09:16:41,236] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:17:10,260] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.240.5
+[2025-03-26 09:17:10,262] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:17:10] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:20:27,370] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.4:8080
+[2025-03-26 09:20:27,370] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:20:46,384] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:20:46,386] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:20:46,389] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:20:46] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:26,389] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:26,391] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:26,391] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:26] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:28,158] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:28,159] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:28,160] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:28] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:28,613] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:28,615] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:28,616] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:28] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:28,852] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:28,854] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:28,855] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:28] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:29,036] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:29,038] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:29,038] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:29] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:29,244] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:29,245] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:29,246] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:29] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:29,427] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:29,429] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:29,430] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:29] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:29,619] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:29,621] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:29,622] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:29] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:23:29,811] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:23:29,813] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:23:29,814] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:23:29] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:24:00,700] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:24:00,701] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:24:00,702] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:24:00] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:24:43,796] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:24:43,798] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:24:43,799] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:24:43] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:26:30,196] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.0.3:8080
+[2025-03-26 09:26:30,197] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:26:41,317] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:41,319] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:41,414] INFO in usuarios_controller: Acceso usuario m incorrecto
+[2025-03-26 09:26:41,416] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.28.0.5
+[2025-03-26 09:26:41,417] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:41] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:26:48,119] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:48,121] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:48,122] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:26:48,123] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:48] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:26:53,529] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:53,530] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:53,531] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:26:53,532] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:53] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:26:53,991] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:53,993] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:53,994] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:26:53,995] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:53] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:26:54,214] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:54,215] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:54,216] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:26:54,217] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:54] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:26:54,381] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:54,382] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:54,383] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:26:54,384] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:54] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:26:54,549] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:54,551] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:54,552] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:26:54,552] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:54] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:26:54,693] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:26:54,695] INFO in usuarios_controller: POst select
+[2025-03-26 09:26:54,695] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:26:54,696] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:26:54] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:27:25,312] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:27:25,313] INFO in usuarios_controller: POst select
+[2025-03-26 09:27:25,314] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:27:25,315] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:27:25] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:29:57,109] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:29:57,111] INFO in usuarios_controller: POst select
+[2025-03-26 09:29:57,111] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:29:57,112] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:29:57] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:30:31,548] INFO in usuarios_controller: ANtes select
+[2025-03-26 09:30:31,549] INFO in usuarios_controller: POst select
+[2025-03-26 09:30:31,550] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-03-26 09:30:31,551] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 09:30:31] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:33:45,507] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.4:8080
+[2025-03-26 09:33:45,507] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:33:57,322] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.31.0.5
+[2025-03-26 09:33:57,324] INFO in _internal: 172.31.0.5 - - [26/Mar/2025 09:33:57] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:42:21,682] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.240.3:8080
+[2025-03-26 09:42:21,682] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:42:31,779] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:42:31,780] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:42:31] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:43:10,957] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:43:10,958] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:43:10] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:43:11,121] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:43:11,122] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:43:11] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:43:11,290] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:43:11,291] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:43:11] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:43:11,457] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:43:11,458] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:43:11] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:43:11,609] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:43:11,609] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:43:11] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:43:11,769] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:43:11,770] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:43:11] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:43:11,913] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.240.5
+[2025-03-26 09:43:11,914] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 09:43:11] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:47:45,030] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.4:8080
+[2025-03-26 09:47:45,030] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:48:07,054] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.26.0.5
+[2025-03-26 09:48:07,055] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:48:07] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:49:26,666] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:49:26,668] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:49:26] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:49:27,594] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:49:27,595] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:49:27] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 09:50:43,932] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.26.0.5
+[2025-03-26 09:50:43,933] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:50:43] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:54:46,393] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.4:8080
+[2025-03-26 09:54:46,393] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:55:06,479] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.26.0.5
+[2025-03-26 09:55:06,480] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:55:06] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:57:17,702] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.4:8080
+[2025-03-26 09:57:17,702] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 09:57:31,734] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.26.0.5
+[2025-03-26 09:57:31,735] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:57:31] "POST /api/login HTTP/1.1" 200 -
+[2025-03-26 09:59:23,039] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$iTcTabPCbjbdJpKxy.D1/OKS9/KmMjGrbpqU46ijIvN.RJMvtEvje, Intentos erróneos: 0
+[2025-03-26 09:59:23,133] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 09:59:23,133] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 09:59:23] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 10:01:08,782] INFO in usuarios_controller: Nuevo usuario creado
+[2025-03-26 10:01:08,783] INFO in app: path: /api/registro | method: POST | status: 200 OK | size: 16 >>> 172.26.0.5
+[2025-03-26 10:01:08,784] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 10:01:08] "POST /api/registro HTTP/1.1" 200 -
+[2025-03-26 10:01:28,351] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$mfVM.PjuHcnDEd5.Zkhblel6uns15ONMegEGdriRhiGqhpCWfYsou, Intentos erróneos: 0
+[2025-03-26 10:01:28,443] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 10:01:28,444] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 10:01:28] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 10:02:07,728] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$mfVM.PjuHcnDEd5.Zkhblel6uns15ONMegEGdriRhiGqhpCWfYsou, Intentos erróneos: 0
+[2025-03-26 10:02:07,825] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 10:02:07,825] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 10:02:07] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 10:08:50,322] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.240.3:8080
+[2025-03-26 10:08:50,323] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 10:09:01,811] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$mfVM.PjuHcnDEd5.Zkhblel6uns15ONMegEGdriRhiGqhpCWfYsou, Intentos erróneos: 0
+[2025-03-26 10:09:01,904] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.240.5
+[2025-03-26 10:09:01,905] INFO in _internal: 192.168.240.5 - - [26/Mar/2025 10:09:01] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 10:10:33,425] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.3:8080
+[2025-03-26 10:10:33,426] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 10:10:44,594] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$mfVM.PjuHcnDEd5.Zkhblel6uns15ONMegEGdriRhiGqhpCWfYsou, Intentos erróneos: 0
+[2025-03-26 10:10:44,595] INFO in usuarios_controller: 1
+[2025-03-26 10:10:44,595] INFO in usuarios_controller: 2
+[2025-03-26 10:10:44,685] INFO in usuarios_controller: 3
+[2025-03-26 10:10:44,686] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
+[2025-03-26 10:10:44,687] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 10:10:44] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -

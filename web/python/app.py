@@ -9,9 +9,45 @@ app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 csrf = CSRFProtect(app)
 
+#Configuracion de los logs
+dictConfig(
+    {
+        "version": 1,
+        "formatters": {
+            "default": {
+                "format": "[%(asctime)s] %(levelname)s in %(module)s: %(message)s",
+            }
+        },
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "stream": "ext://sys.stdout",
+                "formatter": "default",
+            },
+            "file": {
+                "class": "logging.FileHandler",
+                "filename": "logs/flask.log",
+                "formatter": "default",
+            },
+            "time-rotate": {
+               "class": "logging.handlers.TimedRotatingFileHandler",
+                "filename": "logs/flask.log",
+                "when": "D",
+                "interval": 10,
+                "backupCount": 5,
+                "formatter": "default",
+            },
+        },
+        "root": {"level": "DEBUG", "handlers": ["console","time-rotate"]},
+    }
+
+)
+
+
+
 #Configuración de las sesiones con cookies
 app.config.update(PERMANENT_SESSION_LIFETIME=600)
-app.config.update( SESSION_COOKIE_SECURE=True,   SESSION_COOKIE_HTTPONLY=True,   SESSION_COOKIE_SAMESITE='Lax',)
+app.config.update( SESSION_COOKIE_SECURE=False,   SESSION_COOKIE_HTTPONLY=True,   SESSION_COOKIE_SAMESITE='Lax',)
 
 
 @app.errorhandler(500)

@@ -40,13 +40,15 @@ services:
       PYTHONBUFFERED: 1
     volumes:
       - ./uploads:/uploads 
+      - ./logs:/app/logs
+
     depends_on:
       - mariadb
   apache:
     build: ./web/apache
     container_name: apachea3
     volumes: 
-      - ./web/python/static:/var/www/html
+      - ./web/python/static:/var/www/html/
       - ./uploads:/var/www/html/uploads
     ports:
       - 6003:80
