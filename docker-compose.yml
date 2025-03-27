@@ -5,21 +5,22 @@ services:
     container_name: mariadba3
     restart: always
     environment:
-      MARIADB_ROOT_PASSWORD: example
-      MARIADB_USER: agente
-      MARIADB_USER_PASSWORD: 0traClave
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
       MARIADB_DATABASE: POPFILM
     volumes:
       - mariadb_dataa3:/var/lib/mysql
       - ./Peliculas.sql:/docker-entrypoint-initdb.d/Peliculas.sql
     user: mysql
+    secrets:
+      - db_root_password
     
   phpmyadmin:
     image: phpmyadmin
     container_name: phpmyadmina3
     restart: always
     environment:
-      - PMA_HOST=mariadb
+      PMA_HOST: mariadb
+      PMA_ARBITRARY: 1
     ports:
       - 7003:80
     depends_on:
@@ -28,6 +29,10 @@ services:
     build: .
     container_name: pythona3
     environment:
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      SECRET_KEY: ${SECRET_KEY}
+      WTF_CSRF_SECRET_KEY: ${WTF_CSRF_SECRET_KEY} 
       DB_USERNAME: root
       DB_PASSWORD: example
       DB_DATABASE: POPFILM
@@ -54,6 +59,16 @@ services:
       - 6003:80
     depends_on:
       - python
+secrets:
+  db_root_user:
+    file: ./secretos/db_root_user.txt
+  db_root_password:
+    file: ./secretos/db_root_password.txt
+  db_user_username:
+    file: ./secretos/db_user_username.txt
+  db_user_password:
+    file: ./secretos/db_user_password.txt
+    
 volumes:
   mariadb_dataa3:
 

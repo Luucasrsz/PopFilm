@@ -277,3 +277,43 @@
 [2025-03-26 10:10:44,685] INFO in usuarios_controller: 3
 [2025-03-26 10:10:44,686] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.26.0.5
 [2025-03-26 10:10:44,687] INFO in _internal: 172.26.0.5 - - [26/Mar/2025 10:10:44] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-26 10:47:24,908] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.0.3:8080
+[2025-03-26 10:47:24,909] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-26 10:47:41,122] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$mfVM.PjuHcnDEd5.Zkhblel6uns15ONMegEGdriRhiGqhpCWfYsou, Intentos erróneos: 0
+[2025-03-26 10:47:41,122] INFO in usuarios_controller: 1
+[2025-03-26 10:47:41,122] INFO in usuarios_controller: 2
+[2025-03-26 10:47:41,213] INFO in usuarios_controller: 3
+[2025-03-26 10:47:41,213] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.28.0.5
+[2025-03-26 10:47:41,214] INFO in _internal: 172.28.0.5 - - [26/Mar/2025 10:47:41] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-03-27 10:52:56,588] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.0.4:8080
+[2025-03-27 10:52:56,588] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-03-27 10:53:38,161] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$mfVM.PjuHcnDEd5.Zkhblel6uns15ONMegEGdriRhiGqhpCWfYsou, Intentos erróneos: 0
+[2025-03-27 10:53:38,161] INFO in usuarios_controller: 1
+[2025-03-27 10:53:38,162] INFO in usuarios_controller: 2
+[2025-03-27 10:53:38,224] INFO in usuarios_controller: 3
+[2025-03-27 10:53:38,225] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-03-27 10:53:38,229] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImY3MWJmNWViNTI4NzFmZjU2NjE4MDVlMmE2ZTQ3MzcxZDdmZmUwZGUi.Z-UuMg._bEsgsejo__xiKd2V29v_jn8Ma4', 'perfil': 'normal'}
+[2025-03-27 10:53:38,230] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 172.28.0.5
+[2025-03-27 10:53:38,230] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:53:38] "POST /api/login HTTP/1.1" 200 -
+[2025-03-27 10:53:38,353] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.28.0.5
+[2025-03-27 10:53:38,353] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:53:38] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-03-27 10:54:05,485] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.28.0.5
+[2025-03-27 10:54:05,486] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:05] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-03-27 10:54:08,690] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.28.0.5
+[2025-03-27 10:54:08,690] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:08] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-03-27 10:54:10,500] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.28.0.5
+[2025-03-27 10:54:10,500] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:10] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-03-27 10:54:15,891] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 172.28.0.5
+[2025-03-27 10:54:15,892] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:15] "GET /api/logout HTTP/1.1" 200 -
+[2025-03-27 10:54:22,884] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.28.0.5
+[2025-03-27 10:54:22,885] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:22] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-03-27 10:54:27,011] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 172.28.0.5
+[2025-03-27 10:54:27,012] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:27] "GET /api/logout HTTP/1.1" 200 -
+[2025-03-27 10:54:47,212] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 172.28.0.5
+[2025-03-27 10:54:47,214] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:47] "GET /api/logout HTTP/1.1" 200 -
