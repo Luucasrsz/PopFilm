@@ -22,10 +22,17 @@
         </form>
 
         <!-- Botón para cerrar sesión -->
-        <button type="button" class="button logout-button" id="logout-button">Cerrar sesión</button>
+        <button type="button" class="button logout-button" id="logout-button" onclick="cerrarSesion()">Cerrar sesión</button>
     </div>
 
     <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (!sessionStorage.getItem("csrf_token")) {
+    window.location.href = "../../index.html";
+  } 
+});
+
         // Obtener los elementos
         const updateButton = document.getElementById('update-button');
         const logoutButton = document.getElementById('logout-button');
@@ -69,24 +76,26 @@
             });
         });
 
-        // Función para cerrar sesión
-        logoutButton.addEventListener('click', function() {
-            // Aquí puedes agregar la lógica para cerrar sesión, por ejemplo:
-            fetch('/api/logout', { method: 'GET' })
+        function cerrarSesion(){
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders
+            };
+            fetch("/api/logout", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.status === 'OK') {
-                        alert('Sesión cerrada');
-                        window.location.href = '../login/login.html'; // Redirige a la página de login
+                    if (result.status == "OK"){
+                        location.href="index.html";
                     } else {
-                        alert('Error al cerrar sesión');
+                        alert("No se ha podido cerrar sesión")
                     }
                 })
                 .catch(error => {
-                    console.log('Error:', error);
-                    alert('Error al cerrar sesión');
+                    console.log('error', error);
+                    alert("Se ha producido un error y no se ha podido cerrar sesión")
                 });
-        });
+
+        }
     </script>
 
 </body>

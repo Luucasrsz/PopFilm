@@ -1,5 +1,14 @@
 var myHeaders = new Headers();
 
+document.addEventListener('DOMContentLoaded', function() {
+  if (!sessionStorage.getItem("csrf_token")) {
+    window.location.href = "../../index.html";
+  } else {
+    cargarPeliculas();
+  }
+});
+
+
 // URL base de la API
 const apiUrl = "/api/peliculas"; // Ajustar según la URL de tu API
 
