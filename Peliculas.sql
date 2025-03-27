@@ -6,7 +6,7 @@ CREATE TABLE peliculas (
     sinopsis VARCHAR(255) NOT NULL,
     categoria VARCHAR(255) NOT NULL, 
     precio DECIMAL(9,2) NOT NULL,
-    portada TEXT
+    portada VARCHAR(255)
     
 );
 INSERT INTO peliculas(nombre, sinopsis, categoria, portada, precio)
