@@ -317,3 +317,211 @@
 [2025-03-27 10:54:27,012] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:27] "GET /api/logout HTTP/1.1" 200 -
 [2025-03-27 10:54:47,212] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 172.28.0.5
 [2025-03-27 10:54:47,214] INFO in _internal: 172.28.0.5 - - [27/Mar/2025 10:54:47] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-02 07:44:29,308] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-02 07:44:29,308] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 07:44:57,625] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 192.168.208.5
+[2025-04-02 07:44:57,626] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:44:57] "POST /api/login HTTP/1.1" 200 -
+[2025-04-02 07:45:52,393] INFO in usuarios_controller: Nuevo usuario creado
+[2025-04-02 07:45:52,394] INFO in app: path: /api/registro | method: POST | status: 200 OK | size: 16 >>> 192.168.208.5
+[2025-04-02 07:45:52,395] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:45:52] "POST /api/registro HTTP/1.1" 200 -
+[2025-04-02 07:46:00,747] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-02 07:46:00,748] INFO in usuarios_controller: 1
+[2025-04-02 07:46:00,748] INFO in usuarios_controller: 2
+[2025-04-02 07:46:00,839] INFO in usuarios_controller: 3
+[2025-04-02 07:46:00,839] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-02 07:46:00,844] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjdlNGNhYjkyMmZjZjk4MzA3OGQ2NGZhZTJmNTM3MmQwZWE4OThkNTki.Z-zrOA.hBvv1aOyAeDYmBrxB4jHTr1TAbQ', 'perfil': 'normal'}
+[2025-04-02 07:46:00,845] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 192.168.208.5
+[2025-04-02 07:46:00,846] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:46:00] "POST /api/login HTTP/1.1" 200 -
+[2025-04-02 07:46:00,957] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:46:00,958] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:46:00] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:49:18,794] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:49:18,795] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:49:18] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:49:18,809] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:49:18,810] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:49:18] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:49:35,447] INFO in app: path: /api/peliculas | method: POST | status: 400 BAD REQUEST | size: 117 >>> 192.168.208.5
+[2025-04-02 07:49:35,448] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:49:35] "[31m[1mPOST /api/peliculas HTTP/1.1[0m" 400 -
+[2025-04-02 07:49:44,758] INFO in app: path: /api/peliculas | method: POST | status: 400 BAD REQUEST | size: 117 >>> 192.168.208.5
+[2025-04-02 07:49:44,759] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:49:44] "[31m[1mPOST /api/peliculas HTTP/1.1[0m" 400 -
+[2025-04-02 07:53:13,266] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-02 07:53:13,266] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 07:53:24,357] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:24,358] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:24] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:24,372] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:24,373] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:24] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:25,778] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:25,779] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:25] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:25,781] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:25,782] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:25] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:36,656] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-02 07:53:36,656] INFO in usuarios_controller: 1
+[2025-04-02 07:53:36,657] INFO in usuarios_controller: 2
+[2025-04-02 07:53:36,749] INFO in usuarios_controller: 3
+[2025-04-02 07:53:36,750] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-02 07:53:36,752] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjdlNGNhYjkyMmZjZjk4MzA3OGQ2NGZhZTJmNTM3MmQwZWE4OThkNTki.Z-ztAA.2WvYlt6WAw-AIXqfOdQqwICq6Mw', 'perfil': 'normal'}
+[2025-04-02 07:53:36,753] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 192.168.208.5
+[2025-04-02 07:53:36,754] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:36] "POST /api/login HTTP/1.1" 200 -
+[2025-04-02 07:53:36,854] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:36,855] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:36] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:41,151] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:41,151] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:41] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:42,093] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:42,094] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:53:42,095] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:42,096] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:53:43,623] INFO in app: path: /api/pelicula/1 | method: GET | status: 200 OK | size: 124 >>> 192.168.208.5
+[2025-04-02 07:53:43,624] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:43] "GET /api/pelicula/1 HTTP/1.1" 200 -
+[2025-04-02 07:53:50,625] INFO in app: path: /api/peliculas | method: PUT | status: 400 BAD REQUEST | size: 117 >>> 192.168.208.5
+[2025-04-02 07:53:50,627] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:53:50] "[31m[1mPUT /api/peliculas HTTP/1.1[0m" 400 -
+[2025-04-02 07:54:00,656] INFO in app: path: /api/pelicula/1 | method: GET | status: 200 OK | size: 124 >>> 192.168.208.5
+[2025-04-02 07:54:00,657] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:54:00] "GET /api/pelicula/1 HTTP/1.1" 200 -
+[2025-04-02 07:54:15,503] INFO in app: path: /api/peliculas | method: PUT | status: 400 BAD REQUEST | size: 117 >>> 192.168.208.5
+[2025-04-02 07:54:15,505] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:54:15] "[31m[1mPUT /api/peliculas HTTP/1.1[0m" 400 -
+[2025-04-02 07:59:25,049] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:59:25,050] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:59:25] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:59:25,056] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-02 07:59:25,056] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:59:25] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-02 07:59:31,436] INFO in app: path: /api/peliculas | method: POST | status: 400 BAD REQUEST | size: 117 >>> 192.168.208.5
+[2025-04-02 07:59:31,440] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 07:59:31] "[31m[1mPOST /api/peliculas HTTP/1.1[0m" 400 -
+[2025-04-02 08:16:52,678] INFO in app: path: /api/pelicula/1 | method: GET | status: 403 FORBIDDEN | size: 28 >>> 192.168.208.5
+[2025-04-02 08:16:52,679] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:16:52] "[31m[1mGET /api/pelicula/1 HTTP/1.1[0m" 403 -
+[2025-04-02 08:16:56,909] INFO in app: path: /api/pelicula/1 | method: GET | status: 403 FORBIDDEN | size: 28 >>> 192.168.208.5
+[2025-04-02 08:16:56,910] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:16:56] "[31m[1mGET /api/pelicula/1 HTTP/1.1[0m" 403 -
+[2025-04-02 08:17:26,725] INFO in app: path: /api/pelicula/1 | method: GET | status: 403 FORBIDDEN | size: 28 >>> 192.168.208.5
+[2025-04-02 08:17:26,726] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:17:26] "[31m[1mGET /api/pelicula/1 HTTP/1.1[0m" 403 -
+[2025-04-02 08:37:21,400] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-02 08:37:21,401] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 08:38:04,964] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.208.5
+[2025-04-02 08:38:04,965] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:38:04] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-04-02 08:38:59,218] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.208.5
+[2025-04-02 08:38:59,219] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:38:59] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-04-02 08:38:59,825] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.208.5
+[2025-04-02 08:38:59,826] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:38:59] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-04-02 08:38:59,976] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.208.5
+[2025-04-02 08:38:59,977] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:38:59] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-04-02 08:39:13,621] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.208.5
+[2025-04-02 08:39:13,622] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:39:13] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-04-02 08:44:25,450] INFO in usuarios_controller: Error (1045, "Access denied for user 'root'@'192.168.208.4' (using password: NO)")
+[2025-04-02 08:44:25,451] INFO in app: path: /api/registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.208.5
+[2025-04-02 08:44:25,452] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:44:25] "[35m[1mPOST /api/registro HTTP/1.1[0m" 500 -
+[2025-04-02 08:50:10,137] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-02 08:50:10,138] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 08:50:35,222] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-02 08:50:35,223] INFO in usuarios_controller: 1
+[2025-04-02 08:50:35,223] INFO in usuarios_controller: 2
+[2025-04-02 08:50:35,315] INFO in usuarios_controller: 3
+[2025-04-02 08:50:35,316] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 192.168.208.5
+[2025-04-02 08:50:35,317] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:50:35] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-04-02 08:51:45,239] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-02 08:51:45,240] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 08:51:59,757] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-02 08:51:59,758] INFO in usuarios_controller: 1
+[2025-04-02 08:51:59,758] INFO in usuarios_controller: 2
+[2025-04-02 08:51:59,852] INFO in usuarios_controller: 3
+[2025-04-02 08:51:59,853] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-02 08:51:59,855] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjRiMGEyOTI0NDcwMmVlMThmMTdiNDI0M2ZmMjFkZWNhZGIwMzMyNzAi.Z-z6rw.fUQesktajmYN1EcrrcY0iHgpfek', 'perfil': 'normal'}
+[2025-04-02 08:51:59,856] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 192.168.208.5
+[2025-04-02 08:51:59,858] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:51:59] "POST /api/login HTTP/1.1" 200 -
+[2025-04-02 08:51:59,944] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:51:59,945] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:51:59] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:36,858] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:36,859] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:36] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:36,891] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:36,892] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:36] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:39,248] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:39,249] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:39] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:39,960] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:39,961] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:39] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:40,703] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:40,704] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:40] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:40,968] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:40,969] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:40] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:41,280] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:41,281] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:41] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:41,610] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:41,611] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:41] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:52:41,925] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:52:41,926] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:52:41] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:54:30,464] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-02 08:54:30,464] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 08:54:45,942] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-02 08:54:45,943] INFO in usuarios_controller: 1
+[2025-04-02 08:54:45,943] INFO in usuarios_controller: 2
+[2025-04-02 08:54:46,036] INFO in usuarios_controller: 3
+[2025-04-02 08:54:46,037] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-02 08:54:46,040] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjQ2ZTIwODhlN2IzMmYyYmU5MDJlZmI5MjY2M2NhMmVjOWE0YzA2OTEi.Z-z7Vg.SO-hmsnwmApkkDmvtpfWlQ4zoOs', 'perfil': 'normal'}
+[2025-04-02 08:54:46,040] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 192.168.208.5
+[2025-04-02 08:54:46,041] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:54:46] "POST /api/login HTTP/1.1" 200 -
+[2025-04-02 08:54:46,127] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:54:46,128] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:54:46] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:54:51,566] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:54:51,567] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:54:51] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:54:52,760] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:54:52,761] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:54:52] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:54:52,795] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:54:52,795] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:54:52] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:54:53,151] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:54:53,152] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:54:53] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:54:53,506] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:54:53,507] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:54:53] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:55:02,576] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:55:02,577] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:55:02] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:58:44,337] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:58:44,338] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:58:44] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 08:58:44,932] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 08:58:44,933] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 08:58:44] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 09:02:08,443] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.3:8080
+[2025-04-02 09:02:08,443] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 09:02:29,658] INFO in usuarios_controller: Usuario: Administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-02 09:02:29,659] INFO in usuarios_controller: 1
+[2025-04-02 09:02:29,659] INFO in usuarios_controller: 2
+[2025-04-02 09:02:29,753] INFO in usuarios_controller: 3
+[2025-04-02 09:02:29,754] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-02 09:02:29,757] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjM2Y2EwNWNlZmE5ZGRkOWE4ODc3MTg2ZjM5OGM3NjQ3YTdiNGE1YTgi.Z-z9JQ.Zs9zp6ZNVT478_M___nRegTN8R8', 'perfil': 'Administrador'}
+[2025-04-02 09:02:29,757] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.208.5
+[2025-04-02 09:02:29,759] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:02:29] "POST /api/login HTTP/1.1" 200 -
+[2025-04-02 09:02:29,858] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 09:02:29,859] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:02:29] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 09:02:38,458] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.208.5
+[2025-04-02 09:02:38,460] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:02:38] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-02 09:03:04,803] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 09:03:04,804] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:03:04] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 09:03:12,581] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.208.5
+[2025-04-02 09:03:12,582] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:03:12] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-02 09:04:07,059] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-02 09:04:07,061] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-02 09:05:22,849] INFO in usuarios_controller: Usuario: Administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-02 09:05:22,849] INFO in usuarios_controller: 1
+[2025-04-02 09:05:22,849] INFO in usuarios_controller: 2
+[2025-04-02 09:05:22,944] INFO in usuarios_controller: 3
+[2025-04-02 09:05:22,944] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-02 09:05:22,947] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjBkMDk0YzNkYTg0YzIyZDNlMGMxMTEyM2ViYWNlYTBlZDJkMWY4ODMi.Z-z90g.38cSvYKZzCUtWhYE7DaXsvxXfOo', 'perfil': 'Administrador'}
+[2025-04-02 09:05:22,947] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.208.5
+[2025-04-02 09:05:22,949] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:05:22] "POST /api/login HTTP/1.1" 200 -
+[2025-04-02 09:05:23,045] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.208.5
+[2025-04-02 09:05:23,045] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:05:23] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-02 09:07:02,386] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.208.5
+[2025-04-02 09:07:02,388] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:07:02] "GET /api/logout HTTP/1.1" 200 -

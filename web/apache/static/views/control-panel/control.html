@@ -23,7 +23,9 @@
 
     <div class="container">
       <div class="add-movie-button">
-        <button class="button" onclick="abrirFormulario()">Agregar Película</button>
+        <button class="button" onclick="abrirFormulario()">
+          Agregar Película
+        </button>
       </div>
       <div class="table-container">
         <table>
@@ -47,7 +49,7 @@
       <div class="modal-content">
         <span class="close-button" onclick="cerrarFormulario()">×</span>
         <h2>Agregar Película</h2>
-        <form id="movie-form" onsubmit="insertMovie(event)">
+        <form id="movie-form" onsubmit="insertMovie()">
           <input type="hidden" id="movie-id" name="id" />
           <label for="titulo">Título:</label>
           <input type="text" id="titulo" name="titulo" required />
@@ -59,15 +61,34 @@
           <input type="text" id="sinopsis" name="sinopsis" required />
 
           <label for="precio">Precio:</label>
-          <input type="number" id="precio" name="precio" step="0.01" min="0" required />
+          <input
+            type="number"
+            id="precio"
+            name="precio"
+            step="0.01"
+            min="0"
+            required
+          />
 
           <div>
             <label for="portada">Portada:</label>
-            <input type="file" id="portada" name="portada" accept="image/*">
-            <!-- Imagen de la portada actual -->
-            <img id="portada-imagen" src="" alt="Portada" style="display: none; width: 100px; height: auto;"/>
+            <input
+              required
+              type="text"
+              class="input"
+              placeholder="Portada"
+              name="portada"
+              id="portada"
+            />
+            <input
+              required
+              type="file"
+              class="input"
+              placeholder="Archivo Portada"
+              name="fileportada"
+              id="fileportada"
+            />
           </div>
-
           <button type="submit" id="submit-btn" class="button">Guardar</button>
         </form>
       </div>

@@ -47,7 +47,7 @@ dictConfig(
 
 #Configuración de las sesiones con cookies
 app.config.update(PERMANENT_SESSION_LIFETIME=600)
-app.config.update( SESSION_COOKIE_SECURE=False,   SESSION_COOKIE_HTTPONLY=True,   SESSION_COOKIE_SAMESITE='Lax',)
+app.config.update( SESSION_COOKIE_SECURE=True,   SESSION_COOKIE_HTTPONLY=True,   SESSION_COOKIE_SAMESITE='Lax',)
 
 
 @app.errorhandler(500)
@@ -79,6 +79,8 @@ def afterRequest(response):
 
 from routes import ruta_inicio
 from routes import ruta_peliculas
+from routes import ruta_upload
+from routes import ruta_verfichero
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT'))

@@ -27,11 +27,14 @@
 
     <script>
 
-document.addEventListener('DOMContentLoaded', function() {
-  if (!sessionStorage.getItem("csrf_token")) {
-    window.location.href = "../../index.html";
-  } 
-});
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!sessionStorage.getItem("csrf_token")) {
+            window.location.href = "../../index.html";
+            } 
+        });
 
         // Obtener los elementos
         const updateButton = document.getElementById('update-button');
@@ -85,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.json())
                 .then(result => {
                     if (result.status == "OK"){
-                        location.href="index.html";
+                        location.href="../../index.html";
                     } else {
                         alert("No se ha podido cerrar sesión")
                     }

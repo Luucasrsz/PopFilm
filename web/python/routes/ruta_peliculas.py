@@ -1,4 +1,4 @@
-from flask import request, jsonify
+from flask import request, jsonify, make_response
 import os
 import decimal
 import json
@@ -43,7 +43,8 @@ def guardar_pelicula():
     # Verificamos si el contenido es 'multipart/form-data', que es lo necesario para enviar archivos
     if (content_type == 'application/json'):
         pelicula_json = request.json
-         if "nombre" in pelicula_json and "sinopsis" in pelicula_json and "portada" in pelicula_json and "categoria" in pelicula_json:
+        # Asegúrate de que el if esté correctamente indentado
+        if "nombre" in pelicula_json and "sinopsis" in pelicula_json and "portada" in pelicula_json and "categoria" in pelicula_json:
             nombre = sanitize_input(pelicula_json["nombre"])
             sinopsis = sanitize_input(pelicula_json["sinopsis"])
             precio = pelicula_json["precio"]
@@ -53,74 +54,68 @@ def guardar_pelicula():
             if isinstance(nombre, str) and isinstance(sinopsis, str) and isinstance(portada, str) and isinstance(categoria, str) and len(nombre)<128 and len(sinopsis)<512 and len(portada)<128 and len(categoria)<512:
                 if (validar_session_admin()):
                     precio = float(precio)
-                    respuesta,code=peliculas_controller.insertar_pelicula(nombre, sinopsis, categoria, precio, portada)
+                    respuesta, code = peliculas_controller.insertar_pelicula(nombre, sinopsis, categoria, precio, portada)
                 else: 
-                    respuesta={"status":"Forbidden"}
-                    code=403
+                    respuesta = {"status": "Forbidden"}
+                    code = 403
             else:
-                respuesta={"status":"Bad request"}
-                code=401
+                respuesta = {"status": "Bad request"}
+                code = 401
         else:
-            respuesta={"status":"Bad request"}
-            code=401
+            respuesta = {"status": "Bad request"}
+            code = 401
     else:
-        respuesta={"status":"Bad request"}
-        code=401
-    response= make_response(json.dumps(respuesta, cls=Encoder))  
+        respuesta = {"status": "Bad request"}
+        code = 401
+    
+    response = make_response(json.dumps(respuesta, cls=Encoder))  
     return response
+
             
             
 
-@app.route("/api/peliculas/<id>", methods=["DELETE"])
+@app.route("/api/peliculas/<int:id>", methods=["DELETE"])
 def eliminar_pelicula(id):
-    # Sanitizar el ID antes de utilizarlo
-    id = sanitize_input(id)
-    ret, code = peliculas_controller.eliminar_pelicula(id)
-    return ret, code  # No se necesita jsonify aquí.
+    if (validar_session_admin()):
+        respuesta, code = peliculas_controller.eliminar_pelicula(id)
+    else:
+        respuesta = {"status": "Forbidden"}
+        code = 403
+    response = make_response(json.dumps(respuesta, cls=Encoder), code)
+    return response
+
 
 @app.route("/api/peliculas", methods=["PUT"])
 def actualizar_pelicula():
     content_type = request.headers.get('Content-Type')
-    
-    if 'multipart/form-data' in content_type:
-        try:
-            # Obtener los datos del formulario
-            id = request.form.get('id')
-            nombre = request.form.get('nombre')
-            sinopsis = request.form.get('sinopsis')
-            categoria = request.form.get('categoria')
-            precio = request.form.get('precio')  # Asegúrate de obtener el precio como cadena
-            
-            if not id or not nombre or not sinopsis or not categoria or not precio:
-                raise ValueError("Faltan campos requeridos")
+    if (content_type == 'application/json'):
+        pelicula_json = request.json
+        # Verificamos si contiene los campos necesarios
+        if "id" in pelicula_json and "nombre" in pelicula_json and "sinopsis" in pelicula_json and "categoria" in pelicula_json and "precio" in pelicula_json and "portada" in pelicula_json:
+            id = pelicula_json["id"]
+            nombre = sanitize_input(pelicula_json["nombre"])
+            sinopsis = sanitize_input(pelicula_json["sinopsis"])
+            categoria = sanitize_input(pelicula_json["categoria"])
+            precio = pelicula_json["precio"]
+            portada = sanitize_input(pelicula_json["portada"])
 
-            # Convertir precio a float
-            try:
-                precio = float(precio)
-            except ValueError:
-                raise ValueError("El precio debe ser un número válido")
-            
-            portada = request.files.get('portada')  # 'portada' es el campo donde se sube la imagen
-            
-            portada_filename = None
-            if portada:
-                # Definir la carpeta de destino
-                upload_folder = 'uploads/'
-                if not os.path.exists(upload_folder):
-                    os.makedirs(upload_folder)
-                
-                # Guardar el archivo
-                portada_filename = os.path.join(upload_folder, portada.filename)
-                portada.save(portada_filename)
-            
-            # Llamada al controlador para actualizar la película
-            ret, code = peliculas_controller.actualizar_pelicula(id, nombre, sinopsis, categoria, precio, portada_filename)
-        
-        except Exception as e:
-            ret = {"status": "error", "message": str(e)}
-            code = 500  # Internal Server Error
+            # Validamos los datos
+            if isinstance(id, int) and isinstance(nombre, str) and isinstance(sinopsis, str) and isinstance(categoria, str) and isinstance(precio, (int, float)) and isinstance(portada, str) and len(id) < 8 and len(nombre) < 128 and len(sinopsis) < 512 and len(categoria) < 512 and len(portada) < 128:
+                if (validar_session_admin()):
+                    # Llamada al controlador para actualizar la película
+                    respuesta, code = peliculas_controller.actualizar_pelicula(id, nombre, sinopsis, categoria, precio, portada)
+                else:
+                    respuesta = {"status": "Forbidden"}
+                    code = 403
+            else:
+                respuesta = {"status": "Bad request"}
+                code = 401
+        else:
+            respuesta = {"status": "Bad request"}
+            code = 401
     else:
-        ret = {"status": "Bad request", "message": "Content-Type must be multipart/form-data"}
-        code = 400  # Bad Request
-    
-    return ret, code  # Retornar respuesta, no es necesario jsonify
+        respuesta = {"status": "Bad request"}
+        code = 401
+
+    response = make_response(json.dumps(respuesta, cls=Encoder), code)
+    return response
