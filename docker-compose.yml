@@ -33,8 +33,6 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       SECRET_KEY: ${SECRET_KEY}
       WTF_CSRF_SECRET_KEY: ${WTF_CSRF_SECRET_KEY} 
-      DB_USERNAME: root
-      DB_PASSWORD: example
       DB_DATABASE: POPFILM
       DB_HOST: mariadb
       DB_PORT: 3306
