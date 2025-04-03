@@ -1,18 +1,14 @@
 var myHeaders = new Headers();
-
-onload = () => {
-  if (
-    sessionStorage.getItem("perfil") ||
-    sessionStorage.getItem("perfil") == "normal"
-  ) {
-    location.href = "../home/home.html";
-  } else {
-    myHeaders.append("Content-Type", "application/json");
-    if (sessionStorage.getItem("csrf_token")) {
-      myHeaders.append("X-CSRFToken", sessionStorage.getItem("csrf_token"));
+onload=()=>{
+    if (!sessionStorage.getItem("perfil") || sessionStorage.getItem("perfil")=="normal"){
+        location.href="../home/home.html"
+    } else {
+        myHeaders.append("Content-Type", "application/json");
+        if (sessionStorage.getItem("csrf_token")){
+            myHeaders.append("X-CSRFToken",sessionStorage.getItem("csrf_token"))
+        }
     }
-  }
-};
+}
 
 // URL base de la API
 const apiUrl = "/api/peliculas"; // Ajustar según la URL de tu API
@@ -24,6 +20,7 @@ function editarPelicula(id) {
   peliculaId = id; // Almacenar el ID al editar la película
   fetch('/api/pelicula/${id}', {
     method: "GET",
+    headers: myHeaders
   })
     .then((response) => response.json())
     .then((pelicula) => {
@@ -51,14 +48,14 @@ function guardarCambios() {
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("categoria").value;
   const precio = parseFloat(document.getElementById("precio").value);
-  const portada = document.getElementById("portada").files[0];
+  const portada = document.getElementById("portada").value;
 
   let datos = JSON.stringify({
-    nombre: nombre,
-    sinopsis: sinopsis,
-    categoria: categoria,
-    precio: precio,
-    portada: portada,
+    "nombre": nombre,
+    "sinopsis": sinopsis,
+    "categoria": categoria,
+    "precio": precio,
+    "portada": portada,
   });
   var requestOptions = {
     method: "PUT",
@@ -89,20 +86,22 @@ function insertMovie() {
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("categoria").value;
   const precio = parseFloat(document.getElementById("precio").value);
-  const portada = document.getElementById("portada").files[0];
+  const portada = document.getElementById("portada").value;
 
   let datos = JSON.stringify({
-    nombre: nombre,
-    sinopsis: sinopsis,
-    categoria: categoria,
-    precio: precio,
-    portada: portada,
+    "nombre": nombre,
+    "sinopsis": sinopsis,
+    "categoria": categoria,
+    "precio": precio,
+    "portada": portada,
   });
   var requestOptions = {
     method: "POST",
     headers: myHeaders,
     body: datos,
   };
+
+  alert(datos)
 
   fetch("/api/peliculas", requestOptions)
     .then((response) => response.json())
@@ -112,12 +111,12 @@ function insertMovie() {
         cerrarFormulario();
         cargarPeliculas();
       } else {
-        alert("La chuche no ha podido ser guardado");
+        alert("La pelicula no ha podido ser guardado");
       }
     })
     .catch((error) => {
       console.log("error", error);
-      alert("Se ha producido un error y la chuche no ha podido ser guardado");
+      alert("Se ha producido un error y la pelicula no ha podido ser guardado");
     });
 }
 // Función para calcular el IVA
@@ -180,7 +179,10 @@ function agregarFila(nombre, categoria, sinopsis, precio, portada, id) {
 
 // Función para cargar todas las películas
 function cargarPeliculas() {
-  fetch("/api/peliculas")
+  fetch("/api/peliculas", {
+    method: "GET",
+    headers: myHeaders
+  })
     .then((response) => response.json())
     .then((peliculas) => {
       const tableBody = document.getElementById("movie-list");
@@ -191,7 +193,7 @@ function cargarPeliculas() {
           pelicula.categoria,
           pelicula.sinopsis,
           pelicula.precio,
-          pelicula.portada,
+          "",
           pelicula.id
         );
       });
@@ -203,8 +205,9 @@ function cargarPeliculas() {
 function eliminarPelicula(id) {
   console.log("ELIMINAR");
   console.log(id);
-  fetch('/api/peliculas/${id}', {
+  fetch(`/api/peliculas/${id}`, {
     method: "DELETE",
+    headers: myHeaders
   })
     .then((response) => response.json())
     .then((data) => {

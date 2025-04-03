@@ -66,7 +66,7 @@ def validar_session_normal():
         return False
 def validar_session_admin():
     try:
-        if (session["usuario"] and session["usuario"]!="" and session["perfil"]=="admin"):
+        if (session["usuario"] and session["usuario"]!="" and session["perfil"]=="administrador"):
             return True
         else:
             return False

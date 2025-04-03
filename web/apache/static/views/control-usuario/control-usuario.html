@@ -88,6 +88,7 @@
                 .then(response => response.json())
                 .then(result => {
                     if (result.status == "OK"){
+                        sessionStorage.clear();
                         location.href="../../index.html";
                     } else {
                         alert("No se ha podido cerrar sesión")

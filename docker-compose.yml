@@ -40,7 +40,6 @@ services:
       DB_PORT: 3306
       PORT: 8080
       HOST: 0.0.0.0
-      SECRET_KEY: 'you-will-never-guess'
       DEBUG: "false"
       PYTHONBUFFERED: 1
     volumes:
@@ -52,8 +51,8 @@ services:
   apache:
     build: ./web/apache
     container_name: apachea3
-    volumes: 
-      - ./web/python/static:/var/www/html/
+    volumes:
+      - ./web/apache/static:/usr/local/apache2/htdocs
       - ./uploads:/var/www/html/uploads
     ports:
       - 6003:80

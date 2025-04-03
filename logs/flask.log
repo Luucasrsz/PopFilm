@@ -525,3 +525,657 @@
 [2025-04-02 09:05:23,045] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:05:23] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
 [2025-04-02 09:07:02,386] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.208.5
 [2025-04-02 09:07:02,388] INFO in _internal: 192.168.208.5 - - [02/Apr/2025 09:07:02] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 08:26:54,820] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-03 08:26:54,821] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:28:11,338] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.4:8080
+[2025-04-03 08:28:11,339] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:29:15,742] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.3:8080
+[2025-04-03 08:29:15,743] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:29:38,609] INFO in usuarios_controller: Usuario: Administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:29:38,609] INFO in usuarios_controller: 1
+[2025-04-03 08:29:38,610] INFO in usuarios_controller: 2
+[2025-04-03 08:29:38,704] INFO in usuarios_controller: 3
+[2025-04-03 08:29:38,704] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:29:38,708] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjFjNGYwOTJhOWIzYTVmZTRkZDMwNjc5OGM2YTI2MjUzYWE1NTkzOWQi.Z-5G8g.070gE6D1ra9suxTd5HOOIABMwJQ', 'perfil': 'Administrador'}
+[2025-04-03 08:29:38,709] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.208.5
+[2025-04-03 08:29:38,710] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:29:38] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:29:38,810] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-03 08:29:38,811] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:29:38] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:30:52,984] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.208.3:8080
+[2025-04-03 08:30:52,984] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:31:34,337] INFO in usuarios_controller: Nuevo usuario creado
+[2025-04-03 08:31:34,338] INFO in app: path: /api/registro | method: POST | status: 200 OK | size: 16 >>> 192.168.208.5
+[2025-04-03 08:31:34,338] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:31:34] "POST /api/registro HTTP/1.1" 200 -
+[2025-04-03 08:31:47,356] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$LtM/phhc2SR.zoOLyYnRUOlubRu9Y.nuGz2XV.jB3P2jIWXyXDm0O, Intentos erróneos: 0
+[2025-04-03 08:31:47,357] INFO in usuarios_controller: 1
+[2025-04-03 08:31:47,358] INFO in usuarios_controller: 2
+[2025-04-03 08:31:47,450] INFO in usuarios_controller: 3
+[2025-04-03 08:31:47,451] INFO in usuarios_controller: Acceso usuario jordi.castillo1@educa.madrid.org correcto
+[2025-04-03 08:31:47,456] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjFjNGYwOTJhOWIzYTVmZTRkZDMwNjc5OGM2YTI2MjUzYWE1NTkzOWQi.Z-5Hcw.10HalXSD0ql3mcAT-cWtI-pKsgU', 'perfil': 'normal'}
+[2025-04-03 08:31:47,457] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 192.168.208.5
+[2025-04-03 08:31:47,458] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:31:47] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:31:47,592] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-03 08:31:47,593] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:31:47] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:31:50,073] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-03 08:31:50,073] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:31:50] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:31:55,017] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-03 08:31:55,018] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:31:55] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:31:55,864] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-03 08:31:55,864] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:31:55] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:31:55,924] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.208.5
+[2025-04-03 08:31:55,924] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:31:55] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:32:06,530] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.208.5
+[2025-04-03 08:32:06,531] INFO in _internal: 192.168.208.5 - - [03/Apr/2025 08:32:06] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 08:33:32,923] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.176.3:8080
+[2025-04-03 08:33:32,923] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:33:47,595] INFO in usuarios_controller: Usuario: Administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:33:47,595] INFO in usuarios_controller: 1
+[2025-04-03 08:33:47,596] INFO in usuarios_controller: 2
+[2025-04-03 08:33:47,689] INFO in usuarios_controller: 3
+[2025-04-03 08:33:47,689] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:33:47,691] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImYzZDAxMzU0ZjJmMWZhOGFkODc5NWUxZDcxNjA3ZDEyMWY0MTczNDEi.Z-5H6w.ZQm6j_CBMlFeNVy83Nyxz7GRVnE', 'perfil': 'Administrador'}
+[2025-04-03 08:33:47,691] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.176.5
+[2025-04-03 08:33:47,692] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 08:33:47] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:33:47,802] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.176.5
+[2025-04-03 08:33:47,803] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 08:33:47] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:33:51,257] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.176.5
+[2025-04-03 08:33:51,258] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 08:33:51] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:33:54,008] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.176.5
+[2025-04-03 08:33:54,008] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 08:33:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:33:54,083] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.176.5
+[2025-04-03 08:33:54,084] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 08:33:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:36:04,107] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.224.3:8080
+[2025-04-03 08:36:04,107] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:36:26,173] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$LtM/phhc2SR.zoOLyYnRUOlubRu9Y.nuGz2XV.jB3P2jIWXyXDm0O, Intentos erróneos: 0
+[2025-04-03 08:36:26,174] INFO in usuarios_controller: 1
+[2025-04-03 08:36:26,175] INFO in usuarios_controller: 2
+[2025-04-03 08:36:26,271] INFO in usuarios_controller: 3
+[2025-04-03 08:36:26,272] INFO in usuarios_controller: Acceso usuario jordi.castillo1@educa.madrid.org correcto
+[2025-04-03 08:36:26,273] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImYzZDAxMzU0ZjJmMWZhOGFkODc5NWUxZDcxNjA3ZDEyMWY0MTczNDEi.Z-5Iig.LJ1bF-DdQ0pJgcoHfFIv0PGvnic', 'perfil': 'normal'}
+[2025-04-03 08:36:26,274] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 192.168.224.5
+[2025-04-03 08:36:26,275] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:36:26] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:36:26,402] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:36:26,403] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:36:26] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:36:34,810] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:36:34,810] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:36:34] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:36:34,885] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:36:34,886] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:36:34] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:38:21,458] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.224.5
+[2025-04-03 08:38:21,458] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:38:21] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 08:38:28,386] INFO in usuarios_controller: Usuario: Administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:38:28,386] INFO in usuarios_controller: 1
+[2025-04-03 08:38:28,387] INFO in usuarios_controller: 2
+[2025-04-03 08:38:28,479] INFO in usuarios_controller: 3
+[2025-04-03 08:38:28,480] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:38:28,481] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImU1OWQyNzA2YjhkNDA0NTE0ODhhODlkYzVkYWIzNjI4NzYwYjg3Yjki.Z-5JBA.KDFb4wLEEBR7wsU7vCLUdtjmfvU', 'perfil': 'Administrador'}
+[2025-04-03 08:38:28,481] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.224.5
+[2025-04-03 08:38:28,482] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:38:28] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:38:28,613] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:38:28,614] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:38:28] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:38:33,446] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:38:33,446] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:38:33] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:38:33,567] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:38:33,568] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:38:33] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:38:38,775] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:38:38,776] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:38:38] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:40:41,224] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.224.5
+[2025-04-03 08:40:41,224] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:40:41] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 08:40:48,915] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:40:48,916] INFO in usuarios_controller: 1
+[2025-04-03 08:40:48,916] INFO in usuarios_controller: 2
+[2025-04-03 08:40:49,011] INFO in usuarios_controller: 3
+[2025-04-03 08:40:49,011] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:40:49,013] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImMzM2I2ZDQ4MDc1ZDhiODdiNTk2NDcxMjcwZjUxYzkwYjAxNDk1ZjAi.Z-5JkQ.ym6XjP07iZSXD3cjMPDaDbuH4Y4', 'perfil': 'administrador'}
+[2025-04-03 08:40:49,014] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.224.5
+[2025-04-03 08:40:49,015] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:40:49] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:40:49,146] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:40:49,147] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:40:49] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:40:55,848] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:40:55,849] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:40:55] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:40:55,915] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 192.168.224.5
+[2025-04-03 08:40:55,916] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 08:40:55] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:42:57,745] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.21.0.4:8080
+[2025-04-03 08:42:57,745] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:43:13,676] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:43:13,677] INFO in usuarios_controller: 1
+[2025-04-03 08:43:13,677] INFO in usuarios_controller: 2
+[2025-04-03 08:43:13,768] INFO in usuarios_controller: 3
+[2025-04-03 08:43:13,769] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:43:13,771] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImMzM2I2ZDQ4MDc1ZDhiODdiNTk2NDcxMjcwZjUxYzkwYjAxNDk1ZjAi.Z-5KIQ.SHTaJ0rt6tI0C89nsObpk5nB88E', 'perfil': 'administrador'}
+[2025-04-03 08:43:13,772] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.21.0.5
+[2025-04-03 08:43:13,773] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:43:13] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:43:13,918] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:43:13,919] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:43:13] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:43:17,901] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:43:17,902] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:43:17] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:43:17,971] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:43:17,972] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:43:17] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:46:49,626] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:46:49,626] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:46:49] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:46:56,395] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:46:56,396] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:46:56] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:47:42,953] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.21.0.4:8080
+[2025-04-03 08:47:42,953] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:48:20,754] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:48:20,754] INFO in usuarios_controller: 1
+[2025-04-03 08:48:20,754] INFO in usuarios_controller: 2
+[2025-04-03 08:48:20,847] INFO in usuarios_controller: 3
+[2025-04-03 08:48:20,848] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:48:20,850] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImMzM2I2ZDQ4MDc1ZDhiODdiNTk2NDcxMjcwZjUxYzkwYjAxNDk1ZjAi.Z-5LVA.407pGuUkwZnlw4hr9ZSD2ZctEno', 'perfil': 'administrador'}
+[2025-04-03 08:48:20,851] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.21.0.5
+[2025-04-03 08:48:20,852] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:48:20] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:48:20,986] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:48:20,986] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:48:20] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:48:22,842] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:48:22,843] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:48:22] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:48:22,926] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:48:22,927] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:48:22] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:48:27,137] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 172.21.0.5
+[2025-04-03 08:48:27,138] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:48:27] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 08:48:50,199] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 172.21.0.5
+[2025-04-03 08:48:50,200] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:48:50] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 08:49:02,319] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$LtM/phhc2SR.zoOLyYnRUOlubRu9Y.nuGz2XV.jB3P2jIWXyXDm0O, Intentos erróneos: 0
+[2025-04-03 08:49:02,319] INFO in usuarios_controller: 1
+[2025-04-03 08:49:02,320] INFO in usuarios_controller: 2
+[2025-04-03 08:49:02,413] INFO in usuarios_controller: 3
+[2025-04-03 08:49:02,414] INFO in usuarios_controller: Acceso usuario jordi.castillo1@educa.madrid.org correcto
+[2025-04-03 08:49:02,416] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjYzYzZkYmJiOTM0NzgyZGYxMzNlZWRjNjE0ZGUyNGMyYzU5NDVkZWIi.Z-5Lfg.TBRXf014jg8-rjqY1dTBB_cGSxM', 'perfil': 'normal'}
+[2025-04-03 08:49:02,417] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 172.21.0.5
+[2025-04-03 08:49:02,418] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:49:02] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:49:02,629] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:49:02,630] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:49:02] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:49:09,261] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:49:09,262] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:49:09] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:49:09,331] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 126 >>> 172.21.0.5
+[2025-04-03 08:49:09,332] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:49:09] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:50:22,477] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.21.0.5
+[2025-04-03 08:50:22,478] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:50:22] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:50:24,218] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.21.0.5
+[2025-04-03 08:50:24,219] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:50:24] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:50:24,294] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.21.0.5
+[2025-04-03 08:50:24,295] INFO in _internal: 172.21.0.5 - - [03/Apr/2025 08:50:24] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:24,534] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.24.0.4:8080
+[2025-04-03 08:52:24,535] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:52:47,427] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:52:47,428] INFO in usuarios_controller: 1
+[2025-04-03 08:52:47,428] INFO in usuarios_controller: 2
+[2025-04-03 08:52:47,521] INFO in usuarios_controller: 3
+[2025-04-03 08:52:47,522] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:52:47,525] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjYzYzZkYmJiOTM0NzgyZGYxMzNlZWRjNjE0ZGUyNGMyYzU5NDVkZWIi.Z-5MXw.lCj-e7sHFmst78Pdi9n9gv3PIUc', 'perfil': 'administrador'}
+[2025-04-03 08:52:47,525] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.24.0.5
+[2025-04-03 08:52:47,527] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:47] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:52:47,665] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:47,666] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:47] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:50,460] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:50,461] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:50] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:52,039] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:52,040] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:52] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:52,110] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:52,111] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:52] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:53,037] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:53,038] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:53] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:54,406] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:54,407] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:54,459] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:54,460] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:56,102] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:56,103] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:56] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:52:56,183] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.24.0.5
+[2025-04-03 08:52:56,184] INFO in _internal: 172.24.0.5 - - [03/Apr/2025 08:52:56] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:54:36,896] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.3:8080
+[2025-04-03 08:54:36,897] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 08:54:54,814] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 08:54:54,815] INFO in usuarios_controller: 1
+[2025-04-03 08:54:54,815] INFO in usuarios_controller: 2
+[2025-04-03 08:54:54,877] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org incorrecto
+[2025-04-03 08:54:54,881] INFO in usuarios_controller: {'status': 'ERROR', 'mensaje': 'Usuario/clave erroneo'}
+[2025-04-03 08:54:54,882] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 55 >>> 172.26.0.5
+[2025-04-03 08:54:54,883] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:54:54] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:55:07,729] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 1
+[2025-04-03 08:55:07,729] INFO in usuarios_controller: 1
+[2025-04-03 08:55:07,729] INFO in usuarios_controller: 2
+[2025-04-03 08:55:07,792] INFO in usuarios_controller: 3
+[2025-04-03 08:55:07,792] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 08:55:07,796] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjYzYzZkYmJiOTM0NzgyZGYxMzNlZWRjNjE0ZGUyNGMyYzU5NDVkZWIi.Z-5M6w.d44N6kIovmVn6TZswX4TRon58I8', 'perfil': 'administrador'}
+[2025-04-03 08:55:07,797] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.26.0.5
+[2025-04-03 08:55:07,798] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:07] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 08:55:07,922] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:07,923] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:07] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:10,193] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:10,193] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:10] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:10,263] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:10,264] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:10] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:11,506] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:11,507] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:11] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:11,559] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:11,559] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:11] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:11,873] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:11,873] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:11] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:11,927] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:11,927] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:11] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:12,184] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:12,185] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:12,240] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:12,241] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:12,505] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:12,506] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:12,557] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:12,557] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:12,848] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:12,849] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:12,899] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:12,899] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:13,226] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:13,226] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:13] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:13,266] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:13,267] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:13] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:13,581] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:13,582] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:13] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:13,633] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:13,634] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:13] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:13,931] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:13,931] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:13] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:13,991] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:13,992] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:13] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:14,331] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:14,332] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:14] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:14,608] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:14,609] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:14] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 08:55:14,661] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.26.0.5
+[2025-04-03 08:55:14,662] INFO in _internal: 172.26.0.5 - - [03/Apr/2025 08:55:14] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:18,918] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.29.0.3:8080
+[2025-04-03 09:00:18,919] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 09:00:35,781] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 09:00:35,782] INFO in usuarios_controller: 1
+[2025-04-03 09:00:35,782] INFO in usuarios_controller: 2
+[2025-04-03 09:00:35,873] INFO in usuarios_controller: 3
+[2025-04-03 09:00:35,874] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 09:00:35,877] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjYzYzZkYmJiOTM0NzgyZGYxMzNlZWRjNjE0ZGUyNGMyYzU5NDVkZWIi.Z-5OMw.9I8ZCBoW_NQk1qZ1ZPAm-H1Sxis', 'perfil': 'administrador'}
+[2025-04-03 09:00:35,878] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.29.0.5
+[2025-04-03 09:00:35,879] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:35] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 09:00:36,016] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:36,017] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:36] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:38,135] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:38,136] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:38] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:41,488] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:41,489] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:41] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:41,559] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:41,560] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:41] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:42,138] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:42,139] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:42,194] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:42,195] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:42,969] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:42,970] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:43,429] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:43,429] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:43] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:43,486] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:43,486] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:43] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:43,908] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:43,909] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:43] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:43,960] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:43,961] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:43] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:44,270] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:44,271] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:44] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:44,331] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:44,331] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:44] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:44,530] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:44,531] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:44] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:44,583] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:44,583] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:44] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:44,952] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:44,953] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:44] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:45,301] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:45,302] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:45] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:45,368] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:45,369] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:45] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:45,657] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:45,658] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:45] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:45,702] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:45,702] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:45] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:46,018] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:46,018] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:46] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:46,084] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:46,085] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:46] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:46,318] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:46,319] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:46] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:46,381] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:46,381] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:46] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:51,975] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:51,976] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:51] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:52,052] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:52,053] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:52] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:53,299] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:53,300] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:53] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:53,358] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:53,359] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:53] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:54,845] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:54,846] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:56,351] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:56,352] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:56] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:56,403] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:56,404] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:56] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:57,851] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:57,851] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:57] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:57,902] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:57,903] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:57] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:00:58,902] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.29.0.5
+[2025-04-03 09:00:58,903] INFO in _internal: 172.29.0.5 - - [03/Apr/2025 09:00:58] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:04:47,448] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.3:8080
+[2025-04-03 09:04:47,448] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 09:04:58,913] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 09:04:58,914] INFO in usuarios_controller: 1
+[2025-04-03 09:04:58,914] INFO in usuarios_controller: 2
+[2025-04-03 09:04:59,005] INFO in usuarios_controller: 3
+[2025-04-03 09:04:59,006] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 09:04:59,008] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjYzYzZkYmJiOTM0NzgyZGYxMzNlZWRjNjE0ZGUyNGMyYzU5NDVkZWIi.Z-5POw.QpKiM7NL-pT2gp3cEy1pTl2FTJ8', 'perfil': 'administrador'}
+[2025-04-03 09:04:59,008] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.31.0.5
+[2025-04-03 09:04:59,010] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:04:59] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 09:04:59,132] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:04:59,133] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:04:59] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:05:01,581] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:05:01,581] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:05:01] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:05:01,698] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:05:01,699] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:05:01] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:10:58,948] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.4:8080
+[2025-04-03 09:10:58,948] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 09:11:20,090] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 09:11:20,091] INFO in usuarios_controller: 1
+[2025-04-03 09:11:20,091] INFO in usuarios_controller: 2
+[2025-04-03 09:11:20,182] INFO in usuarios_controller: 3
+[2025-04-03 09:11:20,183] INFO in app: path: /api/login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.31.0.5
+[2025-04-03 09:11:20,184] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:11:20] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+[2025-04-03 09:41:55,578] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.0.4:8080
+[2025-04-03 09:41:55,578] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 09:42:08,934] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 09:42:08,934] INFO in usuarios_controller: 1
+[2025-04-03 09:42:08,935] INFO in usuarios_controller: 2
+[2025-04-03 09:42:09,026] INFO in usuarios_controller: 3
+[2025-04-03 09:42:09,027] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 09:42:09,029] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjdiZjI0ZDE2NWZiZTNmYzYxNmQyYjY5ZWFhZGQyNDk3YTg4ZThjM2Ei.Z-5X8Q.WBF56Z3fktadujQE23MfNUCxaX4', 'perfil': 'administrador'}
+[2025-04-03 09:42:09,030] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.31.0.5
+[2025-04-03 09:42:09,031] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:42:09] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 09:42:09,146] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:42:09,147] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:42:09] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:42:37,385] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:42:37,386] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:42:37] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:42:49,800] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:42:49,801] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:42:49] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:42:49,871] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:42:49,872] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:42:49] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:42:50,856] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:42:50,858] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:42:50] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:44:27,438] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:44:27,439] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:44:27] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:44:38,570] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:44:38,571] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:44:38] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:44:45,554] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:44:45,555] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:44:45] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:44:54,514] INFO in app: path: /api/update-user | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.31.0.5
+[2025-04-03 09:44:54,515] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:44:54] "[31m[1mPOST /api/update-user HTTP/1.1[0m" 400 -
+[2025-04-03 09:44:59,831] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 172.31.0.5
+[2025-04-03 09:44:59,832] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:44:59] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 09:45:05,479] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 09:45:05,480] INFO in usuarios_controller: 1
+[2025-04-03 09:45:05,480] INFO in usuarios_controller: 2
+[2025-04-03 09:45:05,576] INFO in usuarios_controller: 3
+[2025-04-03 09:45:05,577] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 09:45:05,578] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjAxMmZjYzlkZDY2NGQ0MjI1MTRmNWU1YjM4YzQzNjJlM2U0NzQ2ZWIi.Z-5YoQ.dbgzakxcZGz43xr4KUbJD-Ue67s', 'perfil': 'administrador'}
+[2025-04-03 09:45:05,579] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.31.0.5
+[2025-04-03 09:45:05,581] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:45:05] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 09:45:05,680] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:45:05,682] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:45:05] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:45:11,998] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:45:12,000] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:45:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:45:14,066] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:45:14,067] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:45:14] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:45:14,150] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:45:14,152] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:45:14] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:45:15,932] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:45:15,933] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:45:15] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:45:16,001] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:45:16,002] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:45:16] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:48:49,491] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:48:49,492] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:48:49] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:53:39,599] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:53:39,600] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:53:39] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:53:42,217] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:53:42,218] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:53:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:53:42,348] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:53:42,349] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:53:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:53:48,600] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:53:48,601] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:53:48] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:53:48,706] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:53:48,707] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:53:48] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:53:54,709] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:53:54,710] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:53:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:53:54,804] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:53:54,804] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:53:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:54:10,805] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:54:10,806] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:54:10] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:54:14,953] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:54:14,954] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:54:14] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:54:51,459] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:54:51,460] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:54:51] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:54:51,562] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 172.31.0.5
+[2025-04-03 09:54:51,562] INFO in _internal: 172.31.0.5 - - [03/Apr/2025 09:54:51] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 09:55:26,302] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.64.4:8080
+[2025-04-03 09:55:26,302] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 09:55:30,383] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.64.5
+[2025-04-03 09:55:30,384] INFO in _internal: 192.168.64.5 - - [03/Apr/2025 09:55:30] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-03 09:55:33,178] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.64.5
+[2025-04-03 09:55:33,179] INFO in _internal: 192.168.64.5 - - [03/Apr/2025 09:55:33] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-03 09:55:33,322] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.64.5
+[2025-04-03 09:55:33,323] INFO in _internal: 192.168.64.5 - - [03/Apr/2025 09:55:33] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-03 09:59:39,590] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.112.3:8080
+[2025-04-03 09:59:39,590] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 10:00:28,570] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 10:00:28,570] INFO in usuarios_controller: 1
+[2025-04-03 10:00:28,571] INFO in usuarios_controller: 2
+[2025-04-03 10:00:28,662] INFO in usuarios_controller: 3
+[2025-04-03 10:00:28,662] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 10:00:28,665] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjY3NDFiOTZlYWVjZGE3ODFmOWViOTg1MDkzYTAzNzlkZTFlY2ZmMjgi.Z-5cPA.aLLJT-t3jSf8ysbjOzg-SFwOHO0', 'perfil': 'administrador'}
+[2025-04-03 10:00:28,665] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.112.5
+[2025-04-03 10:00:28,667] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:00:28] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 10:00:28,810] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:00:28,811] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:00:28] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:00:31,515] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:00:31,516] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:00:31] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:00:42,604] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:00:42,605] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:00:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:00:42,705] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:00:42,706] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:00:42] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:01:47,557] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:01:47,558] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:01:47] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:01:47,650] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:01:47,651] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:01:47] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:01:53,514] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:01:53,515] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:01:53] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:01:53,596] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:01:53,597] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:01:53] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:02:26,349] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.112.3:8080
+[2025-04-03 10:02:26,350] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 10:02:34,608] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:02:34,609] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:02:34] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:02:37,057] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:02:37,058] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:02:37] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:02:38,354] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:02:38,355] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:02:38] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:02:57,517] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:02:57,518] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:02:57] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:02:57,616] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:02:57,617] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:02:57] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:06:12,204] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:06:12,204] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:06:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:06:15,446] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:06:15,447] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:06:15] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:06:44,814] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:06:44,815] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:06:44] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:07:38,699] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:07:38,700] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:07:38] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:09:18,978] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:09:18,979] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:09:18] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:10:48,225] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.112.5
+[2025-04-03 10:10:48,226] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:10:48] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-03 10:12:21,632] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.112.3:8080
+[2025-04-03 10:12:21,632] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 10:12:31,932] INFO in app: path: /api/peliculas | method: GET | status: 403 FORBIDDEN | size: 23 >>> 192.168.112.5
+[2025-04-03 10:12:31,934] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:12:31] "[31m[1mGET /api/peliculas HTTP/1.1[0m" 403 -
+[2025-04-03 10:13:22,858] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 10:13:22,858] INFO in usuarios_controller: 1
+[2025-04-03 10:13:22,858] INFO in usuarios_controller: 2
+[2025-04-03 10:13:22,949] INFO in usuarios_controller: 3
+[2025-04-03 10:13:22,950] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 10:13:22,952] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'Ijk3NDlhNWVjMTU1ZjY2Y2RhZGFiNjRjMDgyZDZkYmMzOTAxYTdkNWMi.Z-5fQg.r79pRFxtKHPKHBASKP6kSK-0lRI', 'perfil': 'administrador'}
+[2025-04-03 10:13:22,952] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.112.5
+[2025-04-03 10:13:22,954] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:13:22] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 10:13:23,070] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:13:23,070] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:13:23] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:13:24,874] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.112.5
+[2025-04-03 10:13:24,875] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:13:24] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:14:05,311] INFO in app: path: /api/peliculas | method: POST | status: 200 OK | size: 16 >>> 192.168.112.5
+[2025-04-03 10:14:05,311] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:14:05] "POST /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:14:06,979] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 92 >>> 192.168.112.5
+[2025-04-03 10:14:06,980] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:14:06] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:14:15,803] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 92 >>> 192.168.112.5
+[2025-04-03 10:14:15,804] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:14:15] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:14:29,124] INFO in app: path: /api/peliculas/${id} | method: DELETE | status: 400 BAD REQUEST | size: 117 >>> 192.168.112.5
+[2025-04-03 10:14:29,125] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:14:29] "[31m[1mDELETE /api/peliculas/${id} HTTP/1.1[0m" 400 -
+[2025-04-03 10:14:34,378] INFO in app: path: /api/peliculas/${id} | method: DELETE | status: 400 BAD REQUEST | size: 117 >>> 192.168.112.5
+[2025-04-03 10:14:34,379] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:14:34] "[31m[1mDELETE /api/peliculas/${id} HTTP/1.1[0m" 400 -
+[2025-04-03 10:16:52,111] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.112.3:8080
+[2025-04-03 10:16:52,111] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 10:17:30,460] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 92 >>> 192.168.112.5
+[2025-04-03 10:17:30,462] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:17:30] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:17:32,551] INFO in app: path: /api/peliculas/${id} | method: DELETE | status: 404 NOT FOUND | size: 207 >>> 192.168.112.5
+[2025-04-03 10:17:32,552] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:17:32] "[33mDELETE /api/peliculas/${id} HTTP/1.1[0m" 404 -
+[2025-04-03 10:18:06,553] INFO in app: path: /api/peliculas/${id} | method: DELETE | status: 404 NOT FOUND | size: 207 >>> 192.168.112.5
+[2025-04-03 10:18:06,554] INFO in _internal: 192.168.112.5 - - [03/Apr/2025 10:18:06] "[33mDELETE /api/peliculas/${id} HTTP/1.1[0m" 404 -
+[2025-04-03 10:20:57,176] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.176.3:8080
+[2025-04-03 10:20:57,177] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 10:21:03,030] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 92 >>> 192.168.176.5
+[2025-04-03 10:21:03,032] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:21:03] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:21:05,243] INFO in app: path: /api/peliculas/2 | method: DELETE | status: 200 OK | size: 16 >>> 192.168.176.5
+[2025-04-03 10:21:05,244] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:21:05] "DELETE /api/peliculas/2 HTTP/1.1" 200 -
+[2025-04-03 10:21:06,734] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:21:06,735] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:21:06] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:21:48,109] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:21:48,110] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:21:48] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:21:54,073] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:21:54,074] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:21:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:22:12,837] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:22:12,838] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:22:12] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:23:01,598] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.176.5
+[2025-04-03 10:23:01,599] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:23:01] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 10:23:37,981] INFO in usuarios_controller: Nuevo usuario creado
+[2025-04-03 10:23:37,982] INFO in app: path: /api/registro | method: POST | status: 200 OK | size: 16 >>> 192.168.176.5
+[2025-04-03 10:23:37,983] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:23:37] "POST /api/registro HTTP/1.1" 200 -
+[2025-04-03 10:23:50,848] INFO in usuarios_controller: Usuario: normal, Contraseña: $2b$10$ET8mUGteygy9D121LEHVYOsRIusgH/13s9Gn4fHxL5p4M.FghSHra, Intentos erróneos: 0
+[2025-04-03 10:23:50,848] INFO in usuarios_controller: 1
+[2025-04-03 10:23:50,848] INFO in usuarios_controller: 2
+[2025-04-03 10:23:50,941] INFO in usuarios_controller: 3
+[2025-04-03 10:23:50,942] INFO in usuarios_controller: Acceso usuario ma@gmail.com correcto
+[2025-04-03 10:23:50,947] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImFjYmUzZDUwMmE3Y2U1NjNjMzcyY2ZmMTFiYjViMDYwZDdjYTM2ZWEi.Z-5htg.LFxPUsa7K3f33gSrfk555s_eknE', 'perfil': 'normal'}
+[2025-04-03 10:23:50,948] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 145 >>> 192.168.176.5
+[2025-04-03 10:23:50,949] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:23:50] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 10:23:51,152] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:23:51,154] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:23:51] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:23:54,225] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:23:54,226] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:23:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:23:54,360] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:23:54,360] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:23:54] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:23:57,626] INFO in app: path: /api/logout | method: GET | status: 200 OK | size: 16 >>> 192.168.176.5
+[2025-04-03 10:23:57,627] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:23:57] "GET /api/logout HTTP/1.1" 200 -
+[2025-04-03 10:24:08,842] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 10:24:08,843] INFO in usuarios_controller: 1
+[2025-04-03 10:24:08,843] INFO in usuarios_controller: 2
+[2025-04-03 10:24:08,933] INFO in usuarios_controller: 3
+[2025-04-03 10:24:08,934] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 10:24:08,936] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjM1NzU4YjUxMTdkNzFlM2JmYTcxY2QzZDQ1YWZiZDA3NzE4Mjc2MjUi.Z-5hyA.wjnnx7HE9TlZcB9q1ds_ccTkzJA', 'perfil': 'administrador'}
+[2025-04-03 10:24:08,936] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.176.5
+[2025-04-03 10:24:08,937] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:24:08] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 10:24:09,195] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:24:09,195] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:24:09] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:24:10,293] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:24:10,294] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:24:10] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:24:35,226] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.176.5
+[2025-04-03 10:24:35,227] INFO in _internal: 192.168.176.5 - - [03/Apr/2025 10:24:35] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:26:32,819] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.224.3:8080
+[2025-04-03 10:26:32,819] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-03 10:26:55,186] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$5lL8ZL/5O6VumT7hBbqKze/PmSkv2XzSWLTftuw81rhlJujQZBZhi, Intentos erróneos: 0
+[2025-04-03 10:26:55,187] INFO in usuarios_controller: 1
+[2025-04-03 10:26:55,187] INFO in usuarios_controller: 2
+[2025-04-03 10:26:55,278] INFO in usuarios_controller: 3
+[2025-04-03 10:26:55,279] INFO in usuarios_controller: Acceso usuario lucas.rodriguez7@educa.madrid.org correcto
+[2025-04-03 10:26:55,282] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'IjM1NzU4YjUxMTdkNzFlM2JmYTcxY2QzZDQ1YWZiZDA3NzE4Mjc2MjUi.Z-5ibw.EZwAEyq08Yc_vQSPDRAqxBQRluI', 'perfil': 'administrador'}
+[2025-04-03 10:26:55,282] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 192.168.224.5
+[2025-04-03 10:26:55,284] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 10:26:55] "POST /api/login HTTP/1.1" 200 -
+[2025-04-03 10:26:55,367] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.224.5
+[2025-04-03 10:26:55,368] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 10:26:55] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:26:56,763] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.224.5
+[2025-04-03 10:26:56,764] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 10:26:56] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-03 10:27:11,847] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 2 >>> 192.168.224.5
+[2025-04-03 10:27:11,847] INFO in _internal: 192.168.224.5 - - [03/Apr/2025 10:27:11] "GET /api/peliculas HTTP/1.1" 200 -
