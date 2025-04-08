@@ -10,7 +10,6 @@ services:
     volumes:
       - mariadb_dataa3:/var/lib/mysql
       - ./Peliculas.sql:/docker-entrypoint-initdb.d/Peliculas.sql
-    user: mysql
     secrets:
       - db_root_password
     
@@ -28,6 +27,7 @@ services:
   python:
     build: .
     container_name: pythona3
+    env_file: .env 
     environment:
       DB_USERNAME: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}
@@ -41,7 +41,6 @@ services:
       DEBUG: "false"
       PYTHONBUFFERED: 1
     volumes:
-      - ./uploads:/uploads 
       - ./logs:/app/logs
 
     depends_on:

@@ -79,8 +79,6 @@ def afterRequest(response):
 
 from routes import ruta_inicio
 from routes import ruta_peliculas
-from routes import ruta_upload
-from routes import ruta_verfichero
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT'))
