@@ -18,7 +18,7 @@ let peliculaId; // Variable global para almacenar el ID de la película
 // Función para editar una película
 function editarPelicula(id) {
   peliculaId = id; // Almacenar el ID al editar la película
-  fetch('/api/pelicula/${id}', {
+  fetch(`/api/pelicula/${id}`, {
     method: "GET",
     headers: myHeaders
   })
@@ -30,7 +30,6 @@ function editarPelicula(id) {
       document.getElementById("sinopsis").value = pelicula.sinopsis;
       document.getElementById("categoria").value = pelicula.categoria;
       document.getElementById("precio").value = pelicula.precio;
-      document.getElementById("portada").value = pelicula.portada;
 
       // Cambiar la función del formulario a guardarCambios
       document.getElementById("movie-form").onsubmit = guardarCambios;
@@ -48,22 +47,20 @@ function guardarCambios() {
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("categoria").value;
   const precio = parseFloat(document.getElementById("precio").value);
-  const portada = document.getElementById("portada").value;
 
   let datos = JSON.stringify({
     "nombre": nombre,
     "sinopsis": sinopsis,
     "categoria": categoria,
     "precio": precio,
-    "portada": portada,
   });
-  var requestOptions = {
+  let requestOptions = {
     method: "PUT",
     headers: myHeaders,
     body: datos,
   };
 
-  fetch("/api/peliculas", requestOptions)
+  fetch(`/api/peliculas/editar`, requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status == "OK") {
@@ -71,7 +68,7 @@ function guardarCambios() {
         cerrarFormulario();
         cargarPeliculas();
       } else {
-        alert("La chuche no ha podido ser editada");
+        alert("La pelicula no ha podido ser editada");
       }
     })
     .catch((error) => {
@@ -86,24 +83,20 @@ function insertMovie() {
   const sinopsis = document.getElementById("sinopsis").value;
   const categoria = document.getElementById("categoria").value;
   const precio = parseFloat(document.getElementById("precio").value);
-  const portada = document.getElementById("portada").value;
 
   let datos = JSON.stringify({
     "nombre": nombre,
     "sinopsis": sinopsis,
     "categoria": categoria,
     "precio": precio,
-    "portada": portada,
   });
-  var requestOptions = {
+  let requestOptions = {
     method: "POST",
     headers: myHeaders,
     body: datos,
   };
 
-  alert(datos)
-
-  fetch("/api/peliculas", requestOptions)
+  fetch(`/api/peliculas/insertar`, requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status == "OK") {
@@ -113,6 +106,7 @@ function insertMovie() {
       } else {
         alert("La pelicula no ha podido ser guardado");
       }
+      console.log("lucas tonto")
     })
     .catch((error) => {
       console.log("error", error);
@@ -125,7 +119,7 @@ function calcularIVA(precio) {
 }
 
 // Función para agregar una fila a la tabla de películas
-function agregarFila(nombre, categoria, sinopsis, precio, portada, id) {
+function agregarFila(nombre, categoria, sinopsis, precio, id) {
   const tableBody = document.getElementById("movie-list");
 
   const row = document.createElement("tr");
@@ -138,8 +132,6 @@ function agregarFila(nombre, categoria, sinopsis, precio, portada, id) {
   tdSinopsis.textContent = sinopsis;
   const tdPrecio = document.createElement("td");
   tdPrecio.textContent = precio;
-  const tdPortada = document.createElement("td");
-  tdPortada.textContent = portada;
   const tdAcciones = document.createElement("td");
 
   // Botón de editar
@@ -160,7 +152,7 @@ function agregarFila(nombre, categoria, sinopsis, precio, portada, id) {
   const btnCalcularIVA = document.createElement("button");
   btnCalcularIVA.textContent = "Calcular IVA";
   btnCalcularIVA.onclick = function () {
-    alert('El IVA de ${nombre} es: $${calcularIVA(precio).toFixed(2)}');
+    alert(`El IVA de ${nombre} es: $${calcularIVA(precio).toFixed(2)}`);
   };
 
   tdAcciones.appendChild(btnEditar);
@@ -171,7 +163,6 @@ function agregarFila(nombre, categoria, sinopsis, precio, portada, id) {
   row.appendChild(tdCategoria);
   row.appendChild(tdSinopsis);
   row.appendChild(tdPrecio);
-  row.appendChild(tdPortada);
   row.appendChild(tdAcciones);
 
   tableBody.appendChild(row);
@@ -179,7 +170,7 @@ function agregarFila(nombre, categoria, sinopsis, precio, portada, id) {
 
 // Función para cargar todas las películas
 function cargarPeliculas() {
-  fetch("/api/peliculas", {
+  fetch(`/api/peliculas`, {
     method: "GET",
     headers: myHeaders
   })
@@ -193,7 +184,6 @@ function cargarPeliculas() {
           pelicula.categoria,
           pelicula.sinopsis,
           pelicula.precio,
-          "",
           pelicula.id
         );
       });
