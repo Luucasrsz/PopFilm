@@ -96,12 +96,15 @@ def actualizar_pelicula():
                     respuesta = {"status": "Forbidden"}
                     code = 403
             else:
+                app.logger.info("1")
                 respuesta = {"status": "Bad request"}
                 code = 401
         else:
+            app.logger.info("2")
             respuesta = {"status": "Bad request"}
             code = 401
     else:
+        app.logger.info("3")
         respuesta = {"status": "Bad request"}
         code = 401
 

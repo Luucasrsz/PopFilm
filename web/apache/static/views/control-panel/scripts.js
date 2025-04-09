@@ -49,6 +49,7 @@ function guardarCambios() {
   const precio = parseFloat(document.getElementById("precio").value);
 
   let datos = JSON.stringify({
+    "id": id,
     "nombre": nombre,
     "sinopsis": sinopsis,
     "categoria": categoria,

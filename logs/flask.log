@@ -1614,3 +1614,103 @@
 [2025-04-08 10:31:48,205] INFO in _internal: 172.30.0.5 - - [08/Apr/2025 10:31:48] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
 [2025-04-08 10:31:49,717] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 162 >>> 172.30.0.5
 [2025-04-08 10:31:49,718] INFO in _internal: 172.30.0.5 - - [08/Apr/2025 10:31:49] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:09:46,552] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-04-09 10:09:46,552] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-09 10:10:18,628] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$JtroPBMd9gZTasX5FLCX6.DDeELXGLfw7kMD0lcm6excVXvpFvsv2, Intentos erróneos: 0
+[2025-04-09 10:10:18,629] INFO in usuarios_controller: 1
+[2025-04-09 10:10:18,629] INFO in usuarios_controller: 2
+[2025-04-09 10:10:18,681] INFO in usuarios_controller: 3
+[2025-04-09 10:10:18,681] INFO in usuarios_controller: Acceso usuario mario@gmail.com correcto
+[2025-04-09 10:10:18,681] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImQyNTcyYmY4YmQ0YWI5YzcyODA0ZGYwNjY3ZWU2MmFjMjM2OWYxYWQi.Z_ZHig.o_fnX6niUGFes2M-vcaWu2VdMQk', 'perfil': 'administrador'}
+[2025-04-09 10:10:18,681] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.22.0.5
+[2025-04-09 10:10:18,682] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:18] "POST /api/login HTTP/1.1" 200 -
+[2025-04-09 10:10:18,718] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.22.0.5
+[2025-04-09 10:10:18,719] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:18] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:10:21,096] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.22.0.5
+[2025-04-09 10:10:21,096] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:21] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:10:23,411] INFO in app: path: /api/pelicula/3 | method: GET | status: 200 OK | size: 79 >>> 172.22.0.5
+[2025-04-09 10:10:23,412] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:23] "GET /api/pelicula/3 HTTP/1.1" 200 -
+[2025-04-09 10:10:27,121] INFO in app: path: /api/peliculas/editar | method: PUT | status: 401 UNAUTHORIZED | size: 25 >>> 172.22.0.5
+[2025-04-09 10:10:27,122] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:27] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
+[2025-04-09 10:10:28,470] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.22.0.5
+[2025-04-09 10:10:28,471] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:28] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:10:33,580] INFO in app: path: /api/pelicula/4 | method: GET | status: 200 OK | size: 86 >>> 172.22.0.5
+[2025-04-09 10:10:33,580] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:33] "GET /api/pelicula/4 HTTP/1.1" 200 -
+[2025-04-09 10:10:38,970] INFO in app: path: /api/peliculas/editar | method: PUT | status: 401 UNAUTHORIZED | size: 25 >>> 172.22.0.5
+[2025-04-09 10:10:38,970] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:38] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
+[2025-04-09 10:10:41,835] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.22.0.5
+[2025-04-09 10:10:41,835] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:41] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:10:48,787] INFO in app: path: /api/pelicula/4 | method: GET | status: 200 OK | size: 86 >>> 172.22.0.5
+[2025-04-09 10:10:48,788] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:48] "GET /api/pelicula/4 HTTP/1.1" 200 -
+[2025-04-09 10:10:50,898] INFO in app: path: /api/peliculas/editar | method: PUT | status: 401 UNAUTHORIZED | size: 25 >>> 172.22.0.5
+[2025-04-09 10:10:50,898] INFO in _internal: 172.22.0.5 - - [09/Apr/2025 10:10:50] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
+[2025-04-09 10:17:27,313] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.24.0.3:8080
+[2025-04-09 10:17:27,313] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-09 10:17:45,796] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$JtroPBMd9gZTasX5FLCX6.DDeELXGLfw7kMD0lcm6excVXvpFvsv2, Intentos erróneos: 0
+[2025-04-09 10:17:45,796] INFO in usuarios_controller: 1
+[2025-04-09 10:17:45,796] INFO in usuarios_controller: 2
+[2025-04-09 10:17:45,847] INFO in usuarios_controller: 3
+[2025-04-09 10:17:45,848] INFO in usuarios_controller: Acceso usuario mario@gmail.com correcto
+[2025-04-09 10:17:45,848] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImQyNTcyYmY4YmQ0YWI5YzcyODA0ZGYwNjY3ZWU2MmFjMjM2OWYxYWQi.Z_ZJSQ.GfQegI8ObuYNMtE6fYq7CaCGqjE', 'perfil': 'administrador'}
+[2025-04-09 10:17:45,848] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.24.0.5
+[2025-04-09 10:17:45,849] INFO in _internal: 172.24.0.5 - - [09/Apr/2025 10:17:45] "POST /api/login HTTP/1.1" 200 -
+[2025-04-09 10:17:45,890] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.24.0.5
+[2025-04-09 10:17:45,891] INFO in _internal: 172.24.0.5 - - [09/Apr/2025 10:17:45] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:17:47,303] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.24.0.5
+[2025-04-09 10:17:47,303] INFO in _internal: 172.24.0.5 - - [09/Apr/2025 10:17:47] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:17:52,731] INFO in app: path: /api/pelicula/3 | method: GET | status: 200 OK | size: 79 >>> 172.24.0.5
+[2025-04-09 10:17:52,731] INFO in _internal: 172.24.0.5 - - [09/Apr/2025 10:17:52] "GET /api/pelicula/3 HTTP/1.1" 200 -
+[2025-04-09 10:17:56,465] INFO in ruta_peliculas: 2
+[2025-04-09 10:17:56,465] INFO in app: path: /api/peliculas/editar | method: PUT | status: 401 UNAUTHORIZED | size: 25 >>> 172.24.0.5
+[2025-04-09 10:17:56,465] INFO in _internal: 172.24.0.5 - - [09/Apr/2025 10:17:56] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
+[2025-04-09 10:20:34,120] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.25.0.3:8080
+[2025-04-09 10:20:34,120] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-09 10:20:50,030] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$JtroPBMd9gZTasX5FLCX6.DDeELXGLfw7kMD0lcm6excVXvpFvsv2, Intentos erróneos: 0
+[2025-04-09 10:20:50,030] INFO in usuarios_controller: 1
+[2025-04-09 10:20:50,031] INFO in usuarios_controller: 2
+[2025-04-09 10:20:50,084] INFO in usuarios_controller: 3
+[2025-04-09 10:20:50,084] INFO in usuarios_controller: Acceso usuario mario@gmail.com correcto
+[2025-04-09 10:20:50,085] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImQyNTcyYmY4YmQ0YWI5YzcyODA0ZGYwNjY3ZWU2MmFjMjM2OWYxYWQi.Z_ZKAg.Zrqh47OQQ5Mi7f0ZCyIfYdJTmak', 'perfil': 'administrador'}
+[2025-04-09 10:20:50,085] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.25.0.5
+[2025-04-09 10:20:50,085] INFO in _internal: 172.25.0.5 - - [09/Apr/2025 10:20:50] "POST /api/login HTTP/1.1" 200 -
+[2025-04-09 10:20:50,127] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.25.0.5
+[2025-04-09 10:20:50,127] INFO in _internal: 172.25.0.5 - - [09/Apr/2025 10:20:50] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:20:51,451] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.25.0.5
+[2025-04-09 10:20:51,451] INFO in _internal: 172.25.0.5 - - [09/Apr/2025 10:20:51] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:20:53,259] INFO in app: path: /api/pelicula/3 | method: GET | status: 200 OK | size: 79 >>> 172.25.0.5
+[2025-04-09 10:20:53,259] INFO in _internal: 172.25.0.5 - - [09/Apr/2025 10:20:53] "GET /api/pelicula/3 HTTP/1.1" 200 -
+[2025-04-09 10:20:58,769] INFO in ruta_peliculas: 2
+[2025-04-09 10:20:58,769] INFO in app: path: /api/peliculas/editar | method: PUT | status: 401 UNAUTHORIZED | size: 25 >>> 172.25.0.5
+[2025-04-09 10:20:58,769] INFO in _internal: 172.25.0.5 - - [09/Apr/2025 10:20:58] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
+[2025-04-09 10:25:24,627] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.3:8080
+[2025-04-09 10:25:24,627] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-09 10:25:41,118] INFO in usuarios_controller: Usuario: administrador, Contraseña: $2b$10$JtroPBMd9gZTasX5FLCX6.DDeELXGLfw7kMD0lcm6excVXvpFvsv2, Intentos erróneos: 0
+[2025-04-09 10:25:41,118] INFO in usuarios_controller: 1
+[2025-04-09 10:25:41,118] INFO in usuarios_controller: 2
+[2025-04-09 10:25:41,170] INFO in usuarios_controller: 3
+[2025-04-09 10:25:41,170] INFO in usuarios_controller: Acceso usuario mario@gmail.com correcto
+[2025-04-09 10:25:41,170] INFO in usuarios_controller: {'status': 'OK', 'csrf_token': 'ImQyNTcyYmY4YmQ0YWI5YzcyODA0ZGYwNjY3ZWU2MmFjMjM2OWYxYWQi.Z_ZLJQ.u4vhKMSENzYihqXdtxevGsugC8A', 'perfil': 'administrador'}
+[2025-04-09 10:25:41,171] INFO in app: path: /api/login | method: POST | status: 200 OK | size: 152 >>> 172.26.0.5
+[2025-04-09 10:25:41,171] INFO in _internal: 172.26.0.5 - - [09/Apr/2025 10:25:41] "POST /api/login HTTP/1.1" 200 -
+[2025-04-09 10:25:41,215] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.26.0.5
+[2025-04-09 10:25:41,215] INFO in _internal: 172.26.0.5 - - [09/Apr/2025 10:25:41] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:25:43,040] INFO in app: path: /api/peliculas | method: GET | status: 200 OK | size: 338 >>> 172.26.0.5
+[2025-04-09 10:25:43,040] INFO in _internal: 172.26.0.5 - - [09/Apr/2025 10:25:43] "GET /api/peliculas HTTP/1.1" 200 -
+[2025-04-09 10:25:44,378] INFO in app: path: /api/pelicula/3 | method: GET | status: 200 OK | size: 79 >>> 172.26.0.5
+[2025-04-09 10:25:44,379] INFO in _internal: 172.26.0.5 - - [09/Apr/2025 10:25:44] "GET /api/pelicula/3 HTTP/1.1" 200 -
+[2025-04-09 10:25:46,456] INFO in ruta_peliculas: JSON recibido: {'nombre': 'aaa', 'sinopsis': 'aa', 'categoria': 'sadfgsdfg', 'precio': 21}
+[2025-04-09 10:25:46,456] INFO in ruta_peliculas: 2
+[2025-04-09 10:25:46,457] INFO in app: path: /api/peliculas/editar | method: PUT | status: 401 UNAUTHORIZED | size: 25 >>> 172.26.0.5
+[2025-04-09 10:25:46,457] INFO in _internal: 172.26.0.5 - - [09/Apr/2025 10:25:46] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
