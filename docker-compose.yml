@@ -51,8 +51,10 @@ services:
     volumes:
       - ./web/apache/static:/usr/local/apache2/htdocs
       - ./uploads:/var/www/html/uploads
+      - ./logwaf:/var/log/apache2
     ports:
       - 6003:80
+      - 6013:443
     depends_on:
       - python
 secrets:

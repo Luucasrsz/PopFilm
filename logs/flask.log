@@ -1714,3 +1714,28 @@
 [2025-04-09 10:25:46,456] INFO in ruta_peliculas: 2
 [2025-04-09 10:25:46,457] INFO in app: path: /api/peliculas/editar | method: PUT | status: 401 UNAUTHORIZED | size: 25 >>> 172.26.0.5
 [2025-04-09 10:25:46,457] INFO in _internal: 172.26.0.5 - - [09/Apr/2025 10:25:46] "[31m[1mPUT /api/peliculas/editar HTTP/1.1[0m" 401 -
+[2025-04-10 09:04:02,988] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2025-04-10 09:04:02,988] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-10 09:10:05,375] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.21.0.3:8080
+[2025-04-10 09:10:05,376] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-10 10:19:09,314] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-04-10 10:19:09,314] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-10 10:24:32,939] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.24.0.3:8080
+[2025-04-10 10:24:32,939] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-10 10:28:21,571] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.24.0.3:8080
+[2025-04-10 10:28:21,572] INFO in _internal: [33mPress CTRL+C to quit[0m

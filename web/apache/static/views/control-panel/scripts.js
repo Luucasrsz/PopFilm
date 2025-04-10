@@ -55,6 +55,8 @@ function guardarCambios() {
     "categoria": categoria,
     "precio": precio,
   });
+
+
   let requestOptions = {
     method: "PUT",
     headers: myHeaders,
