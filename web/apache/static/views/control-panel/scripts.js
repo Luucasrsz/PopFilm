@@ -97,6 +97,7 @@ function insertMovie() {
     method: "POST",
     headers: myHeaders,
     body: datos,
+    cache: "no-store"
   };
 
   fetch(`/api/peliculas/insertar`, requestOptions)

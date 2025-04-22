@@ -9,7 +9,7 @@ var myHeaders = new Headers();
                 "email": document.getElementById("email").value,
                 "perfil": "normal"
             });
-            console.log(raw)
+
 
             var requestOptions = {
                 method: 'POST',
@@ -17,7 +17,6 @@ var myHeaders = new Headers();
                 body: raw
             };
 
-            console.log(requestOptions)
 
             fetch("/api/registro", requestOptions)
                 .then(response => response.json())
