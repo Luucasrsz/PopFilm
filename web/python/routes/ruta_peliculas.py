@@ -77,20 +77,21 @@ def eliminar_pelicula(id):
     response = make_response(json.dumps(respuesta, cls=Encoder), code)
     return response
 
-@app.route("/api/peliculas/editar", methods=["PUT"])
-def actualizar_pelicula():
+@app.route("/api/peliculas/<int:id>", methods=["PUT"])
+def actualizar_pelicula(id):
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         pelicula_json = request.json
-        if "id" in pelicula_json and "nombre" in pelicula_json and "sinopsis" in pelicula_json and "categoria" in pelicula_json and "precio" in pelicula_json:
-            id = pelicula_json["id"]
+        if "nombre" in pelicula_json and "sinopsis" in pelicula_json and "categoria" in pelicula_json and "precio" in pelicula_json:
             nombre = sanitize_input(pelicula_json["nombre"])
             sinopsis = sanitize_input(pelicula_json["sinopsis"])
             categoria = sanitize_input(pelicula_json["categoria"])
             precio = pelicula_json["precio"]
 
-            if isinstance(id, int) and isinstance(nombre, str) and isinstance(sinopsis, str) and isinstance(categoria, str) and isinstance(precio, (int, float)) and len(nombre) < 128 and len(sinopsis) < 512 and len(categoria) < 512:
+            # Validación de los parámetros
+            if isinstance(nombre, str) and isinstance(sinopsis, str) and isinstance(categoria, str) and isinstance(precio, (int, float)) and len(nombre) < 128 and len(sinopsis) < 512 and len(categoria) < 512:
                 if (validar_session_admin()):
+                    # Llamar al controlador para actualizar la película
                     respuesta, code = peliculas_controller.actualizar_pelicula(id, nombre, sinopsis, categoria, precio)
                 else:
                     respuesta = {"status": "Forbidden"}
@@ -110,3 +111,4 @@ def actualizar_pelicula():
 
     response = make_response(json.dumps(respuesta, cls=Encoder), code)
     return response
+

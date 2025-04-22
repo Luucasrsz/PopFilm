@@ -577,3 +577,263 @@ su: user someuser does not exist
 [Tue Apr 22 10:23:18.807167 2025] [ssl:info] [pid 9:tid 140402623547136] [client 172.26.0.1:54332] AH01964: Connection to child 4 established (server ciberIES:443)
 [Tue Apr 22 10:23:26.953592 2025] [ssl:info] [pid 10:tid 140402718906112] [client 172.26.0.1:37010] AH01964: Connection to child 64 established (server ciberIES:443)
 [Tue Apr 22 10:23:36.933946 2025] [ssl:info] [pid 10:tid 140402254399232] [client 172.26.0.1:47158] AH01964: Connection to child 72 established (server ciberIES:443)
+[Tue Apr 22 16:41:13.338377 2025] [ssl:info] [pid 8:tid 130565668531264] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 16:41:13.338852 2025] [ssl:info] [pid 8:tid 130565668531264] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 16:41:13.339133 2025] [ssl:warn] [pid 8:tid 130565668531264] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 16:41:13.339143 2025] [ssl:info] [pid 8:tid 130565668531264] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 16:41:13.339256 2025] [ssl:info] [pid 8:tid 130565668531264] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 16:41:13.339293 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Tue Apr 22 16:41:13.339300 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Tue Apr 22 16:41:13.339305 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Tue Apr 22 16:41:13.339309 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: LUA compiled version="Lua 5.1"
+[Tue Apr 22 16:41:13.339313 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: YAJL compiled version="2.1.0"
+[Tue Apr 22 16:41:13.339315 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: LIBXML compiled version="2.9.10"
+[Tue Apr 22 16:41:13.339318 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: Original server signature: Apache
+[Tue Apr 22 16:41:13.339351 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,d7a6a176e632d8aad3ae483618213171c3cdf998"
+[Tue Apr 22 16:41:13.570888 2025] [:notice] [pid 8:tid 130565668531264] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FRSDOYJWMEYTONTFGYZTEZBYMFQWIM3B.MU2DQMZWGE4DEMJTGE3TCYZTMNSGMOJZ.HA.1745340073.status.modsecurity.org
+[Tue Apr 22 16:41:13.712443 2025] [socache_shmcb:info] [pid 8:tid 130565668531264] AH00830: Shared memory socache initialised
+[Tue Apr 22 16:41:13.712463 2025] [ssl:info] [pid 8:tid 130565668531264] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 16:41:13.712468 2025] [ssl:info] [pid 8:tid 130565668531264] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 16:41:13.712680 2025] [ssl:warn] [pid 8:tid 130565668531264] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 16:41:13.712689 2025] [ssl:info] [pid 8:tid 130565668531264] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 16:41:13.712799 2025] [ssl:info] [pid 8:tid 130565668531264] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 16:41:13.712936 2025] [core:warn] [pid 8:tid 130565668531264] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 22 16:41:13.731796 2025] [mpm_event:notice] [pid 8:tid 130565668531264] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Tue Apr 22 16:41:13.731832 2025] [mpm_event:info] [pid 8:tid 130565668531264] AH00490: Server built: 2025-04-02T18:34:29
+[Tue Apr 22 16:41:13.731848 2025] [core:notice] [pid 8:tid 130565668531264] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 22 16:41:46.800750 2025] [ssl:info] [pid 11:tid 130565630068480] [client 172.18.0.1:52916] AH01964: Connection to child 64 established (server ciberIES:443)
+[Tue Apr 22 16:41:46.853269 2025] [ssl:info] [pid 11:tid 130565630068480] [client 172.18.0.1:52916] AH02008: SSL library error 1 in handshake (server ciberIES:443)
+[Tue Apr 22 16:41:46.854866 2025] [ssl:info] [pid 11:tid 130565630068480] SSL Library Error: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate (SSL alert number 42)
+[Tue Apr 22 16:41:46.855011 2025] [ssl:info] [pid 11:tid 130565630068480] [client 172.18.0.1:52916] AH01998: Connection closed to child 64 with abortive shutdown (server ciberIES:443)
+[Tue Apr 22 16:41:46.871681 2025] [ssl:info] [pid 9:tid 130565630068480] [client 172.18.0.1:52924] AH01964: Connection to child 0 established (server ciberIES:443)
+[Tue Apr 22 16:41:46.913189 2025] [ssl:info] [pid 9:tid 130565630068480] [client 172.18.0.1:52924] AH02008: SSL library error 1 in handshake (server ciberIES:443)
+[Tue Apr 22 16:41:46.913273 2025] [ssl:info] [pid 9:tid 130565630068480] SSL Library Error: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate (SSL alert number 42)
+[Tue Apr 22 16:41:46.913290 2025] [ssl:info] [pid 9:tid 130565630068480] [client 172.18.0.1:52924] AH01998: Connection closed to child 0 with abortive shutdown (server ciberIES:443)
+[Tue Apr 22 16:41:53.857295 2025] [ssl:info] [pid 9:tid 130565562959616] [client 172.18.0.1:47114] AH01964: Connection to child 1 established (server ciberIES:443)
+[Tue Apr 22 16:41:54.839391 2025] [core:info] [pid 9:tid 130565541988096] [client 172.18.0.1:47114] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: https://localhost:6013/
+[Tue Apr 22 16:42:15.429200 2025] [ssl:info] [pid 9:tid 130565418256128] [client 172.18.0.1:49026] AH01964: Connection to child 8 established (server ciberIES:443)
+[Tue Apr 22 16:42:18.058446 2025] [core:info] [pid 9:tid 130565397284608] [client 172.18.0.1:49026] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: https://localhost:6013/index.html
+[Tue Apr 22 16:42:26.062151 2025] [ssl:info] [pid 11:tid 130565562959616] [client 172.18.0.1:43578] AH01964: Connection to child 65 established (server ciberIES:443)
+[Tue Apr 22 16:42:26.263885 2025] [ssl:info] [pid 9:tid 130565355341568] [client 172.18.0.1:43584] AH01964: Connection to child 14 established (server ciberIES:443)
+[Tue Apr 22 16:42:26.278564 2025] [ssl:info] [pid 9:tid 130565344855808] [client 172.18.0.1:43586] AH01964: Connection to child 15 established (server ciberIES:443)
+[Tue Apr 22 16:43:39.474652 2025] [ssl:info] [pid 9:tid 130565237901056] [client 172.18.0.1:33414] AH01964: Connection to child 18 established (server ciberIES:443)
+[Tue Apr 22 16:43:51.621934 2025] [ssl:info] [pid 11:tid 130565334370048] [client 172.18.0.1:33424] AH01964: Connection to child 80 established (server ciberIES:443)
+[Tue Apr 22 16:44:03.205329 2025] [ssl:info] [pid 11:tid 130565250483968] [client 172.18.0.1:43386] AH01964: Connection to child 88 established (server ciberIES:443)
+[Tue Apr 22 16:50:35.482921 2025] [ssl:info] [pid 8:tid 125990100028480] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 16:50:35.484921 2025] [ssl:info] [pid 8:tid 125990100028480] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 16:50:35.487364 2025] [ssl:warn] [pid 8:tid 125990100028480] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 16:50:35.487397 2025] [ssl:info] [pid 8:tid 125990100028480] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 16:50:35.487543 2025] [ssl:info] [pid 8:tid 125990100028480] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 16:50:35.487621 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Tue Apr 22 16:50:35.487650 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Tue Apr 22 16:50:35.487658 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Tue Apr 22 16:50:35.487682 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: LUA compiled version="Lua 5.1"
+[Tue Apr 22 16:50:35.487686 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: YAJL compiled version="2.1.0"
+[Tue Apr 22 16:50:35.487691 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: LIBXML compiled version="2.9.10"
+[Tue Apr 22 16:50:35.487694 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: Original server signature: Apache
+[Tue Apr 22 16:50:35.487764 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,af9b20a8e4851cdab11374fd9022d39e671fa3cb"
+[Tue Apr 22 16:50:35.566186 2025] [:notice] [pid 8:tid 125990100028480] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FRQWMOLCGIYGCODFGQ4DKMLDMRQWEMJR.GM3TIZTEHEYDEMTEGM4WKNRXGFTGCM3D.MI.1745340635.status.modsecurity.org
+[Tue Apr 22 16:50:35.692851 2025] [socache_shmcb:info] [pid 8:tid 125990100028480] AH00830: Shared memory socache initialised
+[Tue Apr 22 16:50:35.692885 2025] [ssl:info] [pid 8:tid 125990100028480] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 16:50:35.692891 2025] [ssl:info] [pid 8:tid 125990100028480] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 16:50:35.694589 2025] [ssl:warn] [pid 8:tid 125990100028480] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 16:50:35.694606 2025] [ssl:info] [pid 8:tid 125990100028480] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 16:50:35.694783 2025] [ssl:info] [pid 8:tid 125990100028480] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 16:50:35.696316 2025] [core:warn] [pid 8:tid 125990100028480] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 22 16:50:35.705836 2025] [mpm_event:notice] [pid 8:tid 125990100028480] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Tue Apr 22 16:50:35.705873 2025] [mpm_event:info] [pid 8:tid 125990100028480] AH00490: Server built: 2025-04-02T18:34:29
+[Tue Apr 22 16:50:35.705886 2025] [core:notice] [pid 8:tid 125990100028480] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 22 16:50:59.695355 2025] [ssl:info] [pid 10:tid 125989994628864] [client 172.18.0.1:35120] AH01964: Connection to child 65 established (server ciberIES:443)
+[Tue Apr 22 16:50:59.710130 2025] [ssl:info] [pid 10:tid 125989910742784] [client 172.18.0.1:35124] AH01964: Connection to child 66 established (server ciberIES:443)
+[Tue Apr 22 16:51:08.017076 2025] [ssl:info] [pid 10:tid 125990061737728] [client 172.18.0.1:43840] AH01964: Connection to child 64 established (server ciberIES:443)
+[Tue Apr 22 16:51:16.112652 2025] [ssl:info] [pid 10:tid 125989642307328] [client 172.18.0.1:58430] AH01964: Connection to child 78 established (server ciberIES:443)
+[Tue Apr 22 16:52:15.214438 2025] [ssl:info] [pid 10:tid 125989600364288] [client 172.18.0.1:49476] AH01964: Connection to child 82 established (server ciberIES:443)
+[Tue Apr 22 16:52:25.784592 2025] [ssl:info] [pid 10:tid 125989466146560] [client 172.18.0.1:44226] AH01964: Connection to child 88 established (server ciberIES:443)
+[Tue Apr 22 16:52:36.223192 2025] [ssl:info] [pid 10:tid 125989868799744] [client 172.18.0.1:41610] AH01964: Connection to child 70 established (server ciberIES:443)
+[Tue Apr 22 16:52:44.128839 2025] [ssl:info] [pid 9:tid 125989994628864] [client 172.18.0.1:58192] AH01964: Connection to child 1 established (server ciberIES:443)
+[Tue Apr 22 17:04:30.359120 2025] [ssl:info] [pid 9:tid 125989631821568] [client 172.18.0.1:37038] AH01964: Connection to child 15 established (server ciberIES:443)
+[Tue Apr 22 17:04:31.388241 2025] [ssl:info] [pid 9:tid 125989621335808] [client 172.18.0.1:37052] AH01964: Connection to child 16 established (server ciberIES:443)
+[Tue Apr 22 17:04:31.735708 2025] [ssl:info] [pid 10:tid 125989879285504] [client 172.18.0.1:44848] AH01964: Connection to child 69 established (server ciberIES:443)
+[Tue Apr 22 17:04:31.900905 2025] [ssl:info] [pid 9:tid 125989610850048] [client 172.18.0.1:44864] AH01964: Connection to child 17 established (server ciberIES:443)
+[Tue Apr 22 17:04:32.085452 2025] [ssl:info] [pid 10:tid 125989766039296] [client 172.18.0.1:44880] AH01964: Connection to child 73 established (server ciberIES:443)
+[Tue Apr 22 17:04:32.276342 2025] [ssl:info] [pid 10:tid 125989745067776] [client 172.18.0.1:44882] AH01964: Connection to child 75 established (server ciberIES:443)
+[Tue Apr 22 17:04:33.019738 2025] [ssl:info] [pid 10:tid 125989734582016] [client 172.18.0.1:44886] AH01964: Connection to child 76 established (server ciberIES:443)
+[Tue Apr 22 17:04:33.218244 2025] [ssl:info] [pid 9:tid 125989600364288] [client 172.18.0.1:44902] AH01964: Connection to child 18 established (server ciberIES:443)
+[Tue Apr 22 17:04:33.379371 2025] [ssl:info] [pid 9:tid 125989589878528] [client 172.18.0.1:44918] AH01964: Connection to child 19 established (server ciberIES:443)
+[Tue Apr 22 17:04:33.544441 2025] [ssl:info] [pid 9:tid 125989497603840] [client 172.18.0.1:44920] AH01964: Connection to child 21 established (server ciberIES:443)
+[Tue Apr 22 17:04:33.894384 2025] [ssl:info] [pid 10:tid 125989724096256] [client 172.18.0.1:44934] AH01964: Connection to child 77 established (server ciberIES:443)
+[Tue Apr 22 17:04:34.068308 2025] [ssl:info] [pid 9:tid 125989879285504] [client 172.18.0.1:44936] AH01964: Connection to child 5 established (server ciberIES:443)
+[Tue Apr 22 17:04:34.231945 2025] [ssl:info] [pid 9:tid 125989858313984] [client 172.18.0.1:44948] AH01964: Connection to child 7 established (server ciberIES:443)
+[Tue Apr 22 17:04:34.403675 2025] [ssl:info] [pid 10:tid 125989642307328] [client 172.18.0.1:44956] AH01964: Connection to child 78 established (server ciberIES:443)
+[Tue Apr 22 17:04:34.580010 2025] [ssl:info] [pid 9:tid 125989776525056] [client 172.18.0.1:44970] AH01964: Connection to child 8 established (server ciberIES:443)
+[Tue Apr 22 17:04:34.754698 2025] [ssl:info] [pid 9:tid 125989766039296] [client 172.18.0.1:44974] AH01964: Connection to child 9 established (server ciberIES:443)
+postdrop: warning: unable to look up public/pickup: No such file or directory
+su: user someuser does not exist
+[Tue Apr 22 17:04:34.822953 2025] [evasive20:error] [pid 9:tid 125989766039296] [client 172.18.0.1:44974] client denied by server configuration: proxy:http://python:8080/api/peliculas/3, referer: https://localhost:6013/views/control-panel/control.html
+[Tue Apr 22 17:04:34.891480 2025] [evasive20:error] [pid 9:tid 125989755553536] [client 172.18.0.1:44974] client denied by server configuration: proxy:http://python:8080/api/peliculas/3, referer: https://localhost:6013/views/control-panel/control.html
+[Tue Apr 22 17:04:37.092779 2025] [evasive20:error] [pid 9:tid 125989745067776] [client 172.18.0.1:44974] client denied by server configuration: /usr/local/apache2/htdocs/views/control-panel/control.html, referer: https://localhost:6013/views/home/home.html
+[Tue Apr 22 17:04:42.006550 2025] [evasive20:error] [pid 9:tid 125989734582016] [client 172.18.0.1:44974] client denied by server configuration: /usr/local/apache2/htdocs/
+[Tue Apr 22 17:04:44.408153 2025] [evasive20:error] [pid 9:tid 125989724096256] [client 172.18.0.1:44974] client denied by server configuration: /usr/local/apache2/htdocs/
+[Tue Apr 22 17:04:48.047635 2025] [evasive20:error] [pid 9:tid 125989487118080] [client 172.18.0.1:44974] client denied by server configuration: /usr/local/apache2/htdocs/
+[Tue Apr 22 17:04:53.280355 2025] [ssl:info] [pid 10:tid 125989631821568] [client 172.18.0.1:39592] AH01964: Connection to child 79 established (server ciberIES:443)
+[Tue Apr 22 17:05:57.916067 2025] [ssl:info] [pid 9:tid 125989994628864] [client 172.18.0.1:49586] AH01964: Connection to child 1 established (server ciberIES:443)
+[Tue Apr 22 17:11:18.737685 2025] [ssl:info] [pid 8:tid 130464910715968] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:11:18.741068 2025] [ssl:info] [pid 8:tid 130464910715968] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:11:18.743738 2025] [ssl:warn] [pid 8:tid 130464910715968] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:11:18.743871 2025] [ssl:info] [pid 8:tid 130464910715968] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:11:18.744160 2025] [ssl:info] [pid 8:tid 130464910715968] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:11:18.744680 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Tue Apr 22 17:11:18.744693 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Tue Apr 22 17:11:18.744698 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Tue Apr 22 17:11:18.744701 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: LUA compiled version="Lua 5.1"
+[Tue Apr 22 17:11:18.744704 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: YAJL compiled version="2.1.0"
+[Tue Apr 22 17:11:18.744708 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: LIBXML compiled version="2.9.10"
+[Tue Apr 22 17:11:18.744711 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: Original server signature: Apache
+[Tue Apr 22 17:11:18.744773 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,5cab893582fbd84fe34dead99a75f0316fbcd39a"
+[Tue Apr 22 17:11:19.128351 2025] [:notice] [pid 8:tid 130464910715968] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FQ2WGYLCHA4TGNJYGJTGEZBYGRTGKMZU.MRSWCZBZHFQTONLGGAZTCNTGMJRWIMZZ.ME.1745341878.status.modsecurity.org
+[Tue Apr 22 17:11:19.229640 2025] [socache_shmcb:info] [pid 8:tid 130464910715968] AH00830: Shared memory socache initialised
+[Tue Apr 22 17:11:19.230532 2025] [ssl:info] [pid 8:tid 130464910715968] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:11:19.230748 2025] [ssl:info] [pid 8:tid 130464910715968] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:11:19.231014 2025] [ssl:warn] [pid 8:tid 130464910715968] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:11:19.231825 2025] [ssl:info] [pid 8:tid 130464910715968] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:11:19.232136 2025] [ssl:info] [pid 8:tid 130464910715968] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:11:19.233100 2025] [core:warn] [pid 8:tid 130464910715968] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 22 17:11:19.239646 2025] [mpm_event:notice] [pid 8:tid 130464910715968] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Tue Apr 22 17:11:19.242998 2025] [mpm_event:info] [pid 8:tid 130464910715968] AH00490: Server built: 2025-04-02T18:34:29
+[Tue Apr 22 17:11:19.243087 2025] [core:notice] [pid 8:tid 130464910715968] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 22 17:11:48.112661 2025] [ssl:info] [pid 9:tid 130464872400640] [client 172.18.0.1:53336] AH01964: Connection to child 0 established (server ciberIES:443)
+[Tue Apr 22 17:11:48.123602 2025] [ssl:info] [pid 9:tid 130464729794304] [client 172.18.0.1:53342] AH01964: Connection to child 1 established (server ciberIES:443)
+[Tue Apr 22 17:11:48.401633 2025] [core:info] [pid 9:tid 130464729794304] [client 172.18.0.1:53342] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: https://localhost:6013/
+[Tue Apr 22 17:12:00.391233 2025] [ssl:info] [pid 10:tid 130464729794304] [client 172.18.0.1:53920] AH01964: Connection to child 65 established (server ciberIES:443)
+[Tue Apr 22 17:12:13.513113 2025] [ssl:info] [pid 10:tid 130464564119296] [client 172.18.0.1:37308] AH01964: Connection to child 74 established (server ciberIES:443)
+[Tue Apr 22 17:15:48.302201 2025] [ssl:info] [pid 7:tid 126291876981824] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:15:48.307613 2025] [ssl:info] [pid 7:tid 126291876981824] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:15:48.313762 2025] [ssl:warn] [pid 7:tid 126291876981824] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:15:48.314061 2025] [ssl:info] [pid 7:tid 126291876981824] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:15:48.314678 2025] [ssl:info] [pid 7:tid 126291876981824] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:15:48.314765 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Tue Apr 22 17:15:48.314777 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Tue Apr 22 17:15:48.314783 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Tue Apr 22 17:15:48.314787 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: LUA compiled version="Lua 5.1"
+[Tue Apr 22 17:15:48.314791 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: YAJL compiled version="2.1.0"
+[Tue Apr 22 17:15:48.314794 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: LIBXML compiled version="2.9.10"
+[Tue Apr 22 17:15:48.314796 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: Original server signature: Apache
+[Tue Apr 22 17:15:48.314856 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,4dcdd2af5b1dfd706d1fe576bc75e7fba38a1b4a"
+[Tue Apr 22 17:15:48.415768 2025] [:notice] [pid 7:tid 126291876981824] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FQ2GIY3EMQZGCZRVMIYWIZTEG4YDMZBR.MZSTKNZWMJRTONLFG5TGEYJTHBQTCYRU.ME.1745342148.status.modsecurity.org
+[Tue Apr 22 17:15:48.579912 2025] [socache_shmcb:info] [pid 7:tid 126291876981824] AH00830: Shared memory socache initialised
+[Tue Apr 22 17:15:48.579984 2025] [ssl:info] [pid 7:tid 126291876981824] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:15:48.580862 2025] [ssl:info] [pid 7:tid 126291876981824] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:15:48.581124 2025] [ssl:warn] [pid 7:tid 126291876981824] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:15:48.581669 2025] [ssl:info] [pid 7:tid 126291876981824] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:15:48.581973 2025] [ssl:info] [pid 7:tid 126291876981824] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:15:48.584975 2025] [core:warn] [pid 7:tid 126291876981824] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 22 17:15:48.590112 2025] [mpm_event:notice] [pid 7:tid 126291876981824] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Tue Apr 22 17:15:48.590141 2025] [mpm_event:info] [pid 7:tid 126291876981824] AH00490: Server built: 2025-04-02T18:34:29
+[Tue Apr 22 17:15:48.590153 2025] [core:notice] [pid 7:tid 126291876981824] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 22 17:15:58.227636 2025] [ssl:info] [pid 9:tid 126291839813376] [client 172.18.0.1:46694] AH01964: Connection to child 64 established (server ciberIES:443)
+[Tue Apr 22 17:15:58.245193 2025] [ssl:info] [pid 9:tid 126291699304192] [client 172.18.0.1:46698] AH01964: Connection to child 65 established (server ciberIES:443)
+[Tue Apr 22 17:15:58.529956 2025] [core:info] [pid 9:tid 126291699304192] [client 172.18.0.1:46698] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: https://localhost:6013/
+[Tue Apr 22 17:15:59.894381 2025] [core:info] [pid 9:tid 126291678332672] [client 172.18.0.1:46694] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: https://localhost:6013/views/login/login.html
+[Tue Apr 22 17:16:05.087293 2025] [ssl:info] [pid 9:tid 126291667846912] [client 172.18.0.1:56764] AH01964: Connection to child 68 established (server ciberIES:443)
+[Tue Apr 22 17:16:15.131401 2025] [ssl:info] [pid 9:tid 126291378439936] [client 172.18.0.1:58792] AH01964: Connection to child 76 established (server ciberIES:443)
+[Tue Apr 22 17:16:21.929577 2025] [ssl:info] [pid 8:tid 126291839813376] [client 172.18.0.1:43762] AH01964: Connection to child 0 established (server ciberIES:443)
+[Tue Apr 22 17:16:27.499578 2025] [ssl:info] [pid 9:tid 126291544114944] [client 172.18.0.1:43766] AH01964: Connection to child 82 established (server ciberIES:443)
+[Tue Apr 22 17:16:27.512091 2025] [ssl:info] [pid 9:tid 126291533629184] [client 172.18.0.1:43776] AH01964: Connection to child 83 established (server ciberIES:443)
+[Tue Apr 22 17:18:59.537935 2025] [ssl:info] [pid 8:tid 126291678332672] [client 172.18.0.1:33322] AH01964: Connection to child 3 established (server ciberIES:443)
+[Tue Apr 22 17:19:03.240181 2025] [ssl:info] [pid 8:tid 126291657361152] [client 172.18.0.1:40902] AH01964: Connection to child 5 established (server ciberIES:443)
+[Tue Apr 22 17:19:15.296109 2025] [ssl:info] [pid 9:tid 126291839813376] [client 172.18.0.1:44700] AH01964: Connection to child 64 established (server ciberIES:443)
+[Tue Apr 22 17:19:18.528503 2025] [ssl:info] [pid 8:tid 126291594446592] [client 172.18.0.1:44704] AH01964: Connection to child 11 established (server ciberIES:443)
+[Tue Apr 22 17:19:21.090241 2025] [ssl:info] [pid 9:tid 126291688818432] [client 172.18.0.1:44714] AH01964: Connection to child 66 established (server ciberIES:443)
+[Tue Apr 22 17:19:51.595042 2025] [ssl:info] [pid 8:tid 126291552503552] [client 172.18.0.1:43104] AH01964: Connection to child 15 established (server ciberIES:443)
+[Tue Apr 22 17:20:06.176141 2025] [ssl:info] [pid 9:tid 126291657361152] [client 172.18.0.1:52942] AH01964: Connection to child 69 established (server ciberIES:443)
+[Tue Apr 22 17:20:09.004902 2025] [ssl:info] [pid 8:tid 126291510560512] [client 172.18.0.1:52950] AH01964: Connection to child 19 established (server ciberIES:443)
+[Tue Apr 22 17:21:07.407209 2025] [ssl:info] [pid 9:tid 126291409897216] [client 172.18.0.1:41804] AH01964: Connection to child 73 established (server ciberIES:443)
+[Tue Apr 22 17:24:45.313713 2025] [ssl:info] [pid 8:tid 124090824215616] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:24:45.316893 2025] [ssl:info] [pid 8:tid 124090824215616] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:24:45.318413 2025] [ssl:warn] [pid 8:tid 124090824215616] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:24:45.319516 2025] [ssl:info] [pid 8:tid 124090824215616] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:24:45.319842 2025] [ssl:info] [pid 8:tid 124090824215616] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:24:45.319973 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Tue Apr 22 17:24:45.320061 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Tue Apr 22 17:24:45.320120 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Tue Apr 22 17:24:45.320128 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: LUA compiled version="Lua 5.1"
+[Tue Apr 22 17:24:45.320133 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: YAJL compiled version="2.1.0"
+[Tue Apr 22 17:24:45.320136 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: LIBXML compiled version="2.9.10"
+[Tue Apr 22 17:24:45.320142 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: Original server signature: Apache
+[Tue Apr 22 17:24:45.320197 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,803c74db69442f831ba747ca61857fcd07efb4fe"
+[Tue Apr 22 17:24:45.745359 2025] [:notice] [pid 8:tid 124090824215616] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FQ4DAM3DG42GIYRWHE2DIMTGHAZTCYTB.G42DOY3BGYYTQNJXMZRWIMBXMVTGENDG.MU.1745342685.status.modsecurity.org
+[Tue Apr 22 17:24:45.837725 2025] [socache_shmcb:info] [pid 8:tid 124090824215616] AH00830: Shared memory socache initialised
+[Tue Apr 22 17:24:45.837878 2025] [ssl:info] [pid 8:tid 124090824215616] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:24:45.837948 2025] [ssl:info] [pid 8:tid 124090824215616] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:24:45.838343 2025] [ssl:warn] [pid 8:tid 124090824215616] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:24:45.838473 2025] [ssl:info] [pid 8:tid 124090824215616] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:24:45.838700 2025] [ssl:info] [pid 8:tid 124090824215616] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:24:45.840939 2025] [core:warn] [pid 8:tid 124090824215616] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 22 17:24:45.846535 2025] [mpm_event:notice] [pid 8:tid 124090824215616] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Tue Apr 22 17:24:45.846983 2025] [mpm_event:info] [pid 8:tid 124090824215616] AH00490: Server built: 2025-04-02T18:34:29
+[Tue Apr 22 17:24:45.847072 2025] [core:notice] [pid 8:tid 124090824215616] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 22 17:27:16.001860 2025] [ssl:info] [pid 9:tid 124090786514688] [client 172.18.0.1:42178] AH01964: Connection to child 0 established (server ciberIES:443)
+[Tue Apr 22 17:27:28.628726 2025] [ssl:info] [pid 9:tid 124090595673856] [client 172.18.0.1:35986] AH01964: Connection to child 6 established (server ciberIES:443)
+[Tue Apr 22 17:27:40.412903 2025] [ssl:info] [pid 10:tid 124090786514688] [client 172.18.0.1:59146] AH01964: Connection to child 64 established (server ciberIES:443)
+[Tue Apr 22 17:27:48.590079 2025] [ssl:info] [pid 9:tid 124090429998848] [client 172.18.0.1:41470] AH01964: Connection to child 15 established (server ciberIES:443)
+[Tue Apr 22 17:28:48.249493 2025] [ssl:info] [pid 10:tid 124090677462784] [client 172.18.0.1:52438] AH01964: Connection to child 69 established (server ciberIES:443)
+[Tue Apr 22 17:29:15.759835 2025] [ssl:info] [pid 9:tid 124090409027328] [client 172.18.0.1:46662] AH01964: Connection to child 17 established (server ciberIES:443)
+[Tue Apr 22 17:36:37.314973 2025] [ssl:info] [pid 8:tid 127039704640576] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:36:37.318671 2025] [ssl:info] [pid 8:tid 127039704640576] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:36:37.336556 2025] [ssl:warn] [pid 8:tid 127039704640576] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:36:37.336696 2025] [ssl:info] [pid 8:tid 127039704640576] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:36:37.337168 2025] [ssl:info] [pid 8:tid 127039704640576] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:36:37.337216 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Tue Apr 22 17:36:37.337224 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Tue Apr 22 17:36:37.337284 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Tue Apr 22 17:36:37.337292 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: LUA compiled version="Lua 5.1"
+[Tue Apr 22 17:36:37.337295 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: YAJL compiled version="2.1.0"
+[Tue Apr 22 17:36:37.337297 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: LIBXML compiled version="2.9.10"
+[Tue Apr 22 17:36:37.337301 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: Original server signature: Apache
+[Tue Apr 22 17:36:37.337576 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,90611bf1dd3d8b33ec4ee119cc8c75de7543e28a"
+[Tue Apr 22 17:36:37.540886 2025] [:notice] [pid 8:tid 127039704640576] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FQ4TANRRGFRGMMLEMQZWIODCGMZWKYZU.MVSTCMJZMNRTQYZXGVSGKNZVGQZWKMRY.ME.1745343397.status.modsecurity.org
+[Tue Apr 22 17:36:37.626638 2025] [socache_shmcb:info] [pid 8:tid 127039704640576] AH00830: Shared memory socache initialised
+[Tue Apr 22 17:36:37.626664 2025] [ssl:info] [pid 8:tid 127039704640576] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:36:37.626679 2025] [ssl:info] [pid 8:tid 127039704640576] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:36:37.627307 2025] [ssl:warn] [pid 8:tid 127039704640576] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:36:37.627323 2025] [ssl:info] [pid 8:tid 127039704640576] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:36:37.627575 2025] [ssl:info] [pid 8:tid 127039704640576] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:36:37.628926 2025] [core:warn] [pid 8:tid 127039704640576] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 22 17:36:37.634842 2025] [mpm_event:notice] [pid 8:tid 127039704640576] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Tue Apr 22 17:36:37.634869 2025] [mpm_event:info] [pid 8:tid 127039704640576] AH00490: Server built: 2025-04-02T18:34:29
+[Tue Apr 22 17:36:37.634880 2025] [core:notice] [pid 8:tid 127039704640576] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 22 17:36:47.642430 2025] [ssl:info] [pid 10:tid 127039667439360] [client 172.18.0.1:55892] AH01964: Connection to child 64 established (server ciberIES:443)
+[Tue Apr 22 17:36:56.698854 2025] [ssl:info] [pid 9:tid 127039667439360] [client 172.18.0.1:39238] AH01964: Connection to child 0 established (server ciberIES:443)
+[Tue Apr 22 17:37:04.260837 2025] [ssl:info] [pid 9:tid 127039440946944] [client 172.18.0.1:49526] AH01964: Connection to child 9 established (server ciberIES:443)
+[Tue Apr 22 17:39:20.113192 2025] [ssl:info] [pid 10:tid 127039482889984] [client 172.18.0.1:39420] AH01964: Connection to child 69 established (server ciberIES:443)
+[Tue Apr 22 17:39:34.085657 2025] [ssl:info] [pid 9:tid 127039409489664] [client 172.18.0.1:47080] AH01964: Connection to child 12 established (server ciberIES:443)
+[Tue Apr 22 17:50:15.387533 2025] [ssl:info] [pid 8:tid 131296543079488] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:50:15.390055 2025] [ssl:info] [pid 8:tid 131296543079488] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:50:15.391508 2025] [ssl:warn] [pid 8:tid 131296543079488] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:50:15.391538 2025] [ssl:info] [pid 8:tid 131296543079488] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:50:15.391692 2025] [ssl:info] [pid 8:tid 131296543079488] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:50:15.391752 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Tue Apr 22 17:50:15.391763 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Tue Apr 22 17:50:15.391768 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Tue Apr 22 17:50:15.391772 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: LUA compiled version="Lua 5.1"
+[Tue Apr 22 17:50:15.391775 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: YAJL compiled version="2.1.0"
+[Tue Apr 22 17:50:15.391778 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: LIBXML compiled version="2.9.10"
+[Tue Apr 22 17:50:15.391780 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: Original server signature: Apache
+[Tue Apr 22 17:50:15.391833 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,06ab754fdea15680c1218a77a43631d529797df8"
+[Tue Apr 22 17:50:15.732261 2025] [:notice] [pid 8:tid 131296543079488] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FQYDMYLCG42TIZTEMVQTCNJWHAYGGMJS.GE4GCNZXME2DGNRTGFSDKMRZG44TOZDG.HA.1745344215.status.modsecurity.org
+[Tue Apr 22 17:50:16.047798 2025] [socache_shmcb:info] [pid 8:tid 131296543079488] AH00830: Shared memory socache initialised
+[Tue Apr 22 17:50:16.052254 2025] [ssl:info] [pid 8:tid 131296543079488] AH01887: Init: Initializing (virtual) servers for SSL
+[Tue Apr 22 17:50:16.052301 2025] [ssl:info] [pid 8:tid 131296543079488] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Tue Apr 22 17:50:16.059193 2025] [ssl:warn] [pid 8:tid 131296543079488] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 22 17:50:16.059260 2025] [ssl:info] [pid 8:tid 131296543079488] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Tue Apr 22 17:50:16.059848 2025] [ssl:info] [pid 8:tid 131296543079488] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Tue Apr 22 17:50:16.063504 2025] [core:warn] [pid 8:tid 131296543079488] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 22 17:50:16.091144 2025] [mpm_event:notice] [pid 8:tid 131296543079488] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Tue Apr 22 17:50:16.091178 2025] [mpm_event:info] [pid 8:tid 131296543079488] AH00490: Server built: 2025-04-02T18:34:29
+[Tue Apr 22 17:50:16.091192 2025] [core:notice] [pid 8:tid 131296543079488] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 22 17:50:31.468849 2025] [ssl:info] [pid 10:tid 131296506414848] [client 172.18.0.1:49562] AH01964: Connection to child 64 established (server ciberIES:443)
+[Tue Apr 22 17:50:33.143724 2025] [core:info] [pid 10:tid 131296437208832] [client 172.18.0.1:49562] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: https://localhost:6013/
+[Tue Apr 22 17:50:34.185257 2025] [ssl:info] [pid 10:tid 131296426723072] [client 172.18.0.1:45782] AH01964: Connection to child 66 established (server ciberIES:443)
+[Tue Apr 22 17:50:41.923135 2025] [ssl:info] [pid 10:tid 131296321865472] [client 172.18.0.1:34898] AH01964: Connection to child 69 established (server ciberIES:443)
+[Tue Apr 22 17:50:53.567969 2025] [ssl:info] [pid 9:tid 131296506414848] [client 172.18.0.1:54588] AH01964: Connection to child 0 established (server ciberIES:443)
+[Tue Apr 22 17:51:30.938292 2025] [ssl:info] [pid 9:tid 131296300893952] [client 172.18.0.1:60888] AH01964: Connection to child 7 established (server ciberIES:443)
