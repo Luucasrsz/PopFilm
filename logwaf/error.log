@@ -837,3 +837,29 @@ su: user someuser does not exist
 [Tue Apr 22 17:50:41.923135 2025] [ssl:info] [pid 10:tid 131296321865472] [client 172.18.0.1:34898] AH01964: Connection to child 69 established (server ciberIES:443)
 [Tue Apr 22 17:50:53.567969 2025] [ssl:info] [pid 9:tid 131296506414848] [client 172.18.0.1:54588] AH01964: Connection to child 0 established (server ciberIES:443)
 [Tue Apr 22 17:51:30.938292 2025] [ssl:info] [pid 9:tid 131296300893952] [client 172.18.0.1:60888] AH01964: Connection to child 7 established (server ciberIES:443)
+[Wed Nov 05 17:49:57.716919 2025] [ssl:info] [pid 7:tid 124436178009152] AH01887: Init: Initializing (virtual) servers for SSL
+[Wed Nov 05 17:49:57.720925 2025] [ssl:info] [pid 7:tid 124436178009152] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Wed Nov 05 17:49:57.724799 2025] [ssl:warn] [pid 7:tid 124436178009152] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Nov 05 17:49:57.724814 2025] [ssl:info] [pid 7:tid 124436178009152] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Wed Nov 05 17:49:57.724944 2025] [ssl:info] [pid 7:tid 124436178009152] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Wed Nov 05 17:49:57.724987 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/) configured.
+[Wed Nov 05 17:49:57.724993 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: APR compiled version="1.6.5"; loaded version="1.6.5"
+[Wed Nov 05 17:49:57.724997 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
+[Wed Nov 05 17:49:57.724999 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed Nov 05 17:49:57.725002 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: YAJL compiled version="2.1.0"
+[Wed Nov 05 17:49:57.725011 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: LIBXML compiled version="2.9.10"
+[Wed Nov 05 17:49:57.725013 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: Original server signature: Apache
+[Wed Nov 05 17:49:57.725049 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: StatusEngine call: "2.9.3,Apache,1.6.5/1.6.5,8.39/8.39 2016-06-14,Lua 5.1,2.9.10,06ab754fdea15680c1218a77a43631d529797df8"
+[Wed Nov 05 17:49:58.875235 2025] [:notice] [pid 7:tid 124436178009152] ModSecurity: StatusEngine call failed. Query: GIXDSLRTFRAXAYLDNBSSYMJOGYXDKLZR.FY3C4NJMHAXDGOJPHAXDGOJAGIYDCNRN.GA3C2MJUFRGHKYJAGUXDCLBSFY4S4MJQ.FQYDMYLCG42TIZTEMVQTCNJWHAYGGMJS.GE4GCNZXME2DGNRTGFSDKMRZG44TOZDG.HA.1762364997.status.modsecurity.org
+[Wed Nov 05 17:49:58.918222 2025] [socache_shmcb:info] [pid 7:tid 124436178009152] AH00830: Shared memory socache initialised
+[Wed Nov 05 17:49:58.918242 2025] [ssl:info] [pid 7:tid 124436178009152] AH01887: Init: Initializing (virtual) servers for SSL
+[Wed Nov 05 17:49:58.918245 2025] [ssl:info] [pid 7:tid 124436178009152] AH01914: Configuring server ciberIES:443 for SSL protocol
+[Wed Nov 05 17:49:58.918539 2025] [ssl:warn] [pid 7:tid 124436178009152] AH01909: ciberIES:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Nov 05 17:49:58.918544 2025] [ssl:info] [pid 7:tid 124436178009152] AH02568: Certificate and private key ciberIES:443:0 configured from /etc/ssl/certs/server.crt and /etc/ssl/private/server.key
+[Wed Nov 05 17:49:58.918649 2025] [ssl:info] [pid 7:tid 124436178009152] AH01876: mod_ssl/2.4.41 compiled against Server: Apache/2.4.41, Library: OpenSSL/1.1.1f
+[Wed Nov 05 17:49:58.920197 2025] [core:warn] [pid 7:tid 124436178009152] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 05 17:49:58.922624 2025] [mpm_event:notice] [pid 7:tid 124436178009152] AH00489: Apache/2.4.41 (Ubuntu) OpenSSL/1.1.1f Off configured -- resuming normal operations
+[Wed Nov 05 17:49:58.922643 2025] [mpm_event:info] [pid 7:tid 124436178009152] AH00490: Server built: 2025-04-02T18:34:29
+[Wed Nov 05 17:49:58.922654 2025] [core:notice] [pid 7:tid 124436178009152] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed Nov 05 17:51:38.916300 2025] [core:info] [pid 9:tid 124436141311744] [client 172.18.0.1:40260] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: http://localhost:6003/
+[Wed Nov 05 17:51:57.417816 2025] [core:info] [pid 9:tid 124435927402240] [client 172.18.0.1:50300] AH00128: File does not exist: /usr/local/apache2/htdocs/favicon.ico, referer: http://localhost:6003/index.html
