@@ -144,8 +144,15 @@ function agregarFila(nombre, categoria, sinopsis, precio, id) {
     eliminarPelicula(id);
   });
 
+  const btnCalcularIVA = document.createElement("button");
+  btnCalcularIVA.textContent = "Calcular IVA";
+  btnCalcularIVA.onclick = function() {
+      alert(`El IVA de ${nombre} es: $${calcularIVA(precio).toFixed(2)}`);
+  };
+
   tdAcciones.appendChild(btnEditar);
   tdAcciones.appendChild(btnEliminar);
+  tdAcciones.appendChild(btnCalcularIVA);
 
   row.appendChild(tdNombre);
   row.appendChild(tdCategoria);
@@ -181,3 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Usamos solo un único 'submit' handler para guardar la película
   document.getElementById("movie-form").addEventListener("submit", guardarCambios);
 });
+
+function calcularIVA(precio) {
+  return precio * 0.21;
+}
